@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.myapplication_test"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.1"
+    }
+}
+
+dependencies {
+    implementation project(':aars')
+    implementation project(':models')
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.android.support:appcompat-v7:28.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+}
