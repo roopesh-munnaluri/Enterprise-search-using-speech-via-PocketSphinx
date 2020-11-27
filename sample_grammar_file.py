@@ -3,6 +3,6 @@ with open('sample.dic',"r") as f:
 final_wordlist = []
 for word in wordlist:
     final_wordlist.append(word)
-    final_wordlist.append('<s>\n')
+    final_wordlist.append('</s>\n')
 file = open('sample_test.dic',"w")
 file.writelines(final_wordlist)
