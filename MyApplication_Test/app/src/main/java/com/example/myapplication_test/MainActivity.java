@@ -169,11 +169,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .getRecognizer();
         recognizer.addListener(this);
 
-        File digitsGrammar = new File(assetsDir, "sample.dmp");
+        File digitsGrammar = new File(assetsDir, "sample.lm.bin");
         recognizer.addNgramSearch("digits",digitsGrammar);
-
-
-
     }
 
     @Override
