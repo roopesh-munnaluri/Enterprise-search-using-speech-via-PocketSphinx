@@ -11,8 +11,13 @@ en-us-ptm/transition_matrices
 en-us-ptm/variances
 menu.gram
 sample.arpa
+sample.dic
 sample.dmp
 sample.idngram
 sample.lm.bin
 sample.lm.dmp
+sample.txt
+sample.vocab
+sample.wfreq
+test.wav
 weather.dmp

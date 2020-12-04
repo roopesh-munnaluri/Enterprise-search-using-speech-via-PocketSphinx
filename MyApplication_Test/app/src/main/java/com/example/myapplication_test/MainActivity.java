@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_search.setEnabled(true);
                     button_search.setTextColor(R.color.dark_grey);
                     button_search.setText("Search");
-                    recognizer.stop();
+                   // recognizer.stop();
                 }
             }
         });
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .getRecognizer();
         recognizer.addListener(this);
 
-        File digitsGrammar = new File(assetsDir, "sample.lm.bin");
+        File digitsGrammar = new File(assetsDir, "sample.dmp");
         recognizer.addNgramSearch("digits",digitsGrammar);
 
 
