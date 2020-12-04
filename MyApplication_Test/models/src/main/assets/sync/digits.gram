@@ -2,16 +2,5 @@
 
 grammar digits;
 
-<digit> = oh    |
-          zero  |
-          one   |
-          two   |
-          three |
-          four  |
-          five  |
-          six   |
-          seven |
-          eight |
-          nine  ;
-
+<digit> = pet|grooming|brush|grill|mat|vegetable|clippers|yoga|boxes|steel|socks|wedding;
 public <digits> = <digit>+;

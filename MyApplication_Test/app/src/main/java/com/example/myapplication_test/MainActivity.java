@@ -1,27 +1,24 @@
 package com.example.myapplication_test;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextClock;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.File;
-import java.io.IOException;
-import java.lang.ref.WeakReference;
-
 import edu.cmu.pocketsphinx.Assets;
 import edu.cmu.pocketsphinx.Hypothesis;
 import edu.cmu.pocketsphinx.RecognitionListener;
@@ -31,14 +28,21 @@ import edu.cmu.pocketsphinx.SpeechRecognizerSetup;
 import static android.widget.Toast.makeText;
 import static edu.cmu.pocketsphinx.SpeechRecognizerSetup.defaultSetup;
 
-public class MainActivity extends AppCompatActivity implements RecognitionListener{
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, RecognitionListener {
+
+    Button button_search,button_input;
+    EditText input;
+    String text;
+    int status = 0;
+    Spinner spinner;
     SpeechRecognizer recognizer;
-    TextView recognizer_state, recognized_word;
-    Button start;
     int conteo = 0;
-    int permiso_flag=0;
     Handler a = new Handler();
 
     @Override
@@ -46,81 +50,129 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recognizer_state = (TextView) findViewById(R.id.textView2);
-        recognized_word = (TextView) findViewById(R.id.textView3);
-        start = (Button)findViewById(R.id.button);
-        start.setOnClickListener(new View.OnClickListener() {
+        input = (EditText) findViewById(R.id.editTextTextPersonName);
+
+        button_search = (Button)findViewById(R.id.button);
+        button_search.setEnabled(false);
+        button_search.setTextColor(this.getResources().getColor(R.color.dark_grey));
+        button_input = (Button)findViewById(R.id.button1);
+        button_input.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                if(status == 0){
+                    button_input.setText("Stop");
+                    input.setText("");
+                    status = status + 2;
+                    runRecognizerSetup();
 
-                new AsyncTask<Void, Void, Exception>() {
-                    @Override
-                    protected Exception doInBackground(Void... params) {
-                        try {
-                            Assets assets = new Assets(getApplicationContext());
-                            File assetDir = assets.syncAssets();
-                            setupRecognizer(assetDir);
-                        } catch (IOException e) {
-                            return e;
-                        }
-                        return null;
-                    }
-
-                    @Override
-                    protected void onPostExecute(Exception result) {
-                        if (result != null) {
-                        } else {
-                            FireRecognition();
-                        }
-                    }
-                }.execute();
-
+                }
+                if(status%2 == 0 && status!=0){
+                    button_input.setText("Stop");
+                    status = status + 1;
+                    button_search.setEnabled(false);
+                    button_search.setText("");
+                    input.setText("");
+                    runRecognizerSetup();
+                }
+                else{
+                    button_input.setText("Listen");
+                    status = status + 1;
+                    button_search.setEnabled(true);
+                    button_search.setTextColor(R.color.dark_grey);
+                    button_search.setText("Search");
+                    recognizer.stop();
+                }
             }
         });
-
+        // Spinner element
+        spinner = (Spinner) findViewById(R.id.spinner);
+        // Spinner click listener
+        spinner.setOnItemSelectedListener( this);
+        // Spinner Drop down elements
+        List<String> categories = new ArrayList<String>();
+        categories.add("Amazon");
+        categories.add("Best Buy");
+        categories.add("Wb Mason");
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+        button_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input_spinner = spinner.getSelectedItem().toString();
+                if (input_spinner == "Amazon"){
+                    text = input.getText().toString();
+                    String url = "https://www.amazon.com/s?k=" + text ;
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                }
+                if (input_spinner == "Best Buy"){
+                }
+                if (input_spinner == "Wb Mason"){
+                }
+            }
+        });
     }
-
+    public void runRecognizerSetup() {
+        new AsyncTask<Void, Void, Exception>() {
+            @Override
+            protected Exception doInBackground(Void... params) {
+                try {
+                   // input.setText("Started");
+                    Assets assets = new Assets(getApplicationContext());
+                    File assetDir = assets.syncAssets();
+                    setupRecognizer(assetDir);
+                } catch (IOException e) {
+                    return e;
+                }
+                return null;
+            }
+            @Override
+            protected void onPostExecute(Exception result) {
+                if (result != null) {
+                } else {
+                    input.setText("Recognition Started!");
+                        recognizer.startListening("digits");
+                }
+            }
+        }.execute();
+    }
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
     @Override
     public void onStop(){
         super.onStop();
 
     }
-
-
-    public void FireRecognition(){
-        Log.d("Recognition","Recognition Started");
-        recognizer_state.setText("Recognition Started!");
-        conteo = 0;
-        recognizer.stop();
-        recognizer.startListening("digits");
-    }
-
     @Override
     public void onBeginningOfSpeech() {
         // TODO Auto-generated method stub
-
     }
-
     @Override
     public void onEndOfSpeech() {
         // TODO Auto-generated method stub
 
     }
-
     private void setupRecognizer(File assetsDir) throws IOException {
         recognizer = SpeechRecognizerSetup.defaultSetup()
                 .setAcousticModel(new File(assetsDir, "en-us-ptm"))
                 .setDictionary(new File(assetsDir, "cmudict-en-us.dict"))
-
                 .setRawLogDir(assetsDir) // To disable logging of raw audio comment out this call (takes a lot of space on the device)
-
                 .getRecognizer();
         recognizer.addListener(this);
 
+        File digitsGrammar = new File(assetsDir, "sample.lm.bin");
+        recognizer.addNgramSearch("digits",digitsGrammar);
 
-        File digitsGrammar = new File(assetsDir, "digits.gram");
-        recognizer.addGrammarSearch("digits", digitsGrammar);
-        
+
 
     }
 
@@ -129,7 +181,8 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
         conteo +=1;
         if(conteo==1){
             //recognizer.stop();
-            Timer();
+            input.setText(hup.getHypstr());
+
         }
     }
 
@@ -143,40 +196,17 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
 
     }
 
-    public void Timer(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(500);
-                    a.post(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            FireRecognition();
-                        }
-                    });
-                } catch (Exception e) {
-                }
-            }
-
-        }).start();
-    }
 
     @Override
     public void onPartialResult(Hypothesis arg0) {
         if(arg0 == null){ return; }
         String comando = arg0.getHypstr();
-        recognized_word.setText(comando);
+        input.setText(comando);
         conteo +=1;
         if(conteo==1){
             conteo = 0;
             Log.d("Res", comando);
             //recognizer.stop();
-            Timer();
         }
-
     }
-
-
 }
