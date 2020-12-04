@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_search.setEnabled(true);
                     button_search.setTextColor(R.color.dark_grey);
                     button_search.setText("Search");
-                   // recognizer.stop();
+
+                    recognizer.stop();
                 }
             }
         });
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         categories.add("Amazon");
         categories.add("Best Buy");
         categories.add("Wb Mason");
+        categories.add("Walmart");
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         // Drop down layout style - list view with radio button
@@ -111,8 +113,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     startActivity(browserIntent);
                 }
                 if (input_spinner == "Best Buy"){
+                    text = input.getText().toString();
+                    String url =  "https://www.bestbuy.com/site/searchpage.jsp?st="+ text;
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                    
                 }
                 if (input_spinner == "Wb Mason"){
+                    text = input.getText().toString();
+                    String url = "https://www.wbmason.com/SearchResults.aspx?Keyword="+ text +"&sc=BM&fi=1&fr=1";
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                }
+                if(input_spinner == "Walmart"){
+                    text = input.getText().toString();
+                    String url =  "https://www.walmart.com/search/?query="+ text;
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+
                 }
             }
         });
@@ -136,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 if (result != null) {
                 } else {
                     input.setText("Recognition Started!");
-                        recognizer.startListening("digits");
+                    recognizer.startListening("digits");
                 }
             }
         }.execute();
@@ -169,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .getRecognizer();
         recognizer.addListener(this);
 
-        File digitsGrammar = new File(assetsDir, "sample.lm.bin");
+        File digitsGrammar = new File(assetsDir, "sample.dmp");
         recognizer.addNgramSearch("digits",digitsGrammar);
     }
 
@@ -198,7 +216,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onPartialResult(Hypothesis arg0) {
         if(arg0 == null){ return; }
         String comando = arg0.getHypstr();
-        input.setText(comando);
         conteo +=1;
         if(conteo==1){
             conteo = 0;
