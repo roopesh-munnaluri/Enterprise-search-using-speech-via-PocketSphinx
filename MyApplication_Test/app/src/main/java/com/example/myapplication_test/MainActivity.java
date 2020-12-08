@@ -2,9 +2,13 @@ package com.example.myapplication_test;
 
 import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -44,14 +48,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     SpeechRecognizer recognizer;
     int conteo = 0;
     Handler a = new Handler();
+    private static final int PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, PERMISSIONS_REQUEST_RECORD_AUDIO);
+            return;
+        }
         input = (EditText) findViewById(R.id.editTextTextPersonName);
-
         button_search = (Button)findViewById(R.id.button);
         button_search.setEnabled(false);
         button_search.setTextColor(this.getResources().getColor(R.color.dark_grey));
@@ -64,8 +72,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_input.setText("Stop");
                     input.setText("");
                     status = status + 2;
+                    GifImageView gifImageView = (GifImageView) findViewById(R.id.imageView);
+                    gifImageView.setGifImageResource(R.drawable.play);
                     runRecognizerSetup();
-
                 }
                 if(status%2 == 0 && status!=0){
                     button_input.setText("Stop");
@@ -81,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_search.setEnabled(true);
                     button_search.setTextColor(R.color.dark_grey);
                     button_search.setText("Search");
-
                     recognizer.stop();
                 }
             }
@@ -117,7 +125,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     String url =  "https://www.bestbuy.com/site/searchpage.jsp?st="+ text;
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(browserIntent);
-                    
                 }
                 if (input_spinner == "Wb Mason"){
                     text = input.getText().toString();
@@ -130,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     String url =  "https://www.walmart.com/search/?query="+ text;
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(browserIntent);
-
                 }
             }
         });
@@ -168,7 +174,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onStop(){
         super.onStop();
-
     }
     @Override
     public void onBeginningOfSpeech() {
@@ -177,7 +182,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onEndOfSpeech() {
         // TODO Auto-generated method stub
-
     }
     private void setupRecognizer(File assetsDir) throws IOException {
         recognizer = SpeechRecognizerSetup.defaultSetup()
@@ -195,9 +199,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onResult(Hypothesis hup) {
         conteo +=1;
         if(conteo==1){
-            //recognizer.stop();
             input.setText(hup.getHypstr());
-
         }
     }
 
@@ -210,7 +212,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onTimeout() {
 
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
 
+        if (recognizer != null) {
+            recognizer.cancel();
+            recognizer.shutdown();
+        }
+    }
 
     @Override
     public void onPartialResult(Hypothesis arg0) {
@@ -220,7 +230,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(conteo==1){
             conteo = 0;
             Log.d("Res", comando);
-            //recognizer.stop();
         }
     }
 }
