@@ -28,6 +28,7 @@ import edu.cmu.pocketsphinx.Hypothesis;
 import edu.cmu.pocketsphinx.RecognitionListener;
 import edu.cmu.pocketsphinx.SpeechRecognizer;
 import edu.cmu.pocketsphinx.SpeechRecognizerSetup;
+import pl.droidsonroids.gif.GifImageView;
 
 import static android.widget.Toast.makeText;
 import static edu.cmu.pocketsphinx.SpeechRecognizerSetup.defaultSetup;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int status = 0;
     Spinner spinner;
     SpeechRecognizer recognizer;
+    GifImageView gifimage;
     int conteo = 0;
     Handler a = new Handler();
     private static final int PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, PERMISSIONS_REQUEST_RECORD_AUDIO);
             return;
         }
+        gifimage = (GifImageView)findViewById(R.id.gif);
         input = (EditText) findViewById(R.id.editTextTextPersonName);
         button_search = (Button)findViewById(R.id.button);
         button_search.setEnabled(false);
@@ -84,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_search.setText("Search");
                     status = 0;
                     recognizer.stop();
+                    gifimage.setVisibility(View.INVISIBLE);
                 }
             }
         });
@@ -154,8 +158,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 } else {
                     input.setText("Recognition Started!");
                     recognizer.startListening("digits");
-                    GifImageView gifImageView = (GifImageView) findViewById(R.id.imageView);
-                    gifImageView.setGifImageResource(R.drawable.play);
+                    gifimage.setVisibility(View.VISIBLE);
+                    gifimage.setImageResource(R.drawable.play);
                 }
             }
         }.execute();
