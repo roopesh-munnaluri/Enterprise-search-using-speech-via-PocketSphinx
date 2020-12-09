@@ -6,16 +6,16 @@
 ===============  This file was produced by the CMU-Cambridge  ===============
 ===============     Statistical Language Modeling Toolkit     ===============
 =============================================================================
-This is a 3-gram language model, based on a vocabulary of 6 words,
-  which begins "</s>", "<s>", "apple"...
+This is a 3-gram language model, based on a vocabulary of 298 words,
+  which begins "Card", "Colorful", "Games"...
 This is an OPEN-vocabulary model (type 1)
   (OOVs were mapped to UNK, which is treated as any other vocabulary word)
 Good-Turing discounting was applied.
-1-gram frequency of frequency : 3 
-2-gram frequency of frequency : 7 0 1 0 0 0 0 
-3-gram frequency of frequency : 10 0 0 0 0 0 0 
-1-gram discounting ratios : 0.60 
-2-gram discounting ratios : 
+1-gram frequency of frequency : 257 
+2-gram frequency of frequency : 346 1 0 0 0 0 0 
+3-gram frequency of frequency : 348 0 0 0 0 0 0 
+1-gram discounting ratios : 0.98 
+2-gram discounting ratios : 0.00 
 3-gram discounting ratios : 
 This file is in the ARPA-standard format introduced by Doug Paul.
 
@@ -45,39 +45,1008 @@ p_3     wd_1 wd_2 wd_3
 end of data mark: \end\
 
 \data\
-ngram 1=7
-ngram 2=8
-ngram 3=10
+ngram 1=299
+ngram 2=347
+ngram 3=348
 
 \1-grams:
--1.2218 <UNK>	0.0000
--0.5229 </s>	-0.4771
--0.3979 <s>	-0.8351
--1.2218 apple	-0.3222
--1.2218 cat	0.0000
--1.2218 hello	-0.3222
--1.2218 hi	-0.3222
+-2.5483 <UNK>	0.0000
+-2.5483 Card	-0.4759
+-2.5483 Colorful	-0.4759
+-2.5483 Games	-0.4759
+-2.5483 Inflatable	-0.4759
+-2.5483 Lounges	-0.4759
+-2.5483 Memory	-0.4759
+-2.5483 Toys	-0.4759
+-2.5483 Wooden	-0.4734
+-2.5483 accessories	-0.4759
+-2.5483 accessory	-0.4734
+-2.5483 adapters	-0.4746
+-2.5483 adjustable	-0.4759
+-2.5483 air	-0.4734
+-2.5483 and	-0.4759
+-2.5483 apparels	-0.4759
+-2.5483 apple	-0.4759
+-2.5483 armchair	-0.4759
+-2.5483 athleisure	-0.4759
+-2.5483 avocado	-0.4759
+-2.0645 baby	-0.8388
+-2.5483 back	-0.4746
+-2.2405 bag	-0.6940
+-2.5483 balance	-0.4759
+-2.5483 balm	-0.4759
+-2.5483 bamboo	-0.4759
+-2.5483 banana	-0.4759
+-2.2405 bands	-0.6952
+-2.5483 bath	-0.4759
+-2.5483 beanies	-0.4746
+-2.5483 beard	-0.4759
+-2.0645 beauty	-0.7731
+-2.2405 bed	-0.6876
+-2.5483 bibs	-0.4759
+-2.5483 bike	-0.4759
+-2.5483 bird	-0.4759
+-2.5483 birgraphies	-0.4759
+-2.5483 blankes	-0.4746
+-2.5483 blocking	-0.4759
+-2.5483 blocks	-0.4734
+-2.5483 blue	-0.4759
+-2.5483 bluetooth	-0.4746
+-2.0645 board	-0.8414
+-2.5483 body	-0.4746
+-2.5483 books	-0.4759
+-2.5483 bottles	-0.4759
+-2.5483 bouncer	-0.4759
+-2.5483 bounty	-0.4759
+-2.5483 bowls	-0.4759
+-2.5483 branded	-0.4759
+-2.5483 bread	-0.4759
+-2.5483 breast	-0.4759
+-2.5483 broom	-0.4746
+-2.0645 brush	-0.8363
+-2.5483 bun	-0.4759
+-2.5483 cables	-0.4759
+-2.5483 cake	0.0000
+-2.2405 camera	-0.6952
+-2.2405 cameras	-0.6965
+-2.2405 can	-0.6965
+-2.5483 car	-0.4759
+-2.5483 care	-0.4759
+-2.2405 carrier	-0.6965
+-2.2405 cases	-0.6940
+-2.5483 cat	-0.4746
+-2.5483 chair	-0.4759
+-2.5483 charcoal	-0.4734
+-2.5483 charge	-0.4734
+-2.5483 cheese	-0.4759
+-2.5483 children's	-0.4759
+-2.5483 chips	-0.4759
+-2.5483 cigaratte	-0.4759
+-2.5483 cilantro	-0.4759
+-2.5483 cleaner	-0.4759
+-2.5483 click	-0.4746
+-2.5483 clogs	-0.4759
+-2.5483 clothes	-0.4708
+-2.5483 coconut	-0.4759
+-2.5483 coke	-0.4759
+-2.5483 collar	-0.4759
+-2.5483 comics	-0.4759
+-2.5483 computers	-0.4759
+-2.5483 controllers	-0.4759
+-2.5483 cookbooks	-0.4759
+-2.5483 cords	-0.4759
+-2.5483 corrector	-0.4746
+-2.2405 cover	-0.6965
+-2.5483 crop	-0.4759
+-2.5483 cross	-0.4759
+-2.2405 cup	-0.6939
+-2.5483 curtain	-0.4746
+-2.5483 cushion	-0.4759
+-2.5483 cutie	-0.4759
+-2.2405 denim	-0.6965
+-2.5483 desk	-0.4759
+-2.5483 detergent	-0.4746
+-2.2405 devices	-0.6965
+-2.5483 dew	-0.4759
+-2.5483 diaper	-0.4746
+-2.5483 diet	-0.4759
+-2.5483 dig	-0.4759
+-2.5483 dishwasher	-0.4759
+-2.5483 docks	-0.4746
+-1.8426 dog	-1.0314
+-2.5483 door	-0.4734
+-2.5483 dry	-0.4708
+-2.5483 dude	-0.4759
+-2.5483 eggs	-0.4746
+-2.5483 electric	-0.4759
+-2.5483 electronic	-0.4759
+-2.5483 enamel	-0.4759
+-2.5483 excercise	-0.4746
+-2.5483 exclusive	-0.4759
+-2.5483 exercise	-0.4746
+-2.5483 eyelashes	-0.4759
+-2.5483 face	-0.4746
+-2.5483 feeder	-0.4759
+-2.5483 fictional	-0.4759
+-2.5483 films	-0.4759
+-2.5483 fishing	-0.4746
+-2.5483 fitness	-0.4759
+-2.5483 flakes	-0.4759
+-2.5483 flour	0.0000
+-2.5483 food	-0.4759
+-2.5483 fridge	-0.4759
+-2.5483 gadgets	-0.4759
+-2.5483 game	-0.4759
+-2.5483 games	-0.4759
+-2.2405 gaming	-0.6965
+-2.5483 gate	-0.4746
+-2.5483 glass	-0.4759
+-2.5483 glasses	-0.4759
+-2.5483 gloves	-0.4759
+-2.5483 gold	-0.4759
+-2.5483 golf	-0.4708
+-2.5483 gopro	-0.4759
+-2.5483 growth	-0.4759
+-2.5483 guards	-0.4746
+-2.5483 guava	-0.4759
+-2.5483 hari	-0.4759
+-2.5483 headphones	-0.4759
+-2.5483 high	-0.4759
+-2.2405 holder	-0.6952
+-2.5483 home	-0.4759
+-2.5483 hot	-0.4759
+-2.5483 indoor	-0.4759
+-2.5483 ingredients	-0.4759
+-2.5483 instant	-0.4759
+-2.5483 jeans	-0.4759
+-2.5483 jewelry	-0.4759
+-2.5483 jigsaw	-0.4759
+-2.5483 juul	-0.4759
+-2.5483 kayak	-0.4759
+-2.5483 kitchen	-0.4746
+-2.0645 kits	-0.8401
+-2.5483 knife	-0.4759
+-2.5483 lamp	-0.4759
+-2.5483 laptop	-0.4759
+-2.5483 legging	-0.4759
+-2.5483 lego	-0.4759
+-2.5483 light	-0.4759
+-2.5483 lights	-0.4746
+-2.5483 lip	-0.4759
+-2.5483 long	-0.4734
+-2.5483 loop	-0.4759
+-2.5483 lumbar	-0.4721
+-2.5483 machine	-0.4759
+-2.5483 maker	-0.4759
+-2.5483 makeup	-0.4734
+-2.2405 mask	-0.6965
+-2.5483 massager	-0.4759
+-2.0645 mat	-0.8414
+-2.5483 matcha	-0.4759
+-2.5483 maternity	-0.4746
+-2.5483 mats	-0.4759
+-2.5483 mattresses	-0.4759
+-2.5483 measuring	-0.4746
+-2.5483 memories	-0.4759
+-2.5483 men	-0.4759
+-2.5483 microsoft	-0.4759
+-2.5483 milk	-0.4759
+-2.5483 mix	0.0000
+-2.5483 monitor	-0.4734
+-2.5483 mop	-0.4759
+-2.5483 mountain	-0.4759
+-2.5483 mouth	-0.4746
+-2.5483 nail	-0.4759
+-2.5483 natural	-0.4759
+-2.5483 neck	-0.4759
+-2.5483 nintendo	-0.4746
+-2.5483 novelty	-0.4759
+-2.5483 oats	-0.4759
+-2.5483 off	-0.4746
+-2.5483 oil	-0.4746
+-2.5483 onion	-0.4759
+-2.5483 opener	-0.4759
+-2.5483 orange	-0.4759
+-2.5483 organizer	-0.4759
+-2.2405 outdoor	-0.6965
+-2.5483 oximeter	-0.4759
+-2.5483 panel	-0.4759
+-2.5483 papers	-0.4759
+-2.5483 peel	-0.4759
+-2.2405 pen	-0.6914
+-2.5483 pendant	-0.4746
+-2.5483 pepsi	-0.4759
+-2.5483 personal	-0.4759
+-2.5483 pet	-0.4746
+-2.5483 phone	-0.4746
+-2.2405 photo	-0.6965
+-2.5483 pieces	-0.4734
+-2.5483 pilates	-0.4759
+-1.9395 pillow	-0.9493
+-2.5483 pins	-0.4759
+-2.5483 plant	-0.4746
+-2.5483 plants	-0.4759
+-2.5483 platinum	-0.4759
+-2.2405 play	-0.6940
+-2.5483 playsets	-0.4746
+-2.5483 polish	-0.4759
+-2.5483 pop	-0.4759
+-2.5483 portable	-0.4759
+-2.5483 posture	-0.4759
+-2.5483 potato	-0.4759
+-2.5483 powder	-0.4759
+-2.5483 power	-0.4759
+-2.5483 powerbanks	-0.4759
+-2.5483 pregnancy	-0.4721
+-2.5483 printers	-0.4746
+-2.0645 products	-0.8389
+-2.5483 protein	-0.4759
+-2.5483 pulse	-0.4759
+-2.5483 pump	-0.4759
+-2.5483 puzzle	-0.4759
+-2.5483 recipe	-0.4759
+-2.5483 resistance	-0.4759
+-2.5483 rhinestone	-0.4759
+-2.5483 ring	-0.4759
+-2.2405 rod	-0.6965
+-2.5483 rugs	-0.4734
+-2.5483 salt	-0.4759
+-2.2405 screen	-0.6965
+-2.5483 seat	-0.4759
+-2.5483 seciruty	-0.4746
+-2.5483 security	-0.4746
+-2.5483 serum	-0.4759
+-2.5483 shade	-0.4746
+-2.5483 shape	-0.4759
+-1.8426 shoes	-1.0352
+-2.2405 shower	-0.6940
+-2.5483 silver	-0.4759
+-2.5483 smart	-0.4746
+-2.5483 sneakers	-0.4759
+-2.5483 socket	-0.4759
+-2.5483 socks	-0.4759
+-2.5483 sofa	-0.4759
+-2.5483 solar	-0.4759
+-2.5483 sony	-0.4746
+-2.5483 speakers	-0.4759
+-2.5483 spices	-0.4759
+-2.5483 spin	-0.4759
+-2.5483 sports	-0.4746
+-2.5483 stand	-0.4759
+-2.5483 station	-0.4759
+-2.2405 stove	-0.6952
+-2.5483 stylish	-0.4708
+-2.5483 suspense	-0.4759
+-2.5483 swing	-0.4759
+-2.5483 tactical	-0.4746
+-2.5483 tea	-0.4759
+-2.5483 that	-0.4759
+-2.5483 thriller	-0.4759
+-2.5483 throw	-0.4721
+-2.5483 tights	-0.4759
+-2.5483 tobacco	-0.4759
+-2.5483 tomato	-0.4759
+-2.5483 tools	-0.4759
+-2.5483 top	-0.4759
+-2.5483 touch	-0.4746
+-2.5483 toys	-0.4759
+-2.5483 tracker	-0.4759
+-2.5483 trail	-0.4708
+-2.5483 tripod	-0.4759
+-2.5483 tub	-0.4759
+-2.5483 unicorns	-0.4759
+-2.5483 usb	-0.4759
+-2.5483 vacuum	-0.4746
+-2.5483 vegan	-0.4708
+-2.5483 waffle	-0.4759
+-2.2405 wash	-0.6901
+-2.5483 washing	-0.4759
+-2.2405 water	-0.6965
+-2.2405 wear	-0.6952
+-2.5483 wearables	-0.4759
+-2.5483 white	-0.4759
+-2.5483 wipes	-0.4759
+-2.2405 wireless	-0.6965
+-2.5483 women	-0.4759
+-2.2405 yoga	-0.6940
 
 \2-grams:
--0.0969 </s> <s> -0.1249
--0.6532 <s> apple 0.1761
--0.6532 <s> cat -0.0792
--0.6532 <s> hello 0.1761
--0.6532 <s> hi 0.1761
--0.1761 apple </s> 0.3979
--0.1761 hello </s> 0.3979
--0.1761 hi </s> 0.3979
+-0.1761 Card Inflatable 0.1761
+-0.1761 Colorful Card 0.1761
+-0.1761 Games Memory 0.1761
+-0.1761 Inflatable Lounges 0.1761
+-0.1761 Lounges Wooden 0.1761
+-0.1761 Memory Colorful 0.1761
+-0.1761 Toys Games 0.1761
+-0.1761 Wooden kits -0.1549
+-0.1761 accessories gadgets 0.1761
+-0.1761 accessory kits -0.1549
+-0.1761 adapters gaming -0.0792
+-0.1761 adjustable face 0.1761
+-0.1761 air brush -0.1549
+-0.1761 and branded 0.1761
+-0.1761 apparels stylish 0.1761
+-0.1761 apple guava 0.1761
+-0.1761 armchair mattresses 0.1761
+-0.1761 athleisure beanies 0.1761
+-0.1761 avocado oil 0.1761
+-0.5441 baby carrier -0.0792
+-0.5441 baby swing 0.1761
+-0.5441 baby wireless -0.0792
+-0.1761 back cases -0.0792
+-0.3979 bag baby -0.1549
+-0.3979 bag legging 0.1761
+-0.1761 balance bike 0.1761
+-0.1761 balm hot 0.1761
+-0.1761 bamboo beard 0.1761
+-0.1761 banana cutie 0.1761
+-0.3979 bands exercise 0.1761
+-0.3979 bands water -0.0792
+-0.1761 bath tub 0.1761
+-0.1761 beanies denim -0.0792
+-0.1761 beard dude 0.1761
+-0.4771 beauty personal 0.1761
+-0.3010 beauty products -0.1091
+-0.3979 bed dog -0.2139
+-0.3979 bed pillow -0.1919
+-0.1761 bibs breast 0.1761
+-0.1761 bike fitness 0.1761
+-0.1761 bird feeder 0.1761
+-0.1761 birgraphies memories 0.1761
+-0.1761 blankes yoga -0.0792
+-0.1761 blocking glasses 0.1761
+-0.1761 blocks board -0.1549
+-0.1761 blue light 0.1761
+-0.1761 bluetooth devices -0.0792
+-0.5441 board athleisure 0.1761
+-0.5441 board games 0.1761
+-0.5441 board monitor 0.1761
+-0.1761 body bag -0.0792
+-0.1761 books cookbooks 0.1761
+-0.1761 bottles blankes 0.1761
+-0.1761 bouncer high 0.1761
+-0.1761 bounty banana 0.1761
+-0.1761 bowls cat 0.1761
+-0.1761 branded makeup 0.1761
+-0.1761 bread bun 0.1761
+-0.1761 breast pump 0.1761
+-0.1761 broom holder -0.0792
+-0.5441 brush dog -0.2139
+-0.5441 brush matcha 0.1761
+-0.5441 brush throw 0.1761
+-0.1761 bun bounty 0.1761
+-0.1761 cables cords 0.1761
+-0.3979 camera photo -0.0792
+-0.3979 camera tactical 0.1761
+-0.3979 cameras accessory 0.1761
+-0.3979 cameras books 0.1761
+-0.3979 can opener 0.1761
+-0.3979 can ring 0.1761
+-0.1761 car vacuum 0.1761
+-0.1761 care and 0.1761
+-0.3979 carrier bouncer 0.1761
+-0.3979 carrier electric 0.1761
+-0.3979 cases baby -0.1549
+-0.3979 cases cables 0.1761
+-0.1761 cat bed -0.0792
+-0.1761 chair bibs 0.1761
+-0.1761 charcoal beauty 0.0000
+-0.1761 charge kits -0.1549
+-0.1761 cheese milk 0.1761
+-0.1761 children's comics 0.1761
+-0.1761 chips bread 0.1761
+-0.1761 cigaratte tobacco 0.1761
+-0.1761 cilantro onion 0.1761
+-0.1761 cleaner spin 0.1761
+-0.1761 click cameras -0.0792
+-0.1761 clogs vegan 0.1761
+-0.1761 clothes shoes -0.2139
+-0.1761 coconut tomato 0.1761
+-0.1761 coke mountain 0.1761
+-0.1761 collar dry 0.1761
+-0.1761 comics fictional 0.1761
+-0.1761 computers powerbanks 0.1761
+-0.1761 controllers game 0.1761
+-0.1761 cookbooks diet 0.1761
+-0.1761 cords computers 0.1761
+-0.1761 corrector yoga -0.0792
+-0.3979 cover broom 0.1761
+-0.3979 cover sofa 0.1761
+-0.1761 crop top 0.1761
+-0.1761 cross body 0.1761
+-0.3979 cup holder -0.0792
+-0.3979 cup stove -0.0792
+-0.1761 curtain rod -0.0792
+-0.1761 cushion desk 0.1761
+-0.1761 cutie salt 0.1761
+-0.3979 denim enamel 0.1761
+-0.3979 denim jeans 0.1761
+-0.1761 desk toys 0.1761
+-0.1761 detergent wash -0.0792
+-0.3979 devices portable 0.1761
+-0.3979 devices usb 0.1761
+-0.1761 dew flour -0.2998
+-0.1761 diaper bag -0.0792
+-0.1761 diet recipe 0.1761
+-0.1761 dig collar 0.1761
+-0.1761 dishwasher detergent 0.1761
+-0.1761 docks camera -0.0792
+-0.7404 dog bowls 0.1761
+-0.7404 dog brush -0.1549
+-0.7404 dog dig 0.1761
+-0.7404 dog food 0.1761
+-0.7404 dog pen -0.0792
+-0.1761 door mat -0.1549
+-0.1761 dry dog -0.2139
+-0.1761 dude wipes 0.1761
+-0.1761 eggs water -0.0792
+-0.1761 electric long 0.1761
+-0.1761 electronic accessories 0.1761
+-0.1761 enamel pins 0.1761
+-0.1761 excercise bands -0.0792
+-0.1761 exclusive apparels 0.1761
+-0.1761 exercise bands -0.0792
+-0.1761 eyelashes fridge 0.1761
+-0.1761 face mask -0.0792
+-0.1761 feeder indoor 0.1761
+-0.1761 fictional suspense 0.1761
+-0.1761 films instant 0.1761
+-0.1761 fishing rod -0.0792
+-0.1761 fitness tracker 0.1761
+-0.1761 flakes oats 0.1761
+-0.1761 food pet 0.1761
+-0.1761 fridge seat 0.1761
+-0.1761 gadgets smart 0.1761
+-0.1761 game adapters 0.1761
+-0.1761 games jigsaw 0.1761
+-0.3979 gaming charge 0.1761
+-0.3979 gaming sony 0.1761
+-0.1761 gate play -0.0792
+-0.1761 glass armchair 0.1761
+-0.1761 glasses glass 0.1761
+-0.1761 gloves resistance 0.1761
+-0.1761 gold silver 0.1761
+-0.1761 golf shoes -0.2139
+-0.1761 gopro home 0.1761
+-0.1761 growth serum 0.1761
+-0.1761 guards gaming -0.0792
+-0.1761 guava cigaratte 0.1761
+-0.1761 hari growth 0.1761
+-0.1761 headphones bluetooth 0.1761
+-0.1761 high chair 0.1761
+-0.3979 holder can -0.0792
+-0.3979 holder diaper 0.1761
+-0.1761 home security 0.1761
+-0.1761 hot air 0.1761
+-0.1761 indoor plants 0.1761
+-0.1761 ingredients tools 0.1761
+-0.1761 instant click 0.1761
+-0.1761 jeans crop 0.1761
+-0.1761 jewelry exclusive 0.1761
+-0.1761 jigsaw puzzle 0.1761
+-0.1761 juul cheese 0.1761
+-0.1761 kayak rugs 0.1761
+-0.1761 kitchen can -0.0792
+-0.5441 kits docks 0.1761
+-0.5441 kits photo -0.0792
+-0.5441 kits playsets 0.1761
+-0.1761 knife spices 0.1761
+-0.1761 lamp shade 0.1761
+-0.1761 laptop lumbar 0.1761
+-0.1761 legging sports 0.1761
+-0.1761 lego blocks 0.1761
+-0.1761 light blocking 0.1761
+-0.1761 lights outdoor -0.0792
+-0.1761 lip balm 0.1761
+-0.1761 long board -0.1549
+-0.1761 loop protein 0.1761
+-0.1761 lumbar pillow -0.1919
+-0.1761 machine cleaner 0.1761
+-0.1761 maker measuring 0.1761
+-0.1761 makeup products -0.1549
+-0.3979 mask nail 0.1761
+-0.3979 mask pulse 0.1761
+-0.1761 massager eyelashes 0.1761
+-0.5441 mat bath 0.1761
+-0.5441 mat bird 0.1761
+-0.5441 mat touch 0.1761
+-0.1761 matcha tea 0.1761
+-0.1761 maternity wear -0.0792
+-0.1761 mats kayak 0.1761
+-0.1761 mattresses curtain 0.1761
+-0.1761 measuring cup -0.0792
+-0.1761 memories children's 0.1761
+-0.1761 men women 0.1761
+-0.1761 microsoft nintendo 0.1761
+-0.1761 milk eggs 0.1761
+-0.1761 monitor baby -0.1549
+-0.1761 mop tights 0.1761
+-0.1761 mountain dew 0.1761
+-0.1761 mouth wash -0.0792
+-0.1761 nail polish 0.1761
+-0.1761 natural that 0.1761
+-0.1761 neck massager 0.1761
+-0.1761 nintendo wireless -0.0792
+-0.1761 novelty socks 0.1761
+-0.1761 oats pepsi 0.1761
+-0.1761 off mask -0.0792
+-0.1761 oil cover -0.0792
+-0.1761 onion potato 0.1761
+-0.1761 opener waffle 0.1761
+-0.1761 orange apple 0.1761
+-0.1761 organizer pendant 0.1761
+-0.3979 outdoor adjustable 0.1761
+-0.3979 outdoor lego 0.1761
+-0.1761 oximeter pop 0.1761
+-0.1761 panel blue 0.1761
+-0.1761 papers gopro 0.1761
+-0.1761 peel off 0.1761
+-0.3979 pen dog -0.2139
+-0.3979 pen fishing 0.1761
+-0.1761 pendant stove -0.0792
+-0.1761 pepsi coke 0.1761
+-0.1761 personal care 0.1761
+-0.1761 pet carrier -0.0792
+-0.1761 phone cases -0.0792
+-0.3979 photo films 0.1761
+-0.3979 photo papers 0.1761
+-0.1761 pieces beauty -0.1249
+-0.1761 pilates mats 0.1761
+-0.6532 pillow lamp 0.1761
+-0.6532 pillow mouth 0.1761
+-0.6532 pillow stand 0.1761
+-0.6532 pillow washing 0.1761
+-0.1761 pins maternity 0.1761
+-0.1761 plant shower -0.0792
+-0.1761 plants plant 0.1761
+-0.1761 platinum hari 0.1761
+-0.3979 play mat -0.1549
+-0.3979 play station 0.1761
+-0.1761 playsets outdoor -0.0792
+-0.1761 polish excercise 0.1761
+-0.1761 pop socket 0.1761
+-0.1761 portable speakers 0.1761
+-0.1761 posture corrector 0.1761
+-0.1761 potato orange 0.1761
+-0.1761 powder balance 0.1761
+-0.1761 power solar 0.1761
+-0.1761 powerbanks headphones 0.1761
+-0.1761 pregnancy pillow -0.1919
+-0.1761 printers screen -0.0792
+-0.5441 products beauty 0.0000
+-0.5441 products coconut 0.1761
+-0.5441 products natural 0.1761
+-0.1761 protein powder 0.1761
+-0.1761 pulse oximeter 0.1761
+-0.1761 pump pregnancy 0.1761
+-0.1761 puzzle electronic 0.1761
+-0.1761 recipe birgraphies 0.1761
+-0.1761 resistance loop 0.1761
+-0.1761 rhinestone pieces 0.1761
+-0.1761 ring lights 0.1761
+-0.3979 rod golf 0.1761
+-0.3979 rod trail 0.1761
+-0.1761 rugs board -0.1549
+-0.1761 salt knife 0.1761
+-0.3979 screen gloves 0.1761
+-0.3979 screen guards 0.1761
+-0.1761 seat cushion 0.1761
+-0.1761 seciruty camera -0.0792
+-0.1761 security cameras -0.0792
+-0.1761 serum avocado 0.1761
+-0.1761 shade shower -0.0792
+-0.1761 shape unicorns 0.1761
+-0.7404 shoes gold 0.1761
+-0.7404 shoes jewelry 0.1761
+-0.7404 shoes posture 0.1761
+-0.7404 shoes rhinestone 0.1761
+-0.7404 shoes white 0.1761
+-0.3979 shower brush -0.1549
+-0.3979 shower dishwasher 0.1761
+-0.1761 silver platinum 0.1761
+-0.1761 smart devices -0.0792
+-0.1761 sneakers peel 0.1761
+-0.1761 socket phone 0.1761
+-0.1761 socks shape 0.1761
+-0.1761 sofa door 0.1761
+-0.1761 solar panel 0.1761
+-0.1761 sony play -0.0792
+-0.1761 speakers back 0.1761
+-0.1761 spices flakes 0.1761
+-0.1761 spin mop 0.1761
+-0.1761 sports wear -0.0792
+-0.1761 stand laptop 0.1761
+-0.1761 station microsoft 0.1761
+-0.3979 stove cover -0.0792
+-0.3979 stove kitchen 0.1761
+-0.1761 stylish shoes -0.2139
+-0.1761 suspense thriller 0.1761
+-0.1761 swing gate 0.1761
+-0.1761 tactical pen -0.0792
+-0.1761 tea neck 0.1761
+-0.1761 that ingredients 0.1761
+-0.1761 thriller clothes 0.1761
+-0.1761 throw pillow -0.1919
+-0.1761 tights organizer 0.1761
+-0.1761 tobacco juul 0.1761
+-0.1761 tomato cilantro 0.1761
+-0.1761 tools car 0.1761
+-0.1761 top clogs 0.1761
+-0.1761 touch screen -0.0792
+-0.1761 toys tripod 0.1761
+-0.1761 tracker cross 0.1761
+-0.1761 trail shoes -0.2139
+-0.1761 tripod power 0.1761
+-0.1761 tub lip 0.1761
+-0.1761 unicorns bamboo 0.1761
+-0.1761 usb printers 0.1761
+-0.1761 vacuum cup -0.0792
+-0.1761 vegan shoes -0.2139
+-0.1761 waffle maker 0.1761
+-0.3979 wash bed -0.0792
+-0.3979 wash dog -0.2139
+-0.1761 washing machine 0.1761
+-0.3979 water bottles 0.1761
+-0.3979 water chips 0.1761
+-0.3979 wear denim -0.0792
+-0.3979 wear men 0.1761
+-0.1761 wearables novelty 0.1761
+-0.1761 white sneakers 0.1761
+-0.1761 wipes charcoal 0.1761
+-0.3979 wireless controllers 0.1761
+-0.3979 wireless seciruty 0.1761
+-0.1761 women wearables 0.1761
+-0.3979 yoga mat -0.1549
+-0.3979 yoga pilates 0.1761
 
 \3-grams:
--0.6021 </s> <s> apple 
--0.6021 </s> <s> cat 
--0.6021 </s> <s> hello 
--0.3010 <s> apple </s> 
--0.3010 <s> cat <s> 
--0.3010 <s> hello </s> 
--0.3010 <s> hi </s> 
--0.3010 apple </s> <s> 
--0.3010 hello </s> <s> 
--0.3010 hi </s> <s> 
+-0.3010 Card Inflatable Lounges 
+-0.3010 Colorful Card Inflatable 
+-0.3010 Games Memory Colorful 
+-0.3010 Inflatable Lounges Wooden 
+-0.3010 Lounges Wooden kits 
+-0.3010 Memory Colorful Card 
+-0.3010 Toys Games Memory 
+-0.3010 Wooden kits playsets 
+-0.3010 accessories gadgets smart 
+-0.3010 accessory kits photo 
+-0.3010 adapters gaming charge 
+-0.3010 adjustable face mask 
+-0.3010 air brush matcha 
+-0.3010 and branded makeup 
+-0.3010 apparels stylish shoes 
+-0.3010 apple guava cigaratte 
+-0.3010 armchair mattresses curtain 
+-0.3010 athleisure beanies denim 
+-0.3010 avocado oil cover 
+-0.3010 baby carrier bouncer 
+-0.3010 baby swing gate 
+-0.3010 baby wireless seciruty 
+-0.3010 back cases cables 
+-0.3010 bag baby swing 
+-0.3010 bag legging sports 
+-0.3010 balance bike fitness 
+-0.3010 balm hot air 
+-0.3010 bamboo beard dude 
+-0.3010 banana cutie salt 
+-0.3010 bands exercise bands 
+-0.3010 bands water bottles 
+-0.3010 bath tub lip 
+-0.3010 beanies denim enamel 
+-0.3010 beard dude wipes 
+-0.3010 beauty personal care 
+-0.4771 beauty products coconut 
+-0.4771 beauty products natural 
+-0.3010 bed dog dig 
+-0.3010 bed pillow washing 
+-0.3010 bibs breast pump 
+-0.3010 bike fitness tracker 
+-0.3010 bird feeder indoor 
+-0.3010 birgraphies memories children's 
+-0.3010 blankes yoga pilates 
+-0.3010 blocking glasses glass 
+-0.3010 blocks board games 
+-0.3010 blue light blocking 
+-0.3010 bluetooth devices usb 
+-0.3010 board athleisure beanies 
+-0.3010 board games jigsaw 
+-0.3010 board monitor baby 
+-0.3010 body bag legging 
+-0.3010 books cookbooks diet 
+-0.3010 bottles blankes yoga 
+-0.3010 bouncer high chair 
+-0.3010 bounty banana cutie 
+-0.3010 bowls cat bed 
+-0.3010 branded makeup products 
+-0.3010 bread bun bounty 
+-0.3010 breast pump pregnancy 
+-0.3010 broom holder can 
+-0.3010 brush dog bowls 
+-0.3010 brush matcha tea 
+-0.3010 brush throw pillow 
+-0.3010 bun bounty banana 
+-0.3010 cables cords computers 
+-0.3010 camera photo films 
+-0.3010 camera tactical pen 
+-0.3010 cameras accessory kits 
+-0.3010 cameras books cookbooks 
+-0.3010 can opener waffle 
+-0.3010 can ring lights 
+-0.3010 car vacuum cup 
+-0.3010 care and branded 
+-0.3010 carrier bouncer high 
+-0.3010 carrier electric long 
+-0.3010 cases baby carrier 
+-0.3010 cases cables cords 
+-0.3010 cat bed dog 
+-0.3010 chair bibs breast 
+-0.3010 charcoal beauty products 
+-0.3010 charge kits docks 
+-0.3010 cheese milk eggs 
+-0.3010 children's comics fictional 
+-0.3010 chips bread bun 
+-0.3010 cigaratte tobacco juul 
+-0.3010 cilantro onion potato 
+-0.3010 cleaner spin mop 
+-0.3010 click cameras accessory 
+-0.3010 clogs vegan shoes 
+-0.3010 clothes shoes jewelry 
+-0.3010 coconut tomato cilantro 
+-0.3010 coke mountain dew 
+-0.3010 collar dry dog 
+-0.3010 comics fictional suspense 
+-0.3010 computers powerbanks headphones 
+-0.3010 controllers game adapters 
+-0.3010 cookbooks diet recipe 
+-0.3010 cords computers powerbanks 
+-0.3010 corrector yoga mat 
+-0.3010 cover broom holder 
+-0.3010 cover sofa door 
+-0.3010 crop top clogs 
+-0.3010 cross body bag 
+-0.3010 cup holder diaper 
+-0.3010 cup stove cover 
+-0.3010 curtain rod golf 
+-0.3010 cushion desk toys 
+-0.3010 cutie salt knife 
+-0.3010 denim enamel pins 
+-0.3010 denim jeans crop 
+-0.3010 desk toys tripod 
+-0.3010 detergent wash bed 
+-0.3010 devices portable speakers 
+-0.3010 devices usb printers 
+-0.3010 dew flour cake 
+-0.3010 diaper bag baby 
+-0.3010 diet recipe birgraphies 
+-0.3010 dig collar dry 
+-0.3010 dishwasher detergent wash 
+-0.3010 docks camera photo 
+-0.3010 dog bowls cat 
+-0.3010 dog brush dog 
+-0.3010 dog dig collar 
+-0.3010 dog food pet 
+-0.3010 dog pen dog 
+-0.3010 door mat bird 
+-0.3010 dry dog food 
+-0.3010 dude wipes charcoal 
+-0.3010 eggs water chips 
+-0.3010 electric long board 
+-0.3010 electronic accessories gadgets 
+-0.3010 enamel pins maternity 
+-0.3010 excercise bands exercise 
+-0.3010 exclusive apparels stylish 
+-0.3010 exercise bands water 
+-0.3010 eyelashes fridge seat 
+-0.3010 face mask pulse 
+-0.3010 feeder indoor plants 
+-0.3010 fictional suspense thriller 
+-0.3010 films instant click 
+-0.3010 fishing rod trail 
+-0.3010 fitness tracker cross 
+-0.3010 flakes oats pepsi 
+-0.3010 food pet carrier 
+-0.3010 fridge seat cushion 
+-0.3010 gadgets smart devices 
+-0.3010 game adapters gaming 
+-0.3010 games jigsaw puzzle 
+-0.3010 gaming charge kits 
+-0.3010 gaming sony play 
+-0.3010 gate play mat 
+-0.3010 glass armchair mattresses 
+-0.3010 glasses glass armchair 
+-0.3010 gloves resistance loop 
+-0.3010 gold silver platinum 
+-0.3010 golf shoes gold 
+-0.3010 gopro home security 
+-0.3010 growth serum avocado 
+-0.3010 guards gaming sony 
+-0.3010 guava cigaratte tobacco 
+-0.3010 hari growth serum 
+-0.3010 headphones bluetooth devices 
+-0.3010 high chair bibs 
+-0.3010 holder can ring 
+-0.3010 holder diaper bag 
+-0.3010 home security cameras 
+-0.3010 hot air brush 
+-0.3010 indoor plants plant 
+-0.3010 ingredients tools car 
+-0.3010 instant click cameras 
+-0.3010 jeans crop top 
+-0.3010 jewelry exclusive apparels 
+-0.3010 jigsaw puzzle electronic 
+-0.3010 juul cheese milk 
+-0.3010 kayak rugs board 
+-0.3010 kitchen can opener 
+-0.3010 kits docks camera 
+-0.3010 kits photo papers 
+-0.3010 kits playsets outdoor 
+-0.3010 knife spices flakes 
+-0.3010 lamp shade shower 
+-0.3010 laptop lumbar pillow 
+-0.3010 legging sports wear 
+-0.3010 lego blocks board 
+-0.3010 light blocking glasses 
+-0.3010 lights outdoor adjustable 
+-0.3010 lip balm hot 
+-0.3010 long board monitor 
+-0.3010 loop protein powder 
+-0.3010 lumbar pillow mouth 
+-0.3010 machine cleaner spin 
+-0.3010 maker measuring cup 
+-0.3010 makeup products beauty 
+-0.3010 mask nail polish 
+-0.3010 mask pulse oximeter 
+-0.3010 massager eyelashes fridge 
+-0.3010 mat bath tub 
+-0.3010 mat bird feeder 
+-0.3010 mat touch screen 
+-0.3010 matcha tea neck 
+-0.3010 maternity wear men 
+-0.3010 mats kayak rugs 
+-0.3010 mattresses curtain rod 
+-0.3010 measuring cup stove 
+-0.3010 memories children's comics 
+-0.3010 men women wearables 
+-0.3010 microsoft nintendo wireless 
+-0.3010 milk eggs water 
+-0.3010 monitor baby wireless 
+-0.3010 mop tights organizer 
+-0.3010 mountain dew flour 
+-0.3010 mouth wash dog 
+-0.3010 nail polish excercise 
+-0.3010 natural that ingredients 
+-0.3010 neck massager eyelashes 
+-0.3010 nintendo wireless controllers 
+-0.3010 novelty socks shape 
+-0.3010 oats pepsi coke 
+-0.3010 off mask nail 
+-0.3010 oil cover sofa 
+-0.3010 onion potato orange 
+-0.3010 opener waffle maker 
+-0.3010 orange apple guava 
+-0.3010 organizer pendant stove 
+-0.3010 outdoor adjustable face 
+-0.3010 outdoor lego blocks 
+-0.3010 oximeter pop socket 
+-0.3010 panel blue light 
+-0.3010 papers gopro home 
+-0.3010 peel off mask 
+-0.3010 pen dog brush 
+-0.3010 pen fishing rod 
+-0.3010 pendant stove kitchen 
+-0.3010 pepsi coke mountain 
+-0.3010 personal care and 
+-0.3010 pet carrier electric 
+-0.3010 phone cases baby 
+-0.3010 photo films instant 
+-0.3010 photo papers gopro 
+-0.3010 pieces beauty personal 
+-0.3010 pilates mats kayak 
+-0.3010 pillow lamp shade 
+-0.3010 pillow mouth wash 
+-0.3010 pillow stand laptop 
+-0.3010 pillow washing machine 
+-0.3010 pins maternity wear 
+-0.3010 plant shower brush 
+-0.3010 plants plant shower 
+-0.3010 platinum hari growth 
+-0.3010 play mat bath 
+-0.3010 play station microsoft 
+-0.3010 playsets outdoor lego 
+-0.3010 polish excercise bands 
+-0.3010 pop socket phone 
+-0.3010 portable speakers back 
+-0.3010 posture corrector yoga 
+-0.3010 potato orange apple 
+-0.3010 powder balance bike 
+-0.3010 power solar panel 
+-0.3010 powerbanks headphones bluetooth 
+-0.3010 pregnancy pillow stand 
+-0.3010 printers screen guards 
+-0.3010 products beauty products 
+-0.3010 products coconut tomato 
+-0.3010 products natural that 
+-0.3010 protein powder balance 
+-0.3010 pulse oximeter pop 
+-0.3010 pump pregnancy pillow 
+-0.3010 puzzle electronic accessories 
+-0.3010 recipe birgraphies memories 
+-0.3010 resistance loop protein 
+-0.3010 rhinestone pieces beauty 
+-0.3010 ring lights outdoor 
+-0.3010 rod golf shoes 
+-0.3010 rod trail shoes 
+-0.3010 rugs board athleisure 
+-0.3010 salt knife spices 
+-0.3010 screen gloves resistance 
+-0.3010 screen guards gaming 
+-0.3010 seat cushion desk 
+-0.3010 seciruty camera tactical 
+-0.3010 security cameras books 
+-0.3010 serum avocado oil 
+-0.3010 shade shower dishwasher 
+-0.3010 shape unicorns bamboo 
+-0.3010 shoes gold silver 
+-0.3010 shoes jewelry exclusive 
+-0.3010 shoes posture corrector 
+-0.3010 shoes rhinestone pieces 
+-0.3010 shoes white sneakers 
+-0.3010 shower brush throw 
+-0.3010 shower dishwasher detergent 
+-0.3010 silver platinum hari 
+-0.3010 smart devices portable 
+-0.3010 sneakers peel off 
+-0.3010 socket phone cases 
+-0.3010 socks shape unicorns 
+-0.3010 sofa door mat 
+-0.3010 solar panel blue 
+-0.3010 sony play station 
+-0.3010 speakers back cases 
+-0.3010 spices flakes oats 
+-0.3010 spin mop tights 
+-0.3010 sports wear denim 
+-0.3010 stand laptop lumbar 
+-0.3010 station microsoft nintendo 
+-0.3010 stove cover broom 
+-0.3010 stove kitchen can 
+-0.3010 stylish shoes rhinestone 
+-0.3010 suspense thriller clothes 
+-0.3010 swing gate play 
+-0.3010 tactical pen fishing 
+-0.3010 tea neck massager 
+-0.3010 that ingredients tools 
+-0.3010 thriller clothes shoes 
+-0.3010 throw pillow lamp 
+-0.3010 tights organizer pendant 
+-0.3010 tobacco juul cheese 
+-0.3010 tomato cilantro onion 
+-0.3010 tools car vacuum 
+-0.3010 top clogs vegan 
+-0.3010 touch screen gloves 
+-0.3010 toys tripod power 
+-0.3010 tracker cross body 
+-0.3010 trail shoes posture 
+-0.3010 tripod power solar 
+-0.3010 tub lip balm 
+-0.3010 unicorns bamboo beard 
+-0.3010 usb printers screen 
+-0.3010 vacuum cup holder 
+-0.3010 vegan shoes white 
+-0.3010 waffle maker measuring 
+-0.3010 wash bed pillow 
+-0.3010 wash dog pen 
+-0.3010 washing machine cleaner 
+-0.3010 water bottles blankes 
+-0.3010 water chips bread 
+-0.3010 wear denim jeans 
+-0.3010 wear men women 
+-0.3010 wearables novelty socks 
+-0.3010 white sneakers peel 
+-0.3010 wipes charcoal beauty 
+-0.3010 wireless controllers game 
+-0.3010 wireless seciruty camera 
+-0.3010 women wearables novelty 
+-0.3010 yoga mat touch 
+-0.3010 yoga pilates mats 
 
 \end\
