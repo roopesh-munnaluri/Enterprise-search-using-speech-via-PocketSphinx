@@ -1,6 +1,0 @@
-#JSGF V1.0;
-
-grammar digits;
-
-<digit> = pet|grooming|brush|grill|mat|vegetable|clippers|yoga|boxes|steel|socks|wedding;
-public <digits> = <digit>+;

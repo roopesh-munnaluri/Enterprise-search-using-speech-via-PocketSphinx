@@ -68,20 +68,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                if(status == 0){
+                if(status == 0) {
                     button_input.setText("Stop");
                     input.setText("");
-                    status = status + 2;
-                    GifImageView gifImageView = (GifImageView) findViewById(R.id.imageView);
-                    gifImageView.setGifImageResource(R.drawable.play);
-                    runRecognizerSetup();
-                }
-                if(status%2 == 0 && status!=0){
-                    button_input.setText("Stop");
                     status = status + 1;
                     button_search.setEnabled(false);
                     button_search.setText("");
-                    input.setText("");
                     runRecognizerSetup();
                 }
                 else{
@@ -90,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     button_search.setEnabled(true);
                     button_search.setTextColor(R.color.dark_grey);
                     button_search.setText("Search");
+                    status = 0;
                     recognizer.stop();
                 }
             }
@@ -161,6 +154,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 } else {
                     input.setText("Recognition Started!");
                     recognizer.startListening("digits");
+                    GifImageView gifImageView = (GifImageView) findViewById(R.id.imageView);
+                    gifImageView.setGifImageResource(R.drawable.play);
                 }
             }
         }.execute();
@@ -194,34 +189,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         File digitsGrammar = new File(assetsDir, "sample.dmp");
         recognizer.addNgramSearch("digits",digitsGrammar);
     }
-
     @Override
     public void onResult(Hypothesis hup) {
-        conteo +=1;
-        if(conteo==1){
+        if(hup.getHypstr() == null) {
+            input.setText("Nothing Recognized");
+        }
+        else{
             input.setText(hup.getHypstr());
         }
     }
-
     @Override
     public void onError(Exception e) {
 
     }
-
     @Override
     public void onTimeout() {
 
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-
-        if (recognizer != null) {
-            recognizer.cancel();
-            recognizer.shutdown();
-        }
-    }
-
     @Override
     public void onPartialResult(Hypothesis arg0) {
         if(arg0 == null){ return; }
