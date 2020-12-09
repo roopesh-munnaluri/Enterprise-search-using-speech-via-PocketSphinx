@@ -6,16 +6,16 @@
 ===============  This file was produced by the CMU-Cambridge  ===============
 ===============     Statistical Language Modeling Toolkit     ===============
 =============================================================================
-This is a 3-gram language model, based on a vocabulary of 298 words,
-  which begins "Card", "Colorful", "Games"...
+This is a 3-gram language model, based on a vocabulary of 300 words,
+  which begins "</s>", "<s>", "Card"...
 This is an OPEN-vocabulary model (type 1)
   (OOVs were mapped to UNK, which is treated as any other vocabulary word)
 Good-Turing discounting was applied.
-1-gram frequency of frequency : 257 
-2-gram frequency of frequency : 346 1 0 0 0 0 0 
-3-gram frequency of frequency : 348 0 0 0 0 0 0 
-1-gram discounting ratios : 0.98 
-2-gram discounting ratios : 0.00 
+1-gram frequency of frequency : 297 
+2-gram frequency of frequency : 595 0 0 0 0 0 0 
+3-gram frequency of frequency : 892 0 0 0 0 0 0 
+1-gram discounting ratios : 0.99 
+2-gram discounting ratios : 
 3-gram discounting ratios : 
 This file is in the ARPA-standard format introduced by Doug Paul.
 
@@ -45,1008 +45,1803 @@ p_3     wd_1 wd_2 wd_3
 end of data mark: \end\
 
 \data\
-ngram 1=299
-ngram 2=347
-ngram 3=348
+ngram 1=301
+ngram 2=596
+ngram 3=892
 
 \1-grams:
--2.5483 <UNK>	0.0000
--2.5483 Card	-0.4759
--2.5483 Colorful	-0.4759
--2.5483 Games	-0.4759
--2.5483 Inflatable	-0.4759
--2.5483 Lounges	-0.4759
--2.5483 Memory	-0.4759
--2.5483 Toys	-0.4759
--2.5483 Wooden	-0.4734
--2.5483 accessories	-0.4759
--2.5483 accessory	-0.4734
--2.5483 adapters	-0.4746
--2.5483 adjustable	-0.4759
--2.5483 air	-0.4734
--2.5483 and	-0.4759
--2.5483 apparels	-0.4759
--2.5483 apple	-0.4759
--2.5483 armchair	-0.4759
--2.5483 athleisure	-0.4759
--2.5483 avocado	-0.4759
--2.0645 baby	-0.8388
--2.5483 back	-0.4746
--2.2405 bag	-0.6940
--2.5483 balance	-0.4759
--2.5483 balm	-0.4759
--2.5483 bamboo	-0.4759
--2.5483 banana	-0.4759
--2.2405 bands	-0.6952
--2.5483 bath	-0.4759
--2.5483 beanies	-0.4746
--2.5483 beard	-0.4759
--2.0645 beauty	-0.7731
--2.2405 bed	-0.6876
--2.5483 bibs	-0.4759
--2.5483 bike	-0.4759
--2.5483 bird	-0.4759
--2.5483 birgraphies	-0.4759
--2.5483 blankes	-0.4746
--2.5483 blocking	-0.4759
--2.5483 blocks	-0.4734
--2.5483 blue	-0.4759
--2.5483 bluetooth	-0.4746
--2.0645 board	-0.8414
--2.5483 body	-0.4746
--2.5483 books	-0.4759
--2.5483 bottles	-0.4759
--2.5483 bouncer	-0.4759
--2.5483 bounty	-0.4759
--2.5483 bowls	-0.4759
--2.5483 branded	-0.4759
--2.5483 bread	-0.4759
--2.5483 breast	-0.4759
--2.5483 broom	-0.4746
--2.0645 brush	-0.8363
--2.5483 bun	-0.4759
--2.5483 cables	-0.4759
--2.5483 cake	0.0000
--2.2405 camera	-0.6952
--2.2405 cameras	-0.6965
--2.2405 can	-0.6965
--2.5483 car	-0.4759
--2.5483 care	-0.4759
--2.2405 carrier	-0.6965
--2.2405 cases	-0.6940
--2.5483 cat	-0.4746
--2.5483 chair	-0.4759
--2.5483 charcoal	-0.4734
--2.5483 charge	-0.4734
--2.5483 cheese	-0.4759
--2.5483 children's	-0.4759
--2.5483 chips	-0.4759
--2.5483 cigaratte	-0.4759
--2.5483 cilantro	-0.4759
--2.5483 cleaner	-0.4759
--2.5483 click	-0.4746
--2.5483 clogs	-0.4759
--2.5483 clothes	-0.4708
--2.5483 coconut	-0.4759
--2.5483 coke	-0.4759
--2.5483 collar	-0.4759
--2.5483 comics	-0.4759
--2.5483 computers	-0.4759
--2.5483 controllers	-0.4759
--2.5483 cookbooks	-0.4759
--2.5483 cords	-0.4759
--2.5483 corrector	-0.4746
--2.2405 cover	-0.6965
--2.5483 crop	-0.4759
--2.5483 cross	-0.4759
--2.2405 cup	-0.6939
--2.5483 curtain	-0.4746
--2.5483 cushion	-0.4759
--2.5483 cutie	-0.4759
--2.2405 denim	-0.6965
--2.5483 desk	-0.4759
--2.5483 detergent	-0.4746
--2.2405 devices	-0.6965
--2.5483 dew	-0.4759
--2.5483 diaper	-0.4746
--2.5483 diet	-0.4759
--2.5483 dig	-0.4759
--2.5483 dishwasher	-0.4759
--2.5483 docks	-0.4746
--1.8426 dog	-1.0314
--2.5483 door	-0.4734
--2.5483 dry	-0.4708
--2.5483 dude	-0.4759
--2.5483 eggs	-0.4746
--2.5483 electric	-0.4759
--2.5483 electronic	-0.4759
--2.5483 enamel	-0.4759
--2.5483 excercise	-0.4746
--2.5483 exclusive	-0.4759
--2.5483 exercise	-0.4746
--2.5483 eyelashes	-0.4759
--2.5483 face	-0.4746
--2.5483 feeder	-0.4759
--2.5483 fictional	-0.4759
--2.5483 films	-0.4759
--2.5483 fishing	-0.4746
--2.5483 fitness	-0.4759
--2.5483 flakes	-0.4759
--2.5483 flour	0.0000
--2.5483 food	-0.4759
--2.5483 fridge	-0.4759
--2.5483 gadgets	-0.4759
--2.5483 game	-0.4759
--2.5483 games	-0.4759
--2.2405 gaming	-0.6965
--2.5483 gate	-0.4746
--2.5483 glass	-0.4759
--2.5483 glasses	-0.4759
--2.5483 gloves	-0.4759
--2.5483 gold	-0.4759
--2.5483 golf	-0.4708
--2.5483 gopro	-0.4759
--2.5483 growth	-0.4759
--2.5483 guards	-0.4746
--2.5483 guava	-0.4759
--2.5483 hari	-0.4759
--2.5483 headphones	-0.4759
--2.5483 high	-0.4759
--2.2405 holder	-0.6952
--2.5483 home	-0.4759
--2.5483 hot	-0.4759
--2.5483 indoor	-0.4759
--2.5483 ingredients	-0.4759
--2.5483 instant	-0.4759
--2.5483 jeans	-0.4759
--2.5483 jewelry	-0.4759
--2.5483 jigsaw	-0.4759
--2.5483 juul	-0.4759
--2.5483 kayak	-0.4759
--2.5483 kitchen	-0.4746
--2.0645 kits	-0.8401
--2.5483 knife	-0.4759
--2.5483 lamp	-0.4759
--2.5483 laptop	-0.4759
--2.5483 legging	-0.4759
--2.5483 lego	-0.4759
--2.5483 light	-0.4759
--2.5483 lights	-0.4746
--2.5483 lip	-0.4759
--2.5483 long	-0.4734
--2.5483 loop	-0.4759
--2.5483 lumbar	-0.4721
--2.5483 machine	-0.4759
--2.5483 maker	-0.4759
--2.5483 makeup	-0.4734
--2.2405 mask	-0.6965
--2.5483 massager	-0.4759
--2.0645 mat	-0.8414
--2.5483 matcha	-0.4759
--2.5483 maternity	-0.4746
--2.5483 mats	-0.4759
--2.5483 mattresses	-0.4759
--2.5483 measuring	-0.4746
--2.5483 memories	-0.4759
--2.5483 men	-0.4759
--2.5483 microsoft	-0.4759
--2.5483 milk	-0.4759
--2.5483 mix	0.0000
--2.5483 monitor	-0.4734
--2.5483 mop	-0.4759
--2.5483 mountain	-0.4759
--2.5483 mouth	-0.4746
--2.5483 nail	-0.4759
--2.5483 natural	-0.4759
--2.5483 neck	-0.4759
--2.5483 nintendo	-0.4746
--2.5483 novelty	-0.4759
--2.5483 oats	-0.4759
--2.5483 off	-0.4746
--2.5483 oil	-0.4746
--2.5483 onion	-0.4759
--2.5483 opener	-0.4759
--2.5483 orange	-0.4759
--2.5483 organizer	-0.4759
--2.2405 outdoor	-0.6965
--2.5483 oximeter	-0.4759
--2.5483 panel	-0.4759
--2.5483 papers	-0.4759
--2.5483 peel	-0.4759
--2.2405 pen	-0.6914
--2.5483 pendant	-0.4746
--2.5483 pepsi	-0.4759
--2.5483 personal	-0.4759
--2.5483 pet	-0.4746
--2.5483 phone	-0.4746
--2.2405 photo	-0.6965
--2.5483 pieces	-0.4734
--2.5483 pilates	-0.4759
--1.9395 pillow	-0.9493
--2.5483 pins	-0.4759
--2.5483 plant	-0.4746
--2.5483 plants	-0.4759
--2.5483 platinum	-0.4759
--2.2405 play	-0.6940
--2.5483 playsets	-0.4746
--2.5483 polish	-0.4759
--2.5483 pop	-0.4759
--2.5483 portable	-0.4759
--2.5483 posture	-0.4759
--2.5483 potato	-0.4759
--2.5483 powder	-0.4759
--2.5483 power	-0.4759
--2.5483 powerbanks	-0.4759
--2.5483 pregnancy	-0.4721
--2.5483 printers	-0.4746
--2.0645 products	-0.8389
--2.5483 protein	-0.4759
--2.5483 pulse	-0.4759
--2.5483 pump	-0.4759
--2.5483 puzzle	-0.4759
--2.5483 recipe	-0.4759
--2.5483 resistance	-0.4759
--2.5483 rhinestone	-0.4759
--2.5483 ring	-0.4759
--2.2405 rod	-0.6965
--2.5483 rugs	-0.4734
--2.5483 salt	-0.4759
--2.2405 screen	-0.6965
--2.5483 seat	-0.4759
--2.5483 seciruty	-0.4746
--2.5483 security	-0.4746
--2.5483 serum	-0.4759
--2.5483 shade	-0.4746
--2.5483 shape	-0.4759
--1.8426 shoes	-1.0352
--2.2405 shower	-0.6940
--2.5483 silver	-0.4759
--2.5483 smart	-0.4746
--2.5483 sneakers	-0.4759
--2.5483 socket	-0.4759
--2.5483 socks	-0.4759
--2.5483 sofa	-0.4759
--2.5483 solar	-0.4759
--2.5483 sony	-0.4746
--2.5483 speakers	-0.4759
--2.5483 spices	-0.4759
--2.5483 spin	-0.4759
--2.5483 sports	-0.4746
--2.5483 stand	-0.4759
--2.5483 station	-0.4759
--2.2405 stove	-0.6952
--2.5483 stylish	-0.4708
--2.5483 suspense	-0.4759
--2.5483 swing	-0.4759
--2.5483 tactical	-0.4746
--2.5483 tea	-0.4759
--2.5483 that	-0.4759
--2.5483 thriller	-0.4759
--2.5483 throw	-0.4721
--2.5483 tights	-0.4759
--2.5483 tobacco	-0.4759
--2.5483 tomato	-0.4759
--2.5483 tools	-0.4759
--2.5483 top	-0.4759
--2.5483 touch	-0.4746
--2.5483 toys	-0.4759
--2.5483 tracker	-0.4759
--2.5483 trail	-0.4708
--2.5483 tripod	-0.4759
--2.5483 tub	-0.4759
--2.5483 unicorns	-0.4759
--2.5483 usb	-0.4759
--2.5483 vacuum	-0.4746
--2.5483 vegan	-0.4708
--2.5483 waffle	-0.4759
--2.2405 wash	-0.6901
--2.5483 washing	-0.4759
--2.2405 water	-0.6965
--2.2405 wear	-0.6952
--2.5483 wearables	-0.4759
--2.5483 white	-0.4759
--2.5483 wipes	-0.4759
--2.2405 wireless	-0.6965
--2.5483 women	-0.4759
--2.2405 yoga	-0.6940
+-2.9533 <UNK>	0.0000
+-0.4776 </s>	-2.2991
+-0.4761 <s>	-2.6009
+-2.9533 Card	-0.3013
+-2.9533 Colorful	-0.3013
+-2.9533 Games	-0.3013
+-2.9533 Inflatable	-0.3013
+-2.9533 Lounges	-0.3013
+-2.9533 Memory	-0.3013
+-2.9533 Toys	-0.3013
+-2.9533 Wooden	-0.3013
+-2.9533 accessories	-0.3013
+-2.9533 accessory	-0.3013
+-2.9533 adapters	-0.3013
+-2.9533 adjustable	-0.3013
+-2.9533 air	-0.3013
+-2.9533 and	-0.3013
+-2.9533 apparels	-0.3013
+-2.9533 apple	-0.3013
+-2.9533 armchair	-0.3013
+-2.9533 athleisure	-0.3013
+-2.9533 avocado	-0.3013
+-2.9533 baby	-0.3013
+-2.9533 back	-0.3013
+-2.9533 bag	-0.3013
+-2.9533 balance	-0.3013
+-2.9533 balm	-0.3013
+-2.9533 bamboo	-0.3013
+-2.9533 banana	-0.3013
+-2.9533 bands	-0.3013
+-2.9533 bath	-0.3013
+-2.9533 beanies	-0.3013
+-2.9533 beard	-0.3013
+-2.9533 beauty	-0.3013
+-2.9533 bed	-0.3013
+-2.9533 bibs	-0.3013
+-2.9533 bike	-0.3013
+-2.9533 bird	-0.3013
+-2.9533 birgraphies	-0.3013
+-2.9533 blankes	-0.3013
+-2.9533 blocking	-0.3013
+-2.9533 blocks	-0.3013
+-2.9533 blue	-0.3013
+-2.9533 bluetooth	-0.3013
+-2.9533 board	-0.3013
+-2.9533 body	-0.3013
+-2.9533 books	-0.3013
+-2.9533 bottles	-0.3013
+-2.9533 bouncer	-0.3013
+-2.9533 bounty	-0.3013
+-2.9533 bowls	-0.3013
+-2.9533 branded	-0.3013
+-2.9533 bread	-0.3013
+-2.9533 breast	-0.3013
+-2.9533 broom	-0.3013
+-2.9533 brush	-0.3013
+-2.9533 bun	-0.3013
+-2.9533 cables	-0.3013
+-2.9533 cake	-0.3013
+-2.9533 camera	-0.3013
+-2.9533 cameras	-0.3013
+-2.9533 can	-0.3013
+-2.9533 car	-0.3013
+-2.9533 care	-0.3013
+-2.9533 carrier	-0.3013
+-2.9533 cases	-0.3013
+-2.9533 cat	-0.3013
+-2.9533 chair	-0.3013
+-2.9533 charcoal	-0.3013
+-2.9533 charge	-0.3013
+-2.9533 cheese	-0.3013
+-2.9533 children's	-0.3013
+-2.9533 chips	-0.3013
+-2.9533 cigaratte	-0.3013
+-2.9533 cilantro	-0.3013
+-2.9533 cleaner	-0.3013
+-2.9533 click	-0.3013
+-2.9533 clogs	-0.3013
+-2.9533 clothes	-0.3013
+-2.9533 coconut	-0.3013
+-2.9533 coke	-0.3013
+-2.9533 collar	-0.3013
+-2.9533 comics	-0.3013
+-2.9533 computers	-0.3013
+-2.9533 controllers	-0.3013
+-2.9533 cookbooks	-0.3013
+-2.9533 cords	-0.3013
+-2.9533 corrector	-0.3013
+-2.9533 cover	-0.3013
+-2.9533 crop	-0.3013
+-2.9533 cross	-0.3013
+-2.9533 cup	-0.3013
+-2.9533 curtain	-0.3013
+-2.9533 cushion	-0.3013
+-2.9533 cutie	-0.3013
+-2.9533 denim	-0.3013
+-2.9533 desk	-0.3013
+-2.9533 detergent	-0.3013
+-2.9533 devices	-0.3013
+-2.9533 dew	-0.3013
+-2.9533 diaper	-0.3013
+-2.9533 diet	-0.3013
+-2.9533 dig	-0.3013
+-2.9533 dishwasher	-0.3013
+-2.9533 docks	-0.3013
+-2.9533 dog	-0.3013
+-2.9533 door	-0.3013
+-2.9533 dry	-0.3013
+-2.9533 dude	-0.3013
+-2.9533 eggs	-0.3013
+-2.9533 electric	-0.3013
+-2.9533 electronic	-0.3013
+-2.9533 enamel	-0.3013
+-2.9533 excercise	-0.3013
+-2.9533 exclusive	-0.3013
+-2.9533 exercise	-0.3013
+-2.9533 eyelashes	-0.3013
+-2.9533 face	-0.3013
+-2.9533 feeder	-0.3013
+-2.9533 fictional	-0.3013
+-2.9533 films	-0.3013
+-2.9533 fishing	-0.3013
+-2.9533 fitness	-0.3013
+-2.9533 flakes	-0.3013
+-2.9533 flour	-0.3013
+-2.9533 food	-0.3013
+-2.9533 fridge	-0.3013
+-2.9533 gadgets	-0.3013
+-2.9533 game	-0.3013
+-2.9533 games	-0.3013
+-2.9533 gaming	-0.3013
+-2.9533 gate	-0.3013
+-2.9533 glass	-0.3013
+-2.9533 glasses	-0.3013
+-2.9533 gloves	-0.3013
+-2.9533 gold	-0.3013
+-2.9533 golf	-0.3013
+-2.9533 gopro	-0.3013
+-2.9533 growth	-0.3013
+-2.9533 guards	-0.3013
+-2.9533 guava	-0.3013
+-2.9533 hari	-0.3013
+-2.9533 headphones	-0.3013
+-2.9533 high	-0.3013
+-2.9533 holder	-0.3013
+-2.9533 home	-0.3013
+-2.9533 hot	-0.3013
+-2.9533 indoor	-0.3013
+-2.9533 ingredients	-0.3013
+-2.9533 instant	-0.3013
+-2.9533 jeans	-0.3013
+-2.9533 jewelry	-0.3013
+-2.9533 jigsaw	-0.3013
+-2.9533 juul	-0.3013
+-2.9533 kayak	-0.3013
+-2.9533 kitchen	-0.3013
+-2.9533 kits	-0.3013
+-2.9533 knife	-0.3013
+-2.9533 lamp	-0.3013
+-2.9533 laptop	-0.3013
+-2.9533 legging	-0.3013
+-2.9533 lego	-0.3013
+-2.9533 light	-0.3013
+-2.9533 lights	-0.3013
+-2.9533 lip	-0.3013
+-2.9533 long	-0.3013
+-2.9533 loop	-0.3013
+-2.9533 lumbar	-0.3013
+-2.9533 machine	-0.3013
+-2.9533 maker	-0.3013
+-2.9533 makeup	-0.3013
+-2.9533 mask	-0.3013
+-2.9533 massager	-0.3013
+-2.9533 mat	-0.3013
+-2.9533 matcha	-0.3013
+-2.9533 maternity	-0.3013
+-2.9533 mats	-0.3013
+-2.9533 mattresses	-0.3013
+-2.9533 measuring	-0.3013
+-2.9533 memories	-0.3013
+-2.9533 men	-0.3013
+-2.9533 microsoft	-0.3013
+-2.9533 milk	-0.3013
+-2.9533 mix	0.0000
+-2.9533 monitor	-0.3013
+-2.9533 mop	-0.3013
+-2.9533 mountain	-0.3013
+-2.9533 mouth	-0.3013
+-2.9533 nail	-0.3013
+-2.9533 natural	-0.3013
+-2.9533 neck	-0.3013
+-2.9533 nintendo	-0.3013
+-2.9533 novelty	-0.3013
+-2.9533 oats	-0.3013
+-2.9533 off	-0.3013
+-2.9533 oil	-0.3013
+-2.9533 onion	-0.3013
+-2.9533 opener	-0.3013
+-2.9533 orange	-0.3013
+-2.9533 organizer	-0.3013
+-2.9533 outdoor	-0.3013
+-2.9533 oximeter	-0.3013
+-2.9533 panel	-0.3013
+-2.9533 papers	-0.3013
+-2.9533 peel	-0.3013
+-2.9533 pen	-0.3013
+-2.9533 pendant	-0.3013
+-2.9533 pepsi	-0.3013
+-2.9533 personal	-0.3013
+-2.9533 pet	-0.3013
+-2.9533 phone	-0.3013
+-2.9533 photo	-0.3013
+-2.9533 pieces	-0.3013
+-2.9533 pilates	-0.3013
+-2.9533 pillow	-0.3013
+-2.9533 pins	-0.3013
+-2.9533 plant	-0.3013
+-2.9533 plants	-0.3013
+-2.9533 platinum	-0.3013
+-2.9533 play	-0.3013
+-2.9533 playsets	-0.3013
+-2.9533 polish	-0.3013
+-2.9533 pop	-0.3013
+-2.9533 portable	-0.3013
+-2.9533 posture	-0.3013
+-2.9533 potato	-0.3013
+-2.9533 powder	-0.3013
+-2.9533 power	-0.3013
+-2.9533 powerbanks	-0.3013
+-2.9533 pregnancy	-0.3013
+-2.9533 printers	-0.3013
+-2.9533 products	-0.3013
+-2.9533 protein	-0.3013
+-2.9533 pulse	-0.3013
+-2.9533 pump	-0.3013
+-2.9533 puzzle	-0.3013
+-2.9533 recipe	-0.3013
+-2.9533 resistance	-0.3013
+-2.9533 rhinestone	-0.3013
+-2.9533 ring	-0.3013
+-2.9533 rod	-0.3013
+-2.9533 rugs	-0.3013
+-2.9533 salt	-0.3013
+-2.9533 screen	-0.3013
+-2.9533 seat	-0.3013
+-2.9533 seciruty	-0.3013
+-2.9533 security	-0.3013
+-2.9533 serum	-0.3013
+-2.9533 shade	-0.3013
+-2.9533 shape	-0.3013
+-2.9533 shoes	-0.3013
+-2.9533 shower	-0.3013
+-2.9533 silver	-0.3013
+-2.9533 smart	-0.3013
+-2.9533 sneakers	-0.3013
+-2.9533 socket	-0.3013
+-2.9533 socks	-0.3013
+-2.9533 sofa	-0.3013
+-2.9533 solar	-0.3013
+-2.9533 sony	-0.3013
+-2.9533 speakers	-0.3013
+-2.9533 spices	-0.3013
+-2.9533 spin	-0.3013
+-2.9533 sports	-0.3013
+-2.9533 stand	-0.3013
+-2.9533 station	-0.3013
+-2.9533 stove	-0.3013
+-2.9533 stylish	-0.3013
+-2.9533 suspense	-0.3013
+-2.9533 swing	-0.3013
+-2.9533 tactical	-0.3013
+-2.9533 tea	-0.3013
+-2.9533 that	-0.3013
+-2.9533 thriller	-0.3013
+-2.9533 throw	-0.3013
+-2.9533 tights	-0.3013
+-2.9533 tobacco	-0.3013
+-2.9533 tomato	-0.3013
+-2.9533 tools	-0.3013
+-2.9533 top	-0.3013
+-2.9533 touch	-0.3013
+-2.9533 toys	-0.3013
+-2.9533 tracker	-0.3013
+-2.9533 trail	-0.3013
+-2.9533 tripod	-0.3013
+-2.9533 tub	-0.3013
+-2.9533 unicorns	-0.3013
+-2.9533 usb	-0.3013
+-2.9533 vacuum	-0.3013
+-2.9533 vegan	-0.3013
+-2.9533 waffle	-0.3013
+-2.9533 wash	-0.3013
+-2.9533 washing	-0.3013
+-2.9533 water	-0.3013
+-2.9533 wear	-0.3013
+-2.9533 wearables	-0.3013
+-2.9533 white	-0.3013
+-2.9533 wipes	-0.3013
+-2.9533 wireless	-0.3013
+-2.9533 women	-0.3013
+-2.9533 yoga	-0.3013
 
 \2-grams:
--0.1761 Card Inflatable 0.1761
--0.1761 Colorful Card 0.1761
--0.1761 Games Memory 0.1761
--0.1761 Inflatable Lounges 0.1761
--0.1761 Lounges Wooden 0.1761
--0.1761 Memory Colorful 0.1761
--0.1761 Toys Games 0.1761
--0.1761 Wooden kits -0.1549
--0.1761 accessories gadgets 0.1761
--0.1761 accessory kits -0.1549
--0.1761 adapters gaming -0.0792
--0.1761 adjustable face 0.1761
--0.1761 air brush -0.1549
--0.1761 and branded 0.1761
--0.1761 apparels stylish 0.1761
--0.1761 apple guava 0.1761
--0.1761 armchair mattresses 0.1761
--0.1761 athleisure beanies 0.1761
--0.1761 avocado oil 0.1761
--0.5441 baby carrier -0.0792
--0.5441 baby swing 0.1761
--0.5441 baby wireless -0.0792
--0.1761 back cases -0.0792
--0.3979 bag baby -0.1549
--0.3979 bag legging 0.1761
--0.1761 balance bike 0.1761
--0.1761 balm hot 0.1761
--0.1761 bamboo beard 0.1761
--0.1761 banana cutie 0.1761
--0.3979 bands exercise 0.1761
--0.3979 bands water -0.0792
--0.1761 bath tub 0.1761
--0.1761 beanies denim -0.0792
--0.1761 beard dude 0.1761
--0.4771 beauty personal 0.1761
--0.3010 beauty products -0.1091
--0.3979 bed dog -0.2139
--0.3979 bed pillow -0.1919
--0.1761 bibs breast 0.1761
--0.1761 bike fitness 0.1761
--0.1761 bird feeder 0.1761
--0.1761 birgraphies memories 0.1761
--0.1761 blankes yoga -0.0792
--0.1761 blocking glasses 0.1761
--0.1761 blocks board -0.1549
--0.1761 blue light 0.1761
--0.1761 bluetooth devices -0.0792
--0.5441 board athleisure 0.1761
--0.5441 board games 0.1761
--0.5441 board monitor 0.1761
--0.1761 body bag -0.0792
--0.1761 books cookbooks 0.1761
--0.1761 bottles blankes 0.1761
--0.1761 bouncer high 0.1761
--0.1761 bounty banana 0.1761
--0.1761 bowls cat 0.1761
--0.1761 branded makeup 0.1761
--0.1761 bread bun 0.1761
--0.1761 breast pump 0.1761
--0.1761 broom holder -0.0792
--0.5441 brush dog -0.2139
--0.5441 brush matcha 0.1761
--0.5441 brush throw 0.1761
--0.1761 bun bounty 0.1761
--0.1761 cables cords 0.1761
--0.3979 camera photo -0.0792
--0.3979 camera tactical 0.1761
--0.3979 cameras accessory 0.1761
--0.3979 cameras books 0.1761
--0.3979 can opener 0.1761
--0.3979 can ring 0.1761
--0.1761 car vacuum 0.1761
--0.1761 care and 0.1761
--0.3979 carrier bouncer 0.1761
--0.3979 carrier electric 0.1761
--0.3979 cases baby -0.1549
--0.3979 cases cables 0.1761
--0.1761 cat bed -0.0792
--0.1761 chair bibs 0.1761
--0.1761 charcoal beauty 0.0000
--0.1761 charge kits -0.1549
--0.1761 cheese milk 0.1761
--0.1761 children's comics 0.1761
--0.1761 chips bread 0.1761
--0.1761 cigaratte tobacco 0.1761
--0.1761 cilantro onion 0.1761
--0.1761 cleaner spin 0.1761
--0.1761 click cameras -0.0792
--0.1761 clogs vegan 0.1761
--0.1761 clothes shoes -0.2139
--0.1761 coconut tomato 0.1761
--0.1761 coke mountain 0.1761
--0.1761 collar dry 0.1761
--0.1761 comics fictional 0.1761
--0.1761 computers powerbanks 0.1761
--0.1761 controllers game 0.1761
--0.1761 cookbooks diet 0.1761
--0.1761 cords computers 0.1761
--0.1761 corrector yoga -0.0792
--0.3979 cover broom 0.1761
--0.3979 cover sofa 0.1761
--0.1761 crop top 0.1761
--0.1761 cross body 0.1761
--0.3979 cup holder -0.0792
--0.3979 cup stove -0.0792
--0.1761 curtain rod -0.0792
--0.1761 cushion desk 0.1761
--0.1761 cutie salt 0.1761
--0.3979 denim enamel 0.1761
--0.3979 denim jeans 0.1761
--0.1761 desk toys 0.1761
--0.1761 detergent wash -0.0792
--0.3979 devices portable 0.1761
--0.3979 devices usb 0.1761
--0.1761 dew flour -0.2998
--0.1761 diaper bag -0.0792
--0.1761 diet recipe 0.1761
--0.1761 dig collar 0.1761
--0.1761 dishwasher detergent 0.1761
--0.1761 docks camera -0.0792
--0.7404 dog bowls 0.1761
--0.7404 dog brush -0.1549
--0.7404 dog dig 0.1761
--0.7404 dog food 0.1761
--0.7404 dog pen -0.0792
--0.1761 door mat -0.1549
--0.1761 dry dog -0.2139
--0.1761 dude wipes 0.1761
--0.1761 eggs water -0.0792
--0.1761 electric long 0.1761
--0.1761 electronic accessories 0.1761
--0.1761 enamel pins 0.1761
--0.1761 excercise bands -0.0792
--0.1761 exclusive apparels 0.1761
--0.1761 exercise bands -0.0792
--0.1761 eyelashes fridge 0.1761
--0.1761 face mask -0.0792
--0.1761 feeder indoor 0.1761
--0.1761 fictional suspense 0.1761
--0.1761 films instant 0.1761
--0.1761 fishing rod -0.0792
--0.1761 fitness tracker 0.1761
--0.1761 flakes oats 0.1761
--0.1761 food pet 0.1761
--0.1761 fridge seat 0.1761
--0.1761 gadgets smart 0.1761
--0.1761 game adapters 0.1761
--0.1761 games jigsaw 0.1761
--0.3979 gaming charge 0.1761
--0.3979 gaming sony 0.1761
--0.1761 gate play -0.0792
--0.1761 glass armchair 0.1761
--0.1761 glasses glass 0.1761
--0.1761 gloves resistance 0.1761
--0.1761 gold silver 0.1761
--0.1761 golf shoes -0.2139
--0.1761 gopro home 0.1761
--0.1761 growth serum 0.1761
--0.1761 guards gaming -0.0792
--0.1761 guava cigaratte 0.1761
--0.1761 hari growth 0.1761
--0.1761 headphones bluetooth 0.1761
--0.1761 high chair 0.1761
--0.3979 holder can -0.0792
--0.3979 holder diaper 0.1761
--0.1761 home security 0.1761
--0.1761 hot air 0.1761
--0.1761 indoor plants 0.1761
--0.1761 ingredients tools 0.1761
--0.1761 instant click 0.1761
--0.1761 jeans crop 0.1761
--0.1761 jewelry exclusive 0.1761
--0.1761 jigsaw puzzle 0.1761
--0.1761 juul cheese 0.1761
--0.1761 kayak rugs 0.1761
--0.1761 kitchen can -0.0792
--0.5441 kits docks 0.1761
--0.5441 kits photo -0.0792
--0.5441 kits playsets 0.1761
--0.1761 knife spices 0.1761
--0.1761 lamp shade 0.1761
--0.1761 laptop lumbar 0.1761
--0.1761 legging sports 0.1761
--0.1761 lego blocks 0.1761
--0.1761 light blocking 0.1761
--0.1761 lights outdoor -0.0792
--0.1761 lip balm 0.1761
--0.1761 long board -0.1549
--0.1761 loop protein 0.1761
--0.1761 lumbar pillow -0.1919
--0.1761 machine cleaner 0.1761
--0.1761 maker measuring 0.1761
--0.1761 makeup products -0.1549
--0.3979 mask nail 0.1761
--0.3979 mask pulse 0.1761
--0.1761 massager eyelashes 0.1761
--0.5441 mat bath 0.1761
--0.5441 mat bird 0.1761
--0.5441 mat touch 0.1761
--0.1761 matcha tea 0.1761
--0.1761 maternity wear -0.0792
--0.1761 mats kayak 0.1761
--0.1761 mattresses curtain 0.1761
--0.1761 measuring cup -0.0792
--0.1761 memories children's 0.1761
--0.1761 men women 0.1761
--0.1761 microsoft nintendo 0.1761
--0.1761 milk eggs 0.1761
--0.1761 monitor baby -0.1549
--0.1761 mop tights 0.1761
--0.1761 mountain dew 0.1761
--0.1761 mouth wash -0.0792
--0.1761 nail polish 0.1761
--0.1761 natural that 0.1761
--0.1761 neck massager 0.1761
--0.1761 nintendo wireless -0.0792
--0.1761 novelty socks 0.1761
--0.1761 oats pepsi 0.1761
--0.1761 off mask -0.0792
--0.1761 oil cover -0.0792
--0.1761 onion potato 0.1761
--0.1761 opener waffle 0.1761
--0.1761 orange apple 0.1761
--0.1761 organizer pendant 0.1761
--0.3979 outdoor adjustable 0.1761
--0.3979 outdoor lego 0.1761
--0.1761 oximeter pop 0.1761
--0.1761 panel blue 0.1761
--0.1761 papers gopro 0.1761
--0.1761 peel off 0.1761
--0.3979 pen dog -0.2139
--0.3979 pen fishing 0.1761
--0.1761 pendant stove -0.0792
--0.1761 pepsi coke 0.1761
--0.1761 personal care 0.1761
--0.1761 pet carrier -0.0792
--0.1761 phone cases -0.0792
--0.3979 photo films 0.1761
--0.3979 photo papers 0.1761
--0.1761 pieces beauty -0.1249
--0.1761 pilates mats 0.1761
--0.6532 pillow lamp 0.1761
--0.6532 pillow mouth 0.1761
--0.6532 pillow stand 0.1761
--0.6532 pillow washing 0.1761
--0.1761 pins maternity 0.1761
--0.1761 plant shower -0.0792
--0.1761 plants plant 0.1761
--0.1761 platinum hari 0.1761
--0.3979 play mat -0.1549
--0.3979 play station 0.1761
--0.1761 playsets outdoor -0.0792
--0.1761 polish excercise 0.1761
--0.1761 pop socket 0.1761
--0.1761 portable speakers 0.1761
--0.1761 posture corrector 0.1761
--0.1761 potato orange 0.1761
--0.1761 powder balance 0.1761
--0.1761 power solar 0.1761
--0.1761 powerbanks headphones 0.1761
--0.1761 pregnancy pillow -0.1919
--0.1761 printers screen -0.0792
--0.5441 products beauty 0.0000
--0.5441 products coconut 0.1761
--0.5441 products natural 0.1761
--0.1761 protein powder 0.1761
--0.1761 pulse oximeter 0.1761
--0.1761 pump pregnancy 0.1761
--0.1761 puzzle electronic 0.1761
--0.1761 recipe birgraphies 0.1761
--0.1761 resistance loop 0.1761
--0.1761 rhinestone pieces 0.1761
--0.1761 ring lights 0.1761
--0.3979 rod golf 0.1761
--0.3979 rod trail 0.1761
--0.1761 rugs board -0.1549
--0.1761 salt knife 0.1761
--0.3979 screen gloves 0.1761
--0.3979 screen guards 0.1761
--0.1761 seat cushion 0.1761
--0.1761 seciruty camera -0.0792
--0.1761 security cameras -0.0792
--0.1761 serum avocado 0.1761
--0.1761 shade shower -0.0792
--0.1761 shape unicorns 0.1761
--0.7404 shoes gold 0.1761
--0.7404 shoes jewelry 0.1761
--0.7404 shoes posture 0.1761
--0.7404 shoes rhinestone 0.1761
--0.7404 shoes white 0.1761
--0.3979 shower brush -0.1549
--0.3979 shower dishwasher 0.1761
--0.1761 silver platinum 0.1761
--0.1761 smart devices -0.0792
--0.1761 sneakers peel 0.1761
--0.1761 socket phone 0.1761
--0.1761 socks shape 0.1761
--0.1761 sofa door 0.1761
--0.1761 solar panel 0.1761
--0.1761 sony play -0.0792
--0.1761 speakers back 0.1761
--0.1761 spices flakes 0.1761
--0.1761 spin mop 0.1761
--0.1761 sports wear -0.0792
--0.1761 stand laptop 0.1761
--0.1761 station microsoft 0.1761
--0.3979 stove cover -0.0792
--0.3979 stove kitchen 0.1761
--0.1761 stylish shoes -0.2139
--0.1761 suspense thriller 0.1761
--0.1761 swing gate 0.1761
--0.1761 tactical pen -0.0792
--0.1761 tea neck 0.1761
--0.1761 that ingredients 0.1761
--0.1761 thriller clothes 0.1761
--0.1761 throw pillow -0.1919
--0.1761 tights organizer 0.1761
--0.1761 tobacco juul 0.1761
--0.1761 tomato cilantro 0.1761
--0.1761 tools car 0.1761
--0.1761 top clogs 0.1761
--0.1761 touch screen -0.0792
--0.1761 toys tripod 0.1761
--0.1761 tracker cross 0.1761
--0.1761 trail shoes -0.2139
--0.1761 tripod power 0.1761
--0.1761 tub lip 0.1761
--0.1761 unicorns bamboo 0.1761
--0.1761 usb printers 0.1761
--0.1761 vacuum cup -0.0792
--0.1761 vegan shoes -0.2139
--0.1761 waffle maker 0.1761
--0.3979 wash bed -0.0792
--0.3979 wash dog -0.2139
--0.1761 washing machine 0.1761
--0.3979 water bottles 0.1761
--0.3979 water chips 0.1761
--0.3979 wear denim -0.0792
--0.3979 wear men 0.1761
--0.1761 wearables novelty 0.1761
--0.1761 white sneakers 0.1761
--0.1761 wipes charcoal 0.1761
--0.3979 wireless controllers 0.1761
--0.3979 wireless seciruty 0.1761
--0.1761 women wearables 0.1761
--0.3979 yoga mat -0.1549
--0.3979 yoga pilates 0.1761
+-0.0015 </s> <s> -0.1754
+-2.4749 <s> Card 0.1761
+-2.4749 <s> Colorful 0.1761
+-2.4749 <s> Games 0.1761
+-2.4749 <s> Inflatable 0.1761
+-2.4749 <s> Lounges 0.1761
+-2.4749 <s> Memory 0.1761
+-2.4749 <s> Toys 0.1761
+-2.4749 <s> Wooden 0.1761
+-2.4749 <s> accessories 0.1761
+-2.4749 <s> accessory 0.1761
+-2.4749 <s> adapters 0.1761
+-2.4749 <s> adjustable 0.1761
+-2.4749 <s> air 0.1761
+-2.4749 <s> and 0.1761
+-2.4749 <s> apparels 0.1761
+-2.4749 <s> apple 0.1761
+-2.4749 <s> armchair 0.1761
+-2.4749 <s> athleisure 0.1761
+-2.4749 <s> avocado 0.1761
+-2.4749 <s> baby 0.1761
+-2.4749 <s> back 0.1761
+-2.4749 <s> bag 0.1761
+-2.4749 <s> balance 0.1761
+-2.4749 <s> balm 0.1761
+-2.4749 <s> bamboo 0.1761
+-2.4749 <s> banana 0.1761
+-2.4749 <s> bands 0.1761
+-2.4749 <s> bath 0.1761
+-2.4749 <s> beanies 0.1761
+-2.4749 <s> beard 0.1761
+-2.4749 <s> beauty 0.1761
+-2.4749 <s> bed 0.1761
+-2.4749 <s> bibs 0.1761
+-2.4749 <s> bike 0.1761
+-2.4749 <s> bird 0.1761
+-2.4749 <s> birgraphies 0.1761
+-2.4749 <s> blankes 0.1761
+-2.4749 <s> blocking 0.1761
+-2.4749 <s> blocks 0.1761
+-2.4749 <s> blue 0.1761
+-2.4749 <s> bluetooth 0.1761
+-2.4749 <s> board 0.1761
+-2.4749 <s> body 0.1761
+-2.4749 <s> books 0.1761
+-2.4749 <s> bottles 0.1761
+-2.4749 <s> bouncer 0.1761
+-2.4749 <s> bounty 0.1761
+-2.4749 <s> bowls 0.1761
+-2.4749 <s> branded 0.1761
+-2.4749 <s> bread 0.1761
+-2.4749 <s> breast 0.1761
+-2.4749 <s> broom 0.1761
+-2.4749 <s> brush 0.1761
+-2.4749 <s> bun 0.1761
+-2.4749 <s> cables 0.1761
+-2.4749 <s> cake 0.1761
+-2.4749 <s> camera 0.1761
+-2.4749 <s> cameras 0.1761
+-2.4749 <s> can 0.1761
+-2.4749 <s> car 0.1761
+-2.4749 <s> care 0.1761
+-2.4749 <s> carrier 0.1761
+-2.4749 <s> cases 0.1761
+-2.4749 <s> cat 0.1761
+-2.4749 <s> chair 0.1761
+-2.4749 <s> charcoal 0.1761
+-2.4749 <s> charge 0.1761
+-2.4749 <s> cheese 0.1761
+-2.4749 <s> children's 0.1761
+-2.4749 <s> chips 0.1761
+-2.4749 <s> cigaratte 0.1761
+-2.4749 <s> cilantro 0.1761
+-2.4749 <s> cleaner 0.1761
+-2.4749 <s> click 0.1761
+-2.4749 <s> clogs 0.1761
+-2.4749 <s> clothes 0.1761
+-2.4749 <s> coconut 0.1761
+-2.4749 <s> coke 0.1761
+-2.4749 <s> collar 0.1761
+-2.4749 <s> comics 0.1761
+-2.4749 <s> computers 0.1761
+-2.4749 <s> controllers 0.1761
+-2.4749 <s> cookbooks 0.1761
+-2.4749 <s> cords 0.1761
+-2.4749 <s> corrector 0.1761
+-2.4749 <s> cover 0.1761
+-2.4749 <s> crop 0.1761
+-2.4749 <s> cross 0.1761
+-2.4749 <s> cup 0.1761
+-2.4749 <s> curtain 0.1761
+-2.4749 <s> cushion 0.1761
+-2.4749 <s> cutie 0.1761
+-2.4749 <s> denim 0.1761
+-2.4749 <s> desk 0.1761
+-2.4749 <s> detergent 0.1761
+-2.4749 <s> devices 0.1761
+-2.4749 <s> dew 0.1761
+-2.4749 <s> diaper 0.1761
+-2.4749 <s> diet 0.1761
+-2.4749 <s> dig 0.1761
+-2.4749 <s> dishwasher 0.1761
+-2.4749 <s> docks 0.1761
+-2.4749 <s> dog 0.1761
+-2.4749 <s> door 0.1761
+-2.4749 <s> dry 0.1761
+-2.4749 <s> dude 0.1761
+-2.4749 <s> eggs 0.1761
+-2.4749 <s> electric 0.1761
+-2.4749 <s> electronic 0.1761
+-2.4749 <s> enamel 0.1761
+-2.4749 <s> excercise 0.1761
+-2.4749 <s> exclusive 0.1761
+-2.4749 <s> exercise 0.1761
+-2.4749 <s> eyelashes 0.1761
+-2.4749 <s> face 0.1761
+-2.4749 <s> feeder 0.1761
+-2.4749 <s> fictional 0.1761
+-2.4749 <s> films 0.1761
+-2.4749 <s> fishing 0.1761
+-2.4749 <s> fitness 0.1761
+-2.4749 <s> flakes 0.1761
+-2.4749 <s> flour 0.1761
+-2.4749 <s> food 0.1761
+-2.4749 <s> fridge 0.1761
+-2.4749 <s> gadgets 0.1761
+-2.4749 <s> game 0.1761
+-2.4749 <s> games 0.1761
+-2.4749 <s> gaming 0.1761
+-2.4749 <s> gate 0.1761
+-2.4749 <s> glass 0.1761
+-2.4749 <s> glasses 0.1761
+-2.4749 <s> gloves 0.1761
+-2.4749 <s> gold 0.1761
+-2.4749 <s> golf 0.1761
+-2.4749 <s> gopro 0.1761
+-2.4749 <s> growth 0.1761
+-2.4749 <s> guards 0.1761
+-2.4749 <s> guava 0.1761
+-2.4749 <s> hari 0.1761
+-2.4749 <s> headphones 0.1761
+-2.4749 <s> high 0.1761
+-2.4749 <s> holder 0.1761
+-2.4749 <s> home 0.1761
+-2.4749 <s> hot 0.1761
+-2.4749 <s> indoor 0.1761
+-2.4749 <s> ingredients 0.1761
+-2.4749 <s> instant 0.1761
+-2.4749 <s> jeans 0.1761
+-2.4749 <s> jewelry 0.1761
+-2.4749 <s> jigsaw 0.1761
+-2.4749 <s> juul 0.1761
+-2.4749 <s> kayak 0.1761
+-2.4749 <s> kitchen 0.1761
+-2.4749 <s> kits 0.1761
+-2.4749 <s> knife 0.1761
+-2.4749 <s> lamp 0.1761
+-2.4749 <s> laptop 0.1761
+-2.4749 <s> legging 0.1761
+-2.4749 <s> lego 0.1761
+-2.4749 <s> light 0.1761
+-2.4749 <s> lights 0.1761
+-2.4749 <s> lip 0.1761
+-2.4749 <s> long 0.1761
+-2.4749 <s> loop 0.1761
+-2.4749 <s> lumbar 0.1761
+-2.4749 <s> machine 0.1761
+-2.4749 <s> maker 0.1761
+-2.4749 <s> makeup 0.1761
+-2.4749 <s> mask 0.1761
+-2.4749 <s> massager 0.1761
+-2.4749 <s> mat 0.1761
+-2.4749 <s> matcha 0.1761
+-2.4749 <s> maternity 0.1761
+-2.4749 <s> mats 0.1761
+-2.4749 <s> mattresses 0.1761
+-2.4749 <s> measuring 0.1761
+-2.4749 <s> memories 0.1761
+-2.4749 <s> men 0.1761
+-2.4749 <s> microsoft 0.1761
+-2.4749 <s> milk 0.1761
+-2.4749 <s> mix -0.1252
+-2.4749 <s> monitor 0.1761
+-2.4749 <s> mop 0.1761
+-2.4749 <s> mountain 0.1761
+-2.4749 <s> mouth 0.1761
+-2.4749 <s> nail 0.1761
+-2.4749 <s> natural 0.1761
+-2.4749 <s> neck 0.1761
+-2.4749 <s> nintendo 0.1761
+-2.4749 <s> novelty 0.1761
+-2.4749 <s> oats 0.1761
+-2.4749 <s> off 0.1761
+-2.4749 <s> oil 0.1761
+-2.4749 <s> onion 0.1761
+-2.4749 <s> opener 0.1761
+-2.4749 <s> orange 0.1761
+-2.4749 <s> organizer 0.1761
+-2.4749 <s> outdoor 0.1761
+-2.4749 <s> oximeter 0.1761
+-2.4749 <s> panel 0.1761
+-2.4749 <s> papers 0.1761
+-2.4749 <s> peel 0.1761
+-2.4749 <s> pen 0.1761
+-2.4749 <s> pendant 0.1761
+-2.4749 <s> pepsi 0.1761
+-2.4749 <s> personal 0.1761
+-2.4749 <s> pet 0.1761
+-2.4749 <s> phone 0.1761
+-2.4749 <s> photo 0.1761
+-2.4749 <s> pieces 0.1761
+-2.4749 <s> pilates 0.1761
+-2.4749 <s> pillow 0.1761
+-2.4749 <s> pins 0.1761
+-2.4749 <s> plant 0.1761
+-2.4749 <s> plants 0.1761
+-2.4749 <s> platinum 0.1761
+-2.4749 <s> play 0.1761
+-2.4749 <s> playsets 0.1761
+-2.4749 <s> polish 0.1761
+-2.4749 <s> pop 0.1761
+-2.4749 <s> portable 0.1761
+-2.4749 <s> posture 0.1761
+-2.4749 <s> potato 0.1761
+-2.4749 <s> powder 0.1761
+-2.4749 <s> power 0.1761
+-2.4749 <s> powerbanks 0.1761
+-2.4749 <s> pregnancy 0.1761
+-2.4749 <s> printers 0.1761
+-2.4749 <s> products 0.1761
+-2.4749 <s> protein 0.1761
+-2.4749 <s> pulse 0.1761
+-2.4749 <s> pump 0.1761
+-2.4749 <s> puzzle 0.1761
+-2.4749 <s> recipe 0.1761
+-2.4749 <s> resistance 0.1761
+-2.4749 <s> rhinestone 0.1761
+-2.4749 <s> ring 0.1761
+-2.4749 <s> rod 0.1761
+-2.4749 <s> rugs 0.1761
+-2.4749 <s> salt 0.1761
+-2.4749 <s> screen 0.1761
+-2.4749 <s> seat 0.1761
+-2.4749 <s> seciruty 0.1761
+-2.4749 <s> security 0.1761
+-2.4749 <s> serum 0.1761
+-2.4749 <s> shade 0.1761
+-2.4749 <s> shape 0.1761
+-2.4749 <s> shoes 0.1761
+-2.4749 <s> shower 0.1761
+-2.4749 <s> silver 0.1761
+-2.4749 <s> smart 0.1761
+-2.4749 <s> sneakers 0.1761
+-2.4749 <s> socket 0.1761
+-2.4749 <s> socks 0.1761
+-2.4749 <s> sofa 0.1761
+-2.4749 <s> solar 0.1761
+-2.4749 <s> sony 0.1761
+-2.4749 <s> speakers 0.1761
+-2.4749 <s> spices 0.1761
+-2.4749 <s> spin 0.1761
+-2.4749 <s> sports 0.1761
+-2.4749 <s> stand 0.1761
+-2.4749 <s> station 0.1761
+-2.4749 <s> stove 0.1761
+-2.4749 <s> stylish 0.1761
+-2.4749 <s> suspense 0.1761
+-2.4749 <s> swing 0.1761
+-2.4749 <s> tactical 0.1761
+-2.4749 <s> tea 0.1761
+-2.4749 <s> that 0.1761
+-2.4749 <s> thriller 0.1761
+-2.4749 <s> throw 0.1761
+-2.4749 <s> tights 0.1761
+-2.4749 <s> tobacco 0.1761
+-2.4749 <s> tomato 0.1761
+-2.4749 <s> tools 0.1761
+-2.4749 <s> top 0.1761
+-2.4749 <s> touch 0.1761
+-2.4749 <s> toys 0.1761
+-2.4749 <s> tracker 0.1761
+-2.4749 <s> trail 0.1761
+-2.4749 <s> tripod 0.1761
+-2.4749 <s> tub 0.1761
+-2.4749 <s> unicorns 0.1761
+-2.4749 <s> usb 0.1761
+-2.4749 <s> vacuum 0.1761
+-2.4749 <s> vegan 0.1761
+-2.4749 <s> waffle 0.1761
+-2.4749 <s> wash 0.1761
+-2.4749 <s> washing 0.1761
+-2.4749 <s> water 0.1761
+-2.4749 <s> wear 0.1761
+-2.4749 <s> wearables 0.1761
+-2.4749 <s> white 0.1761
+-2.4749 <s> wipes 0.1761
+-2.4749 <s> wireless 0.1761
+-2.4749 <s> women 0.1761
+-2.4749 <s> yoga 0.1761
+-0.1761 Card </s> 2.1746
+-0.1761 Colorful </s> 2.1746
+-0.1761 Games </s> 2.1746
+-0.1761 Inflatable </s> 2.1746
+-0.1761 Lounges </s> 2.1746
+-0.1761 Memory </s> 2.1746
+-0.1761 Toys </s> 2.1746
+-0.1761 Wooden </s> 2.1746
+-0.1761 accessories </s> 2.1746
+-0.1761 accessory </s> 2.1746
+-0.1761 adapters </s> 2.1746
+-0.1761 adjustable </s> 2.1746
+-0.1761 air </s> 2.1746
+-0.1761 and </s> 2.1746
+-0.1761 apparels </s> 2.1746
+-0.1761 apple </s> 2.1746
+-0.1761 armchair </s> 2.1746
+-0.1761 athleisure </s> 2.1746
+-0.1761 avocado </s> 2.1746
+-0.1761 baby </s> 2.1746
+-0.1761 back </s> 2.1746
+-0.1761 bag </s> 2.1746
+-0.1761 balance </s> 2.1746
+-0.1761 balm </s> 2.1746
+-0.1761 bamboo </s> 2.1746
+-0.1761 banana </s> 2.1746
+-0.1761 bands </s> 2.1746
+-0.1761 bath </s> 2.1746
+-0.1761 beanies </s> 2.1746
+-0.1761 beard </s> 2.1746
+-0.1761 beauty </s> 2.1746
+-0.1761 bed </s> 2.1746
+-0.1761 bibs </s> 2.1746
+-0.1761 bike </s> 2.1746
+-0.1761 bird </s> 2.1746
+-0.1761 birgraphies </s> 2.1746
+-0.1761 blankes </s> 2.1746
+-0.1761 blocking </s> 2.1746
+-0.1761 blocks </s> 2.1746
+-0.1761 blue </s> 2.1746
+-0.1761 bluetooth </s> 2.1746
+-0.1761 board </s> 2.1746
+-0.1761 body </s> 2.1746
+-0.1761 books </s> 2.1746
+-0.1761 bottles </s> 2.1746
+-0.1761 bouncer </s> 2.1746
+-0.1761 bounty </s> 2.1746
+-0.1761 bowls </s> 2.1746
+-0.1761 branded </s> 2.1746
+-0.1761 bread </s> 2.1746
+-0.1761 breast </s> 2.1746
+-0.1761 broom </s> 2.1746
+-0.1761 brush </s> 2.1746
+-0.1761 bun </s> 2.1746
+-0.1761 cables </s> 2.1746
+-0.1761 cake </s> 2.1746
+-0.1761 camera </s> 2.1746
+-0.1761 cameras </s> 2.1746
+-0.1761 can </s> 2.1746
+-0.1761 car </s> 2.1746
+-0.1761 care </s> 2.1746
+-0.1761 carrier </s> 2.1746
+-0.1761 cases </s> 2.1746
+-0.1761 cat </s> 2.1746
+-0.1761 chair </s> 2.1746
+-0.1761 charcoal </s> 2.1746
+-0.1761 charge </s> 2.1746
+-0.1761 cheese </s> 2.1746
+-0.1761 children's </s> 2.1746
+-0.1761 chips </s> 2.1746
+-0.1761 cigaratte </s> 2.1746
+-0.1761 cilantro </s> 2.1746
+-0.1761 cleaner </s> 2.1746
+-0.1761 click </s> 2.1746
+-0.1761 clogs </s> 2.1746
+-0.1761 clothes </s> 2.1746
+-0.1761 coconut </s> 2.1746
+-0.1761 coke </s> 2.1746
+-0.1761 collar </s> 2.1746
+-0.1761 comics </s> 2.1746
+-0.1761 computers </s> 2.1746
+-0.1761 controllers </s> 2.1746
+-0.1761 cookbooks </s> 2.1746
+-0.1761 cords </s> 2.1746
+-0.1761 corrector </s> 2.1746
+-0.1761 cover </s> 2.1746
+-0.1761 crop </s> 2.1746
+-0.1761 cross </s> 2.1746
+-0.1761 cup </s> 2.1746
+-0.1761 curtain </s> 2.1746
+-0.1761 cushion </s> 2.1746
+-0.1761 cutie </s> 2.1746
+-0.1761 denim </s> 2.1746
+-0.1761 desk </s> 2.1746
+-0.1761 detergent </s> 2.1746
+-0.1761 devices </s> 2.1746
+-0.1761 dew </s> 2.1746
+-0.1761 diaper </s> 2.1746
+-0.1761 diet </s> 2.1746
+-0.1761 dig </s> 2.1746
+-0.1761 dishwasher </s> 2.1746
+-0.1761 docks </s> 2.1746
+-0.1761 dog </s> 2.1746
+-0.1761 door </s> 2.1746
+-0.1761 dry </s> 2.1746
+-0.1761 dude </s> 2.1746
+-0.1761 eggs </s> 2.1746
+-0.1761 electric </s> 2.1746
+-0.1761 electronic </s> 2.1746
+-0.1761 enamel </s> 2.1746
+-0.1761 excercise </s> 2.1746
+-0.1761 exclusive </s> 2.1746
+-0.1761 exercise </s> 2.1746
+-0.1761 eyelashes </s> 2.1746
+-0.1761 face </s> 2.1746
+-0.1761 feeder </s> 2.1746
+-0.1761 fictional </s> 2.1746
+-0.1761 films </s> 2.1746
+-0.1761 fishing </s> 2.1746
+-0.1761 fitness </s> 2.1746
+-0.1761 flakes </s> 2.1746
+-0.1761 flour </s> 2.1746
+-0.1761 food </s> 2.1746
+-0.1761 fridge </s> 2.1746
+-0.1761 gadgets </s> 2.1746
+-0.1761 game </s> 2.1746
+-0.1761 games </s> 2.1746
+-0.1761 gaming </s> 2.1746
+-0.1761 gate </s> 2.1746
+-0.1761 glass </s> 2.1746
+-0.1761 glasses </s> 2.1746
+-0.1761 gloves </s> 2.1746
+-0.1761 gold </s> 2.1746
+-0.1761 golf </s> 2.1746
+-0.1761 gopro </s> 2.1746
+-0.1761 growth </s> 2.1746
+-0.1761 guards </s> 2.1746
+-0.1761 guava </s> 2.1746
+-0.1761 hari </s> 2.1746
+-0.1761 headphones </s> 2.1746
+-0.1761 high </s> 2.1746
+-0.1761 holder </s> 2.1746
+-0.1761 home </s> 2.1746
+-0.1761 hot </s> 2.1746
+-0.1761 indoor </s> 2.1746
+-0.1761 ingredients </s> 2.1746
+-0.1761 instant </s> 2.1746
+-0.1761 jeans </s> 2.1746
+-0.1761 jewelry </s> 2.1746
+-0.1761 jigsaw </s> 2.1746
+-0.1761 juul </s> 2.1746
+-0.1761 kayak </s> 2.1746
+-0.1761 kitchen </s> 2.1746
+-0.1761 kits </s> 2.1746
+-0.1761 knife </s> 2.1746
+-0.1761 lamp </s> 2.1746
+-0.1761 laptop </s> 2.1746
+-0.1761 legging </s> 2.1746
+-0.1761 lego </s> 2.1746
+-0.1761 light </s> 2.1746
+-0.1761 lights </s> 2.1746
+-0.1761 lip </s> 2.1746
+-0.1761 long </s> 2.1746
+-0.1761 loop </s> 2.1746
+-0.1761 lumbar </s> 2.1746
+-0.1761 machine </s> 2.1746
+-0.1761 maker </s> 2.1746
+-0.1761 makeup </s> 2.1746
+-0.1761 mask </s> 2.1746
+-0.1761 massager </s> 2.1746
+-0.1761 mat </s> 2.1746
+-0.1761 matcha </s> 2.1746
+-0.1761 maternity </s> 2.1746
+-0.1761 mats </s> 2.1746
+-0.1761 mattresses </s> 2.1746
+-0.1761 measuring </s> 2.1746
+-0.1761 memories </s> 2.1746
+-0.1761 men </s> 2.1746
+-0.1761 microsoft </s> 2.1746
+-0.1761 milk </s> 2.1746
+-0.1761 monitor </s> 2.1746
+-0.1761 mop </s> 2.1746
+-0.1761 mountain </s> 2.1746
+-0.1761 mouth </s> 2.1746
+-0.1761 nail </s> 2.1746
+-0.1761 natural </s> 2.1746
+-0.1761 neck </s> 2.1746
+-0.1761 nintendo </s> 2.1746
+-0.1761 novelty </s> 2.1746
+-0.1761 oats </s> 2.1746
+-0.1761 off </s> 2.1746
+-0.1761 oil </s> 2.1746
+-0.1761 onion </s> 2.1746
+-0.1761 opener </s> 2.1746
+-0.1761 orange </s> 2.1746
+-0.1761 organizer </s> 2.1746
+-0.1761 outdoor </s> 2.1746
+-0.1761 oximeter </s> 2.1746
+-0.1761 panel </s> 2.1746
+-0.1761 papers </s> 2.1746
+-0.1761 peel </s> 2.1746
+-0.1761 pen </s> 2.1746
+-0.1761 pendant </s> 2.1746
+-0.1761 pepsi </s> 2.1746
+-0.1761 personal </s> 2.1746
+-0.1761 pet </s> 2.1746
+-0.1761 phone </s> 2.1746
+-0.1761 photo </s> 2.1746
+-0.1761 pieces </s> 2.1746
+-0.1761 pilates </s> 2.1746
+-0.1761 pillow </s> 2.1746
+-0.1761 pins </s> 2.1746
+-0.1761 plant </s> 2.1746
+-0.1761 plants </s> 2.1746
+-0.1761 platinum </s> 2.1746
+-0.1761 play </s> 2.1746
+-0.1761 playsets </s> 2.1746
+-0.1761 polish </s> 2.1746
+-0.1761 pop </s> 2.1746
+-0.1761 portable </s> 2.1746
+-0.1761 posture </s> 2.1746
+-0.1761 potato </s> 2.1746
+-0.1761 powder </s> 2.1746
+-0.1761 power </s> 2.1746
+-0.1761 powerbanks </s> 2.1746
+-0.1761 pregnancy </s> 2.1746
+-0.1761 printers </s> 2.1746
+-0.1761 products </s> 2.1746
+-0.1761 protein </s> 2.1746
+-0.1761 pulse </s> 2.1746
+-0.1761 pump </s> 2.1746
+-0.1761 puzzle </s> 2.1746
+-0.1761 recipe </s> 2.1746
+-0.1761 resistance </s> 2.1746
+-0.1761 rhinestone </s> 2.1746
+-0.1761 ring </s> 2.1746
+-0.1761 rod </s> 2.1746
+-0.1761 rugs </s> 2.1746
+-0.1761 salt </s> 2.1746
+-0.1761 screen </s> 2.1746
+-0.1761 seat </s> 2.1746
+-0.1761 seciruty </s> 2.1746
+-0.1761 security </s> 2.1746
+-0.1761 serum </s> 2.1746
+-0.1761 shade </s> 2.1746
+-0.1761 shape </s> 2.1746
+-0.1761 shoes </s> 2.1746
+-0.1761 shower </s> 2.1746
+-0.1761 silver </s> 2.1746
+-0.1761 smart </s> 2.1746
+-0.1761 sneakers </s> 2.1746
+-0.1761 socket </s> 2.1746
+-0.1761 socks </s> 2.1746
+-0.1761 sofa </s> 2.1746
+-0.1761 solar </s> 2.1746
+-0.1761 sony </s> 2.1746
+-0.1761 speakers </s> 2.1746
+-0.1761 spices </s> 2.1746
+-0.1761 spin </s> 2.1746
+-0.1761 sports </s> 2.1746
+-0.1761 stand </s> 2.1746
+-0.1761 station </s> 2.1746
+-0.1761 stove </s> 2.1746
+-0.1761 stylish </s> 2.1746
+-0.1761 suspense </s> 2.1746
+-0.1761 swing </s> 2.1746
+-0.1761 tactical </s> 2.1746
+-0.1761 tea </s> 2.1746
+-0.1761 that </s> 2.1746
+-0.1761 thriller </s> 2.1746
+-0.1761 throw </s> 2.1746
+-0.1761 tights </s> 2.1746
+-0.1761 tobacco </s> 2.1746
+-0.1761 tomato </s> 2.1746
+-0.1761 tools </s> 2.1746
+-0.1761 top </s> 2.1746
+-0.1761 touch </s> 2.1746
+-0.1761 toys </s> 2.1746
+-0.1761 tracker </s> 2.1746
+-0.1761 trail </s> 2.1746
+-0.1761 tripod </s> 2.1746
+-0.1761 tub </s> 2.1746
+-0.1761 unicorns </s> 2.1746
+-0.1761 usb </s> 2.1746
+-0.1761 vacuum </s> 2.1746
+-0.1761 vegan </s> 2.1746
+-0.1761 waffle </s> 2.1746
+-0.1761 wash </s> 2.1746
+-0.1761 washing </s> 2.1746
+-0.1761 water </s> 2.1746
+-0.1761 wear </s> 2.1746
+-0.1761 wearables </s> 2.1746
+-0.1761 white </s> 2.1746
+-0.1761 wipes </s> 2.1746
+-0.1761 wireless </s> 2.1746
+-0.1761 women </s> 2.1746
+-0.1761 yoga </s> 2.1746
 
 \3-grams:
--0.3010 Card Inflatable Lounges 
--0.3010 Colorful Card Inflatable 
--0.3010 Games Memory Colorful 
--0.3010 Inflatable Lounges Wooden 
--0.3010 Lounges Wooden kits 
--0.3010 Memory Colorful Card 
--0.3010 Toys Games Memory 
--0.3010 Wooden kits playsets 
--0.3010 accessories gadgets smart 
--0.3010 accessory kits photo 
--0.3010 adapters gaming charge 
--0.3010 adjustable face mask 
--0.3010 air brush matcha 
--0.3010 and branded makeup 
--0.3010 apparels stylish shoes 
--0.3010 apple guava cigaratte 
--0.3010 armchair mattresses curtain 
--0.3010 athleisure beanies denim 
--0.3010 avocado oil cover 
--0.3010 baby carrier bouncer 
--0.3010 baby swing gate 
--0.3010 baby wireless seciruty 
--0.3010 back cases cables 
--0.3010 bag baby swing 
--0.3010 bag legging sports 
--0.3010 balance bike fitness 
--0.3010 balm hot air 
--0.3010 bamboo beard dude 
--0.3010 banana cutie salt 
--0.3010 bands exercise bands 
--0.3010 bands water bottles 
--0.3010 bath tub lip 
--0.3010 beanies denim enamel 
--0.3010 beard dude wipes 
--0.3010 beauty personal care 
--0.4771 beauty products coconut 
--0.4771 beauty products natural 
--0.3010 bed dog dig 
--0.3010 bed pillow washing 
--0.3010 bibs breast pump 
--0.3010 bike fitness tracker 
--0.3010 bird feeder indoor 
--0.3010 birgraphies memories children's 
--0.3010 blankes yoga pilates 
--0.3010 blocking glasses glass 
--0.3010 blocks board games 
--0.3010 blue light blocking 
--0.3010 bluetooth devices usb 
--0.3010 board athleisure beanies 
--0.3010 board games jigsaw 
--0.3010 board monitor baby 
--0.3010 body bag legging 
--0.3010 books cookbooks diet 
--0.3010 bottles blankes yoga 
--0.3010 bouncer high chair 
--0.3010 bounty banana cutie 
--0.3010 bowls cat bed 
--0.3010 branded makeup products 
--0.3010 bread bun bounty 
--0.3010 breast pump pregnancy 
--0.3010 broom holder can 
--0.3010 brush dog bowls 
--0.3010 brush matcha tea 
--0.3010 brush throw pillow 
--0.3010 bun bounty banana 
--0.3010 cables cords computers 
--0.3010 camera photo films 
--0.3010 camera tactical pen 
--0.3010 cameras accessory kits 
--0.3010 cameras books cookbooks 
--0.3010 can opener waffle 
--0.3010 can ring lights 
--0.3010 car vacuum cup 
--0.3010 care and branded 
--0.3010 carrier bouncer high 
--0.3010 carrier electric long 
--0.3010 cases baby carrier 
--0.3010 cases cables cords 
--0.3010 cat bed dog 
--0.3010 chair bibs breast 
--0.3010 charcoal beauty products 
--0.3010 charge kits docks 
--0.3010 cheese milk eggs 
--0.3010 children's comics fictional 
--0.3010 chips bread bun 
--0.3010 cigaratte tobacco juul 
--0.3010 cilantro onion potato 
--0.3010 cleaner spin mop 
--0.3010 click cameras accessory 
--0.3010 clogs vegan shoes 
--0.3010 clothes shoes jewelry 
--0.3010 coconut tomato cilantro 
--0.3010 coke mountain dew 
--0.3010 collar dry dog 
--0.3010 comics fictional suspense 
--0.3010 computers powerbanks headphones 
--0.3010 controllers game adapters 
--0.3010 cookbooks diet recipe 
--0.3010 cords computers powerbanks 
--0.3010 corrector yoga mat 
--0.3010 cover broom holder 
--0.3010 cover sofa door 
--0.3010 crop top clogs 
--0.3010 cross body bag 
--0.3010 cup holder diaper 
--0.3010 cup stove cover 
--0.3010 curtain rod golf 
--0.3010 cushion desk toys 
--0.3010 cutie salt knife 
--0.3010 denim enamel pins 
--0.3010 denim jeans crop 
--0.3010 desk toys tripod 
--0.3010 detergent wash bed 
--0.3010 devices portable speakers 
--0.3010 devices usb printers 
--0.3010 dew flour cake 
--0.3010 diaper bag baby 
--0.3010 diet recipe birgraphies 
--0.3010 dig collar dry 
--0.3010 dishwasher detergent wash 
--0.3010 docks camera photo 
--0.3010 dog bowls cat 
--0.3010 dog brush dog 
--0.3010 dog dig collar 
--0.3010 dog food pet 
--0.3010 dog pen dog 
--0.3010 door mat bird 
--0.3010 dry dog food 
--0.3010 dude wipes charcoal 
--0.3010 eggs water chips 
--0.3010 electric long board 
--0.3010 electronic accessories gadgets 
--0.3010 enamel pins maternity 
--0.3010 excercise bands exercise 
--0.3010 exclusive apparels stylish 
--0.3010 exercise bands water 
--0.3010 eyelashes fridge seat 
--0.3010 face mask pulse 
--0.3010 feeder indoor plants 
--0.3010 fictional suspense thriller 
--0.3010 films instant click 
--0.3010 fishing rod trail 
--0.3010 fitness tracker cross 
--0.3010 flakes oats pepsi 
--0.3010 food pet carrier 
--0.3010 fridge seat cushion 
--0.3010 gadgets smart devices 
--0.3010 game adapters gaming 
--0.3010 games jigsaw puzzle 
--0.3010 gaming charge kits 
--0.3010 gaming sony play 
--0.3010 gate play mat 
--0.3010 glass armchair mattresses 
--0.3010 glasses glass armchair 
--0.3010 gloves resistance loop 
--0.3010 gold silver platinum 
--0.3010 golf shoes gold 
--0.3010 gopro home security 
--0.3010 growth serum avocado 
--0.3010 guards gaming sony 
--0.3010 guava cigaratte tobacco 
--0.3010 hari growth serum 
--0.3010 headphones bluetooth devices 
--0.3010 high chair bibs 
--0.3010 holder can ring 
--0.3010 holder diaper bag 
--0.3010 home security cameras 
--0.3010 hot air brush 
--0.3010 indoor plants plant 
--0.3010 ingredients tools car 
--0.3010 instant click cameras 
--0.3010 jeans crop top 
--0.3010 jewelry exclusive apparels 
--0.3010 jigsaw puzzle electronic 
--0.3010 juul cheese milk 
--0.3010 kayak rugs board 
--0.3010 kitchen can opener 
--0.3010 kits docks camera 
--0.3010 kits photo papers 
--0.3010 kits playsets outdoor 
--0.3010 knife spices flakes 
--0.3010 lamp shade shower 
--0.3010 laptop lumbar pillow 
--0.3010 legging sports wear 
--0.3010 lego blocks board 
--0.3010 light blocking glasses 
--0.3010 lights outdoor adjustable 
--0.3010 lip balm hot 
--0.3010 long board monitor 
--0.3010 loop protein powder 
--0.3010 lumbar pillow mouth 
--0.3010 machine cleaner spin 
--0.3010 maker measuring cup 
--0.3010 makeup products beauty 
--0.3010 mask nail polish 
--0.3010 mask pulse oximeter 
--0.3010 massager eyelashes fridge 
--0.3010 mat bath tub 
--0.3010 mat bird feeder 
--0.3010 mat touch screen 
--0.3010 matcha tea neck 
--0.3010 maternity wear men 
--0.3010 mats kayak rugs 
--0.3010 mattresses curtain rod 
--0.3010 measuring cup stove 
--0.3010 memories children's comics 
--0.3010 men women wearables 
--0.3010 microsoft nintendo wireless 
--0.3010 milk eggs water 
--0.3010 monitor baby wireless 
--0.3010 mop tights organizer 
--0.3010 mountain dew flour 
--0.3010 mouth wash dog 
--0.3010 nail polish excercise 
--0.3010 natural that ingredients 
--0.3010 neck massager eyelashes 
--0.3010 nintendo wireless controllers 
--0.3010 novelty socks shape 
--0.3010 oats pepsi coke 
--0.3010 off mask nail 
--0.3010 oil cover sofa 
--0.3010 onion potato orange 
--0.3010 opener waffle maker 
--0.3010 orange apple guava 
--0.3010 organizer pendant stove 
--0.3010 outdoor adjustable face 
--0.3010 outdoor lego blocks 
--0.3010 oximeter pop socket 
--0.3010 panel blue light 
--0.3010 papers gopro home 
--0.3010 peel off mask 
--0.3010 pen dog brush 
--0.3010 pen fishing rod 
--0.3010 pendant stove kitchen 
--0.3010 pepsi coke mountain 
--0.3010 personal care and 
--0.3010 pet carrier electric 
--0.3010 phone cases baby 
--0.3010 photo films instant 
--0.3010 photo papers gopro 
--0.3010 pieces beauty personal 
--0.3010 pilates mats kayak 
--0.3010 pillow lamp shade 
--0.3010 pillow mouth wash 
--0.3010 pillow stand laptop 
--0.3010 pillow washing machine 
--0.3010 pins maternity wear 
--0.3010 plant shower brush 
--0.3010 plants plant shower 
--0.3010 platinum hari growth 
--0.3010 play mat bath 
--0.3010 play station microsoft 
--0.3010 playsets outdoor lego 
--0.3010 polish excercise bands 
--0.3010 pop socket phone 
--0.3010 portable speakers back 
--0.3010 posture corrector yoga 
--0.3010 potato orange apple 
--0.3010 powder balance bike 
--0.3010 power solar panel 
--0.3010 powerbanks headphones bluetooth 
--0.3010 pregnancy pillow stand 
--0.3010 printers screen guards 
--0.3010 products beauty products 
--0.3010 products coconut tomato 
--0.3010 products natural that 
--0.3010 protein powder balance 
--0.3010 pulse oximeter pop 
--0.3010 pump pregnancy pillow 
--0.3010 puzzle electronic accessories 
--0.3010 recipe birgraphies memories 
--0.3010 resistance loop protein 
--0.3010 rhinestone pieces beauty 
--0.3010 ring lights outdoor 
--0.3010 rod golf shoes 
--0.3010 rod trail shoes 
--0.3010 rugs board athleisure 
--0.3010 salt knife spices 
--0.3010 screen gloves resistance 
--0.3010 screen guards gaming 
--0.3010 seat cushion desk 
--0.3010 seciruty camera tactical 
--0.3010 security cameras books 
--0.3010 serum avocado oil 
--0.3010 shade shower dishwasher 
--0.3010 shape unicorns bamboo 
--0.3010 shoes gold silver 
--0.3010 shoes jewelry exclusive 
--0.3010 shoes posture corrector 
--0.3010 shoes rhinestone pieces 
--0.3010 shoes white sneakers 
--0.3010 shower brush throw 
--0.3010 shower dishwasher detergent 
--0.3010 silver platinum hari 
--0.3010 smart devices portable 
--0.3010 sneakers peel off 
--0.3010 socket phone cases 
--0.3010 socks shape unicorns 
--0.3010 sofa door mat 
--0.3010 solar panel blue 
--0.3010 sony play station 
--0.3010 speakers back cases 
--0.3010 spices flakes oats 
--0.3010 spin mop tights 
--0.3010 sports wear denim 
--0.3010 stand laptop lumbar 
--0.3010 station microsoft nintendo 
--0.3010 stove cover broom 
--0.3010 stove kitchen can 
--0.3010 stylish shoes rhinestone 
--0.3010 suspense thriller clothes 
--0.3010 swing gate play 
--0.3010 tactical pen fishing 
--0.3010 tea neck massager 
--0.3010 that ingredients tools 
--0.3010 thriller clothes shoes 
--0.3010 throw pillow lamp 
--0.3010 tights organizer pendant 
--0.3010 tobacco juul cheese 
--0.3010 tomato cilantro onion 
--0.3010 tools car vacuum 
--0.3010 top clogs vegan 
--0.3010 touch screen gloves 
--0.3010 toys tripod power 
--0.3010 tracker cross body 
--0.3010 trail shoes posture 
--0.3010 tripod power solar 
--0.3010 tub lip balm 
--0.3010 unicorns bamboo beard 
--0.3010 usb printers screen 
--0.3010 vacuum cup holder 
--0.3010 vegan shoes white 
--0.3010 waffle maker measuring 
--0.3010 wash bed pillow 
--0.3010 wash dog pen 
--0.3010 washing machine cleaner 
--0.3010 water bottles blankes 
--0.3010 water chips bread 
--0.3010 wear denim jeans 
--0.3010 wear men women 
--0.3010 wearables novelty socks 
--0.3010 white sneakers peel 
--0.3010 wipes charcoal beauty 
--0.3010 wireless controllers game 
--0.3010 wireless seciruty camera 
--0.3010 women wearables novelty 
--0.3010 yoga mat touch 
--0.3010 yoga pilates mats 
+-2.4742 </s> <s> Card 
+-2.4742 </s> <s> Colorful 
+-2.4742 </s> <s> Games 
+-2.4742 </s> <s> Inflatable 
+-2.4742 </s> <s> Lounges 
+-2.4742 </s> <s> Memory 
+-2.4742 </s> <s> Wooden 
+-2.4742 </s> <s> accessories 
+-2.4742 </s> <s> accessory 
+-2.4742 </s> <s> adapters 
+-2.4742 </s> <s> adjustable 
+-2.4742 </s> <s> air 
+-2.4742 </s> <s> and 
+-2.4742 </s> <s> apparels 
+-2.4742 </s> <s> apple 
+-2.4742 </s> <s> armchair 
+-2.4742 </s> <s> athleisure 
+-2.4742 </s> <s> avocado 
+-2.4742 </s> <s> baby 
+-2.4742 </s> <s> back 
+-2.4742 </s> <s> bag 
+-2.4742 </s> <s> balance 
+-2.4742 </s> <s> balm 
+-2.4742 </s> <s> bamboo 
+-2.4742 </s> <s> banana 
+-2.4742 </s> <s> bands 
+-2.4742 </s> <s> bath 
+-2.4742 </s> <s> beanies 
+-2.4742 </s> <s> beard 
+-2.4742 </s> <s> beauty 
+-2.4742 </s> <s> bed 
+-2.4742 </s> <s> bibs 
+-2.4742 </s> <s> bike 
+-2.4742 </s> <s> bird 
+-2.4742 </s> <s> birgraphies 
+-2.4742 </s> <s> blankes 
+-2.4742 </s> <s> blocking 
+-2.4742 </s> <s> blocks 
+-2.4742 </s> <s> blue 
+-2.4742 </s> <s> bluetooth 
+-2.4742 </s> <s> board 
+-2.4742 </s> <s> body 
+-2.4742 </s> <s> books 
+-2.4742 </s> <s> bottles 
+-2.4742 </s> <s> bouncer 
+-2.4742 </s> <s> bounty 
+-2.4742 </s> <s> bowls 
+-2.4742 </s> <s> branded 
+-2.4742 </s> <s> bread 
+-2.4742 </s> <s> breast 
+-2.4742 </s> <s> broom 
+-2.4742 </s> <s> brush 
+-2.4742 </s> <s> bun 
+-2.4742 </s> <s> cables 
+-2.4742 </s> <s> cake 
+-2.4742 </s> <s> camera 
+-2.4742 </s> <s> cameras 
+-2.4742 </s> <s> can 
+-2.4742 </s> <s> car 
+-2.4742 </s> <s> care 
+-2.4742 </s> <s> carrier 
+-2.4742 </s> <s> cases 
+-2.4742 </s> <s> cat 
+-2.4742 </s> <s> chair 
+-2.4742 </s> <s> charcoal 
+-2.4742 </s> <s> charge 
+-2.4742 </s> <s> cheese 
+-2.4742 </s> <s> children's 
+-2.4742 </s> <s> chips 
+-2.4742 </s> <s> cigaratte 
+-2.4742 </s> <s> cilantro 
+-2.4742 </s> <s> cleaner 
+-2.4742 </s> <s> click 
+-2.4742 </s> <s> clogs 
+-2.4742 </s> <s> clothes 
+-2.4742 </s> <s> coconut 
+-2.4742 </s> <s> coke 
+-2.4742 </s> <s> collar 
+-2.4742 </s> <s> comics 
+-2.4742 </s> <s> computers 
+-2.4742 </s> <s> controllers 
+-2.4742 </s> <s> cookbooks 
+-2.4742 </s> <s> cords 
+-2.4742 </s> <s> corrector 
+-2.4742 </s> <s> cover 
+-2.4742 </s> <s> crop 
+-2.4742 </s> <s> cross 
+-2.4742 </s> <s> cup 
+-2.4742 </s> <s> curtain 
+-2.4742 </s> <s> cushion 
+-2.4742 </s> <s> cutie 
+-2.4742 </s> <s> denim 
+-2.4742 </s> <s> desk 
+-2.4742 </s> <s> detergent 
+-2.4742 </s> <s> devices 
+-2.4742 </s> <s> dew 
+-2.4742 </s> <s> diaper 
+-2.4742 </s> <s> diet 
+-2.4742 </s> <s> dig 
+-2.4742 </s> <s> dishwasher 
+-2.4742 </s> <s> docks 
+-2.4742 </s> <s> dog 
+-2.4742 </s> <s> door 
+-2.4742 </s> <s> dry 
+-2.4742 </s> <s> dude 
+-2.4742 </s> <s> eggs 
+-2.4742 </s> <s> electric 
+-2.4742 </s> <s> electronic 
+-2.4742 </s> <s> enamel 
+-2.4742 </s> <s> excercise 
+-2.4742 </s> <s> exclusive 
+-2.4742 </s> <s> exercise 
+-2.4742 </s> <s> eyelashes 
+-2.4742 </s> <s> face 
+-2.4742 </s> <s> feeder 
+-2.4742 </s> <s> fictional 
+-2.4742 </s> <s> films 
+-2.4742 </s> <s> fishing 
+-2.4742 </s> <s> fitness 
+-2.4742 </s> <s> flakes 
+-2.4742 </s> <s> flour 
+-2.4742 </s> <s> food 
+-2.4742 </s> <s> fridge 
+-2.4742 </s> <s> gadgets 
+-2.4742 </s> <s> game 
+-2.4742 </s> <s> games 
+-2.4742 </s> <s> gaming 
+-2.4742 </s> <s> gate 
+-2.4742 </s> <s> glass 
+-2.4742 </s> <s> glasses 
+-2.4742 </s> <s> gloves 
+-2.4742 </s> <s> gold 
+-2.4742 </s> <s> golf 
+-2.4742 </s> <s> gopro 
+-2.4742 </s> <s> growth 
+-2.4742 </s> <s> guards 
+-2.4742 </s> <s> guava 
+-2.4742 </s> <s> hari 
+-2.4742 </s> <s> headphones 
+-2.4742 </s> <s> high 
+-2.4742 </s> <s> holder 
+-2.4742 </s> <s> home 
+-2.4742 </s> <s> hot 
+-2.4742 </s> <s> indoor 
+-2.4742 </s> <s> ingredients 
+-2.4742 </s> <s> instant 
+-2.4742 </s> <s> jeans 
+-2.4742 </s> <s> jewelry 
+-2.4742 </s> <s> jigsaw 
+-2.4742 </s> <s> juul 
+-2.4742 </s> <s> kayak 
+-2.4742 </s> <s> kitchen 
+-2.4742 </s> <s> kits 
+-2.4742 </s> <s> knife 
+-2.4742 </s> <s> lamp 
+-2.4742 </s> <s> laptop 
+-2.4742 </s> <s> legging 
+-2.4742 </s> <s> lego 
+-2.4742 </s> <s> light 
+-2.4742 </s> <s> lights 
+-2.4742 </s> <s> lip 
+-2.4742 </s> <s> long 
+-2.4742 </s> <s> loop 
+-2.4742 </s> <s> lumbar 
+-2.4742 </s> <s> machine 
+-2.4742 </s> <s> maker 
+-2.4742 </s> <s> makeup 
+-2.4742 </s> <s> mask 
+-2.4742 </s> <s> massager 
+-2.4742 </s> <s> mat 
+-2.4742 </s> <s> matcha 
+-2.4742 </s> <s> maternity 
+-2.4742 </s> <s> mats 
+-2.4742 </s> <s> mattresses 
+-2.4742 </s> <s> measuring 
+-2.4742 </s> <s> memories 
+-2.4742 </s> <s> men 
+-2.4742 </s> <s> microsoft 
+-2.4742 </s> <s> milk 
+-2.4742 </s> <s> mix 
+-2.4742 </s> <s> monitor 
+-2.4742 </s> <s> mop 
+-2.4742 </s> <s> mountain 
+-2.4742 </s> <s> mouth 
+-2.4742 </s> <s> nail 
+-2.4742 </s> <s> natural 
+-2.4742 </s> <s> neck 
+-2.4742 </s> <s> nintendo 
+-2.4742 </s> <s> novelty 
+-2.4742 </s> <s> oats 
+-2.4742 </s> <s> off 
+-2.4742 </s> <s> oil 
+-2.4742 </s> <s> onion 
+-2.4742 </s> <s> opener 
+-2.4742 </s> <s> orange 
+-2.4742 </s> <s> organizer 
+-2.4742 </s> <s> outdoor 
+-2.4742 </s> <s> oximeter 
+-2.4742 </s> <s> panel 
+-2.4742 </s> <s> papers 
+-2.4742 </s> <s> peel 
+-2.4742 </s> <s> pen 
+-2.4742 </s> <s> pendant 
+-2.4742 </s> <s> pepsi 
+-2.4742 </s> <s> personal 
+-2.4742 </s> <s> pet 
+-2.4742 </s> <s> phone 
+-2.4742 </s> <s> photo 
+-2.4742 </s> <s> pieces 
+-2.4742 </s> <s> pilates 
+-2.4742 </s> <s> pillow 
+-2.4742 </s> <s> pins 
+-2.4742 </s> <s> plant 
+-2.4742 </s> <s> plants 
+-2.4742 </s> <s> platinum 
+-2.4742 </s> <s> play 
+-2.4742 </s> <s> playsets 
+-2.4742 </s> <s> polish 
+-2.4742 </s> <s> pop 
+-2.4742 </s> <s> portable 
+-2.4742 </s> <s> posture 
+-2.4742 </s> <s> potato 
+-2.4742 </s> <s> powder 
+-2.4742 </s> <s> power 
+-2.4742 </s> <s> powerbanks 
+-2.4742 </s> <s> pregnancy 
+-2.4742 </s> <s> printers 
+-2.4742 </s> <s> products 
+-2.4742 </s> <s> protein 
+-2.4742 </s> <s> pulse 
+-2.4742 </s> <s> pump 
+-2.4742 </s> <s> puzzle 
+-2.4742 </s> <s> recipe 
+-2.4742 </s> <s> resistance 
+-2.4742 </s> <s> rhinestone 
+-2.4742 </s> <s> ring 
+-2.4742 </s> <s> rod 
+-2.4742 </s> <s> rugs 
+-2.4742 </s> <s> salt 
+-2.4742 </s> <s> screen 
+-2.4742 </s> <s> seat 
+-2.4742 </s> <s> seciruty 
+-2.4742 </s> <s> security 
+-2.4742 </s> <s> serum 
+-2.4742 </s> <s> shade 
+-2.4742 </s> <s> shape 
+-2.4742 </s> <s> shoes 
+-2.4742 </s> <s> shower 
+-2.4742 </s> <s> silver 
+-2.4742 </s> <s> smart 
+-2.4742 </s> <s> sneakers 
+-2.4742 </s> <s> socket 
+-2.4742 </s> <s> socks 
+-2.4742 </s> <s> sofa 
+-2.4742 </s> <s> solar 
+-2.4742 </s> <s> sony 
+-2.4742 </s> <s> speakers 
+-2.4742 </s> <s> spices 
+-2.4742 </s> <s> spin 
+-2.4742 </s> <s> sports 
+-2.4742 </s> <s> stand 
+-2.4742 </s> <s> station 
+-2.4742 </s> <s> stove 
+-2.4742 </s> <s> stylish 
+-2.4742 </s> <s> suspense 
+-2.4742 </s> <s> swing 
+-2.4742 </s> <s> tactical 
+-2.4742 </s> <s> tea 
+-2.4742 </s> <s> that 
+-2.4742 </s> <s> thriller 
+-2.4742 </s> <s> throw 
+-2.4742 </s> <s> tights 
+-2.4742 </s> <s> tobacco 
+-2.4742 </s> <s> tomato 
+-2.4742 </s> <s> tools 
+-2.4742 </s> <s> top 
+-2.4742 </s> <s> touch 
+-2.4742 </s> <s> toys 
+-2.4742 </s> <s> tracker 
+-2.4742 </s> <s> trail 
+-2.4742 </s> <s> tripod 
+-2.4742 </s> <s> tub 
+-2.4742 </s> <s> unicorns 
+-2.4742 </s> <s> usb 
+-2.4742 </s> <s> vacuum 
+-2.4742 </s> <s> vegan 
+-2.4742 </s> <s> waffle 
+-2.4742 </s> <s> wash 
+-2.4742 </s> <s> washing 
+-2.4742 </s> <s> water 
+-2.4742 </s> <s> wear 
+-2.4742 </s> <s> wearables 
+-2.4742 </s> <s> white 
+-2.4742 </s> <s> wipes 
+-2.4742 </s> <s> wireless 
+-2.4742 </s> <s> women 
+-2.4742 </s> <s> yoga 
+-0.3010 <s> Card </s> 
+-0.3010 <s> Colorful </s> 
+-0.3010 <s> Games </s> 
+-0.3010 <s> Inflatable </s> 
+-0.3010 <s> Lounges </s> 
+-0.3010 <s> Memory </s> 
+-0.3010 <s> Toys </s> 
+-0.3010 <s> Wooden </s> 
+-0.3010 <s> accessories </s> 
+-0.3010 <s> accessory </s> 
+-0.3010 <s> adapters </s> 
+-0.3010 <s> adjustable </s> 
+-0.3010 <s> air </s> 
+-0.3010 <s> and </s> 
+-0.3010 <s> apparels </s> 
+-0.3010 <s> apple </s> 
+-0.3010 <s> armchair </s> 
+-0.3010 <s> athleisure </s> 
+-0.3010 <s> avocado </s> 
+-0.3010 <s> baby </s> 
+-0.3010 <s> back </s> 
+-0.3010 <s> bag </s> 
+-0.3010 <s> balance </s> 
+-0.3010 <s> balm </s> 
+-0.3010 <s> bamboo </s> 
+-0.3010 <s> banana </s> 
+-0.3010 <s> bands </s> 
+-0.3010 <s> bath </s> 
+-0.3010 <s> beanies </s> 
+-0.3010 <s> beard </s> 
+-0.3010 <s> beauty </s> 
+-0.3010 <s> bed </s> 
+-0.3010 <s> bibs </s> 
+-0.3010 <s> bike </s> 
+-0.3010 <s> bird </s> 
+-0.3010 <s> birgraphies </s> 
+-0.3010 <s> blankes </s> 
+-0.3010 <s> blocking </s> 
+-0.3010 <s> blocks </s> 
+-0.3010 <s> blue </s> 
+-0.3010 <s> bluetooth </s> 
+-0.3010 <s> board </s> 
+-0.3010 <s> body </s> 
+-0.3010 <s> books </s> 
+-0.3010 <s> bottles </s> 
+-0.3010 <s> bouncer </s> 
+-0.3010 <s> bounty </s> 
+-0.3010 <s> bowls </s> 
+-0.3010 <s> branded </s> 
+-0.3010 <s> bread </s> 
+-0.3010 <s> breast </s> 
+-0.3010 <s> broom </s> 
+-0.3010 <s> brush </s> 
+-0.3010 <s> bun </s> 
+-0.3010 <s> cables </s> 
+-0.3010 <s> cake </s> 
+-0.3010 <s> camera </s> 
+-0.3010 <s> cameras </s> 
+-0.3010 <s> can </s> 
+-0.3010 <s> car </s> 
+-0.3010 <s> care </s> 
+-0.3010 <s> carrier </s> 
+-0.3010 <s> cases </s> 
+-0.3010 <s> cat </s> 
+-0.3010 <s> chair </s> 
+-0.3010 <s> charcoal </s> 
+-0.3010 <s> charge </s> 
+-0.3010 <s> cheese </s> 
+-0.3010 <s> children's </s> 
+-0.3010 <s> chips </s> 
+-0.3010 <s> cigaratte </s> 
+-0.3010 <s> cilantro </s> 
+-0.3010 <s> cleaner </s> 
+-0.3010 <s> click </s> 
+-0.3010 <s> clogs </s> 
+-0.3010 <s> clothes </s> 
+-0.3010 <s> coconut </s> 
+-0.3010 <s> coke </s> 
+-0.3010 <s> collar </s> 
+-0.3010 <s> comics </s> 
+-0.3010 <s> computers </s> 
+-0.3010 <s> controllers </s> 
+-0.3010 <s> cookbooks </s> 
+-0.3010 <s> cords </s> 
+-0.3010 <s> corrector </s> 
+-0.3010 <s> cover </s> 
+-0.3010 <s> crop </s> 
+-0.3010 <s> cross </s> 
+-0.3010 <s> cup </s> 
+-0.3010 <s> curtain </s> 
+-0.3010 <s> cushion </s> 
+-0.3010 <s> cutie </s> 
+-0.3010 <s> denim </s> 
+-0.3010 <s> desk </s> 
+-0.3010 <s> detergent </s> 
+-0.3010 <s> devices </s> 
+-0.3010 <s> dew </s> 
+-0.3010 <s> diaper </s> 
+-0.3010 <s> diet </s> 
+-0.3010 <s> dig </s> 
+-0.3010 <s> dishwasher </s> 
+-0.3010 <s> docks </s> 
+-0.3010 <s> dog </s> 
+-0.3010 <s> door </s> 
+-0.3010 <s> dry </s> 
+-0.3010 <s> dude </s> 
+-0.3010 <s> eggs </s> 
+-0.3010 <s> electric </s> 
+-0.3010 <s> electronic </s> 
+-0.3010 <s> enamel </s> 
+-0.3010 <s> excercise </s> 
+-0.3010 <s> exclusive </s> 
+-0.3010 <s> exercise </s> 
+-0.3010 <s> eyelashes </s> 
+-0.3010 <s> face </s> 
+-0.3010 <s> feeder </s> 
+-0.3010 <s> fictional </s> 
+-0.3010 <s> films </s> 
+-0.3010 <s> fishing </s> 
+-0.3010 <s> fitness </s> 
+-0.3010 <s> flakes </s> 
+-0.3010 <s> flour </s> 
+-0.3010 <s> food </s> 
+-0.3010 <s> fridge </s> 
+-0.3010 <s> gadgets </s> 
+-0.3010 <s> game </s> 
+-0.3010 <s> games </s> 
+-0.3010 <s> gaming </s> 
+-0.3010 <s> gate </s> 
+-0.3010 <s> glass </s> 
+-0.3010 <s> glasses </s> 
+-0.3010 <s> gloves </s> 
+-0.3010 <s> gold </s> 
+-0.3010 <s> golf </s> 
+-0.3010 <s> gopro </s> 
+-0.3010 <s> growth </s> 
+-0.3010 <s> guards </s> 
+-0.3010 <s> guava </s> 
+-0.3010 <s> hari </s> 
+-0.3010 <s> headphones </s> 
+-0.3010 <s> high </s> 
+-0.3010 <s> holder </s> 
+-0.3010 <s> home </s> 
+-0.3010 <s> hot </s> 
+-0.3010 <s> indoor </s> 
+-0.3010 <s> ingredients </s> 
+-0.3010 <s> instant </s> 
+-0.3010 <s> jeans </s> 
+-0.3010 <s> jewelry </s> 
+-0.3010 <s> jigsaw </s> 
+-0.3010 <s> juul </s> 
+-0.3010 <s> kayak </s> 
+-0.3010 <s> kitchen </s> 
+-0.3010 <s> kits </s> 
+-0.3010 <s> knife </s> 
+-0.3010 <s> lamp </s> 
+-0.3010 <s> laptop </s> 
+-0.3010 <s> legging </s> 
+-0.3010 <s> lego </s> 
+-0.3010 <s> light </s> 
+-0.3010 <s> lights </s> 
+-0.3010 <s> lip </s> 
+-0.3010 <s> long </s> 
+-0.3010 <s> loop </s> 
+-0.3010 <s> lumbar </s> 
+-0.3010 <s> machine </s> 
+-0.3010 <s> maker </s> 
+-0.3010 <s> makeup </s> 
+-0.3010 <s> mask </s> 
+-0.3010 <s> massager </s> 
+-0.3010 <s> mat </s> 
+-0.3010 <s> matcha </s> 
+-0.3010 <s> maternity </s> 
+-0.3010 <s> mats </s> 
+-0.3010 <s> mattresses </s> 
+-0.3010 <s> measuring </s> 
+-0.3010 <s> memories </s> 
+-0.3010 <s> men </s> 
+-0.3010 <s> microsoft </s> 
+-0.3010 <s> milk </s> 
+-0.3010 <s> mix </s> 
+-0.3010 <s> monitor </s> 
+-0.3010 <s> mop </s> 
+-0.3010 <s> mountain </s> 
+-0.3010 <s> mouth </s> 
+-0.3010 <s> nail </s> 
+-0.3010 <s> natural </s> 
+-0.3010 <s> neck </s> 
+-0.3010 <s> nintendo </s> 
+-0.3010 <s> novelty </s> 
+-0.3010 <s> oats </s> 
+-0.3010 <s> off </s> 
+-0.3010 <s> oil </s> 
+-0.3010 <s> onion </s> 
+-0.3010 <s> opener </s> 
+-0.3010 <s> orange </s> 
+-0.3010 <s> organizer </s> 
+-0.3010 <s> outdoor </s> 
+-0.3010 <s> oximeter </s> 
+-0.3010 <s> panel </s> 
+-0.3010 <s> papers </s> 
+-0.3010 <s> peel </s> 
+-0.3010 <s> pen </s> 
+-0.3010 <s> pendant </s> 
+-0.3010 <s> pepsi </s> 
+-0.3010 <s> personal </s> 
+-0.3010 <s> pet </s> 
+-0.3010 <s> phone </s> 
+-0.3010 <s> photo </s> 
+-0.3010 <s> pieces </s> 
+-0.3010 <s> pilates </s> 
+-0.3010 <s> pillow </s> 
+-0.3010 <s> pins </s> 
+-0.3010 <s> plant </s> 
+-0.3010 <s> plants </s> 
+-0.3010 <s> platinum </s> 
+-0.3010 <s> play </s> 
+-0.3010 <s> playsets </s> 
+-0.3010 <s> polish </s> 
+-0.3010 <s> pop </s> 
+-0.3010 <s> portable </s> 
+-0.3010 <s> posture </s> 
+-0.3010 <s> potato </s> 
+-0.3010 <s> powder </s> 
+-0.3010 <s> power </s> 
+-0.3010 <s> powerbanks </s> 
+-0.3010 <s> pregnancy </s> 
+-0.3010 <s> printers </s> 
+-0.3010 <s> products </s> 
+-0.3010 <s> protein </s> 
+-0.3010 <s> pulse </s> 
+-0.3010 <s> pump </s> 
+-0.3010 <s> puzzle </s> 
+-0.3010 <s> recipe </s> 
+-0.3010 <s> resistance </s> 
+-0.3010 <s> rhinestone </s> 
+-0.3010 <s> ring </s> 
+-0.3010 <s> rod </s> 
+-0.3010 <s> rugs </s> 
+-0.3010 <s> salt </s> 
+-0.3010 <s> screen </s> 
+-0.3010 <s> seat </s> 
+-0.3010 <s> seciruty </s> 
+-0.3010 <s> security </s> 
+-0.3010 <s> serum </s> 
+-0.3010 <s> shade </s> 
+-0.3010 <s> shape </s> 
+-0.3010 <s> shoes </s> 
+-0.3010 <s> shower </s> 
+-0.3010 <s> silver </s> 
+-0.3010 <s> smart </s> 
+-0.3010 <s> sneakers </s> 
+-0.3010 <s> socket </s> 
+-0.3010 <s> socks </s> 
+-0.3010 <s> sofa </s> 
+-0.3010 <s> solar </s> 
+-0.3010 <s> sony </s> 
+-0.3010 <s> speakers </s> 
+-0.3010 <s> spices </s> 
+-0.3010 <s> spin </s> 
+-0.3010 <s> sports </s> 
+-0.3010 <s> stand </s> 
+-0.3010 <s> station </s> 
+-0.3010 <s> stove </s> 
+-0.3010 <s> stylish </s> 
+-0.3010 <s> suspense </s> 
+-0.3010 <s> swing </s> 
+-0.3010 <s> tactical </s> 
+-0.3010 <s> tea </s> 
+-0.3010 <s> that </s> 
+-0.3010 <s> thriller </s> 
+-0.3010 <s> throw </s> 
+-0.3010 <s> tights </s> 
+-0.3010 <s> tobacco </s> 
+-0.3010 <s> tomato </s> 
+-0.3010 <s> tools </s> 
+-0.3010 <s> top </s> 
+-0.3010 <s> touch </s> 
+-0.3010 <s> toys </s> 
+-0.3010 <s> tracker </s> 
+-0.3010 <s> trail </s> 
+-0.3010 <s> tripod </s> 
+-0.3010 <s> tub </s> 
+-0.3010 <s> unicorns </s> 
+-0.3010 <s> usb </s> 
+-0.3010 <s> vacuum </s> 
+-0.3010 <s> vegan </s> 
+-0.3010 <s> waffle </s> 
+-0.3010 <s> wash </s> 
+-0.3010 <s> washing </s> 
+-0.3010 <s> water </s> 
+-0.3010 <s> wear </s> 
+-0.3010 <s> wearables </s> 
+-0.3010 <s> white </s> 
+-0.3010 <s> wipes </s> 
+-0.3010 <s> wireless </s> 
+-0.3010 <s> women </s> 
+-0.3010 <s> yoga </s> 
+-0.3010 Card </s> <s> 
+-0.3010 Colorful </s> <s> 
+-0.3010 Games </s> <s> 
+-0.3010 Inflatable </s> <s> 
+-0.3010 Lounges </s> <s> 
+-0.3010 Memory </s> <s> 
+-0.3010 Toys </s> <s> 
+-0.3010 Wooden </s> <s> 
+-0.3010 accessories </s> <s> 
+-0.3010 accessory </s> <s> 
+-0.3010 adapters </s> <s> 
+-0.3010 adjustable </s> <s> 
+-0.3010 air </s> <s> 
+-0.3010 and </s> <s> 
+-0.3010 apparels </s> <s> 
+-0.3010 apple </s> <s> 
+-0.3010 armchair </s> <s> 
+-0.3010 athleisure </s> <s> 
+-0.3010 avocado </s> <s> 
+-0.3010 baby </s> <s> 
+-0.3010 back </s> <s> 
+-0.3010 bag </s> <s> 
+-0.3010 balance </s> <s> 
+-0.3010 balm </s> <s> 
+-0.3010 bamboo </s> <s> 
+-0.3010 banana </s> <s> 
+-0.3010 bands </s> <s> 
+-0.3010 bath </s> <s> 
+-0.3010 beanies </s> <s> 
+-0.3010 beard </s> <s> 
+-0.3010 beauty </s> <s> 
+-0.3010 bed </s> <s> 
+-0.3010 bibs </s> <s> 
+-0.3010 bike </s> <s> 
+-0.3010 bird </s> <s> 
+-0.3010 birgraphies </s> <s> 
+-0.3010 blankes </s> <s> 
+-0.3010 blocking </s> <s> 
+-0.3010 blocks </s> <s> 
+-0.3010 blue </s> <s> 
+-0.3010 bluetooth </s> <s> 
+-0.3010 board </s> <s> 
+-0.3010 body </s> <s> 
+-0.3010 books </s> <s> 
+-0.3010 bottles </s> <s> 
+-0.3010 bouncer </s> <s> 
+-0.3010 bounty </s> <s> 
+-0.3010 bowls </s> <s> 
+-0.3010 branded </s> <s> 
+-0.3010 bread </s> <s> 
+-0.3010 breast </s> <s> 
+-0.3010 broom </s> <s> 
+-0.3010 brush </s> <s> 
+-0.3010 bun </s> <s> 
+-0.3010 cables </s> <s> 
+-0.3010 cake </s> <s> 
+-0.3010 camera </s> <s> 
+-0.3010 cameras </s> <s> 
+-0.3010 can </s> <s> 
+-0.3010 car </s> <s> 
+-0.3010 care </s> <s> 
+-0.3010 carrier </s> <s> 
+-0.3010 cases </s> <s> 
+-0.3010 cat </s> <s> 
+-0.3010 chair </s> <s> 
+-0.3010 charcoal </s> <s> 
+-0.3010 charge </s> <s> 
+-0.3010 cheese </s> <s> 
+-0.3010 children's </s> <s> 
+-0.3010 chips </s> <s> 
+-0.3010 cigaratte </s> <s> 
+-0.3010 cilantro </s> <s> 
+-0.3010 cleaner </s> <s> 
+-0.3010 click </s> <s> 
+-0.3010 clogs </s> <s> 
+-0.3010 clothes </s> <s> 
+-0.3010 coconut </s> <s> 
+-0.3010 coke </s> <s> 
+-0.3010 collar </s> <s> 
+-0.3010 comics </s> <s> 
+-0.3010 computers </s> <s> 
+-0.3010 controllers </s> <s> 
+-0.3010 cookbooks </s> <s> 
+-0.3010 cords </s> <s> 
+-0.3010 corrector </s> <s> 
+-0.3010 cover </s> <s> 
+-0.3010 crop </s> <s> 
+-0.3010 cross </s> <s> 
+-0.3010 cup </s> <s> 
+-0.3010 curtain </s> <s> 
+-0.3010 cushion </s> <s> 
+-0.3010 cutie </s> <s> 
+-0.3010 denim </s> <s> 
+-0.3010 desk </s> <s> 
+-0.3010 detergent </s> <s> 
+-0.3010 devices </s> <s> 
+-0.3010 dew </s> <s> 
+-0.3010 diaper </s> <s> 
+-0.3010 diet </s> <s> 
+-0.3010 dig </s> <s> 
+-0.3010 dishwasher </s> <s> 
+-0.3010 docks </s> <s> 
+-0.3010 dog </s> <s> 
+-0.3010 door </s> <s> 
+-0.3010 dry </s> <s> 
+-0.3010 dude </s> <s> 
+-0.3010 eggs </s> <s> 
+-0.3010 electric </s> <s> 
+-0.3010 electronic </s> <s> 
+-0.3010 enamel </s> <s> 
+-0.3010 excercise </s> <s> 
+-0.3010 exclusive </s> <s> 
+-0.3010 exercise </s> <s> 
+-0.3010 eyelashes </s> <s> 
+-0.3010 face </s> <s> 
+-0.3010 feeder </s> <s> 
+-0.3010 fictional </s> <s> 
+-0.3010 films </s> <s> 
+-0.3010 fishing </s> <s> 
+-0.3010 fitness </s> <s> 
+-0.3010 flakes </s> <s> 
+-0.3010 flour </s> <s> 
+-0.3010 food </s> <s> 
+-0.3010 fridge </s> <s> 
+-0.3010 gadgets </s> <s> 
+-0.3010 game </s> <s> 
+-0.3010 games </s> <s> 
+-0.3010 gaming </s> <s> 
+-0.3010 gate </s> <s> 
+-0.3010 glass </s> <s> 
+-0.3010 glasses </s> <s> 
+-0.3010 gloves </s> <s> 
+-0.3010 gold </s> <s> 
+-0.3010 golf </s> <s> 
+-0.3010 gopro </s> <s> 
+-0.3010 growth </s> <s> 
+-0.3010 guards </s> <s> 
+-0.3010 guava </s> <s> 
+-0.3010 hari </s> <s> 
+-0.3010 headphones </s> <s> 
+-0.3010 high </s> <s> 
+-0.3010 holder </s> <s> 
+-0.3010 home </s> <s> 
+-0.3010 hot </s> <s> 
+-0.3010 indoor </s> <s> 
+-0.3010 ingredients </s> <s> 
+-0.3010 instant </s> <s> 
+-0.3010 jeans </s> <s> 
+-0.3010 jewelry </s> <s> 
+-0.3010 jigsaw </s> <s> 
+-0.3010 juul </s> <s> 
+-0.3010 kayak </s> <s> 
+-0.3010 kitchen </s> <s> 
+-0.3010 kits </s> <s> 
+-0.3010 knife </s> <s> 
+-0.3010 lamp </s> <s> 
+-0.3010 laptop </s> <s> 
+-0.3010 legging </s> <s> 
+-0.3010 lego </s> <s> 
+-0.3010 light </s> <s> 
+-0.3010 lights </s> <s> 
+-0.3010 lip </s> <s> 
+-0.3010 long </s> <s> 
+-0.3010 loop </s> <s> 
+-0.3010 lumbar </s> <s> 
+-0.3010 machine </s> <s> 
+-0.3010 maker </s> <s> 
+-0.3010 makeup </s> <s> 
+-0.3010 mask </s> <s> 
+-0.3010 massager </s> <s> 
+-0.3010 mat </s> <s> 
+-0.3010 matcha </s> <s> 
+-0.3010 maternity </s> <s> 
+-0.3010 mats </s> <s> 
+-0.3010 mattresses </s> <s> 
+-0.3010 measuring </s> <s> 
+-0.3010 memories </s> <s> 
+-0.3010 men </s> <s> 
+-0.3010 microsoft </s> <s> 
+-0.3010 milk </s> <s> 
+-0.3010 monitor </s> <s> 
+-0.3010 mop </s> <s> 
+-0.3010 mountain </s> <s> 
+-0.3010 mouth </s> <s> 
+-0.3010 nail </s> <s> 
+-0.3010 natural </s> <s> 
+-0.3010 neck </s> <s> 
+-0.3010 nintendo </s> <s> 
+-0.3010 novelty </s> <s> 
+-0.3010 oats </s> <s> 
+-0.3010 off </s> <s> 
+-0.3010 oil </s> <s> 
+-0.3010 onion </s> <s> 
+-0.3010 opener </s> <s> 
+-0.3010 orange </s> <s> 
+-0.3010 organizer </s> <s> 
+-0.3010 outdoor </s> <s> 
+-0.3010 oximeter </s> <s> 
+-0.3010 panel </s> <s> 
+-0.3010 papers </s> <s> 
+-0.3010 peel </s> <s> 
+-0.3010 pen </s> <s> 
+-0.3010 pendant </s> <s> 
+-0.3010 pepsi </s> <s> 
+-0.3010 personal </s> <s> 
+-0.3010 pet </s> <s> 
+-0.3010 phone </s> <s> 
+-0.3010 photo </s> <s> 
+-0.3010 pieces </s> <s> 
+-0.3010 pilates </s> <s> 
+-0.3010 pillow </s> <s> 
+-0.3010 pins </s> <s> 
+-0.3010 plant </s> <s> 
+-0.3010 plants </s> <s> 
+-0.3010 platinum </s> <s> 
+-0.3010 play </s> <s> 
+-0.3010 playsets </s> <s> 
+-0.3010 polish </s> <s> 
+-0.3010 pop </s> <s> 
+-0.3010 portable </s> <s> 
+-0.3010 posture </s> <s> 
+-0.3010 potato </s> <s> 
+-0.3010 powder </s> <s> 
+-0.3010 power </s> <s> 
+-0.3010 powerbanks </s> <s> 
+-0.3010 pregnancy </s> <s> 
+-0.3010 printers </s> <s> 
+-0.3010 products </s> <s> 
+-0.3010 protein </s> <s> 
+-0.3010 pulse </s> <s> 
+-0.3010 pump </s> <s> 
+-0.3010 puzzle </s> <s> 
+-0.3010 recipe </s> <s> 
+-0.3010 resistance </s> <s> 
+-0.3010 rhinestone </s> <s> 
+-0.3010 ring </s> <s> 
+-0.3010 rod </s> <s> 
+-0.3010 rugs </s> <s> 
+-0.3010 salt </s> <s> 
+-0.3010 screen </s> <s> 
+-0.3010 seat </s> <s> 
+-0.3010 seciruty </s> <s> 
+-0.3010 security </s> <s> 
+-0.3010 serum </s> <s> 
+-0.3010 shade </s> <s> 
+-0.3010 shape </s> <s> 
+-0.3010 shoes </s> <s> 
+-0.3010 shower </s> <s> 
+-0.3010 silver </s> <s> 
+-0.3010 smart </s> <s> 
+-0.3010 sneakers </s> <s> 
+-0.3010 socket </s> <s> 
+-0.3010 socks </s> <s> 
+-0.3010 sofa </s> <s> 
+-0.3010 solar </s> <s> 
+-0.3010 sony </s> <s> 
+-0.3010 speakers </s> <s> 
+-0.3010 spices </s> <s> 
+-0.3010 spin </s> <s> 
+-0.3010 sports </s> <s> 
+-0.3010 stand </s> <s> 
+-0.3010 station </s> <s> 
+-0.3010 stove </s> <s> 
+-0.3010 stylish </s> <s> 
+-0.3010 suspense </s> <s> 
+-0.3010 swing </s> <s> 
+-0.3010 tactical </s> <s> 
+-0.3010 tea </s> <s> 
+-0.3010 that </s> <s> 
+-0.3010 thriller </s> <s> 
+-0.3010 throw </s> <s> 
+-0.3010 tights </s> <s> 
+-0.3010 tobacco </s> <s> 
+-0.3010 tomato </s> <s> 
+-0.3010 tools </s> <s> 
+-0.3010 top </s> <s> 
+-0.3010 touch </s> <s> 
+-0.3010 toys </s> <s> 
+-0.3010 tracker </s> <s> 
+-0.3010 trail </s> <s> 
+-0.3010 tripod </s> <s> 
+-0.3010 tub </s> <s> 
+-0.3010 unicorns </s> <s> 
+-0.3010 usb </s> <s> 
+-0.3010 vacuum </s> <s> 
+-0.3010 vegan </s> <s> 
+-0.3010 waffle </s> <s> 
+-0.3010 wash </s> <s> 
+-0.3010 washing </s> <s> 
+-0.3010 water </s> <s> 
+-0.3010 wear </s> <s> 
+-0.3010 wearables </s> <s> 
+-0.3010 white </s> <s> 
+-0.3010 wipes </s> <s> 
+-0.3010 wireless </s> <s> 
+-0.3010 women </s> <s> 
+-0.3010 yoga </s> <s> 
 
 \end\

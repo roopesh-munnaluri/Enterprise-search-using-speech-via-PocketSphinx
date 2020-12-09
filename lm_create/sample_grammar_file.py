@@ -1,4 +1,4 @@
-with open('sample.dic',"r") as f:
+with open('sample_test.txt',"r") as f:
     wordlist = [r.split()[0] for r in f]
 final_wordlist = []
 for word in wordlist:
@@ -7,5 +7,5 @@ for word in wordlist:
 final_wordlist = list(dict.fromkeys(final_wordlist))
 print(len(wordlist))
 print(len(final_wordlist))
-file = open('sample_test.txt',"w")
+file = open('sample_test_1.txt',"w")
 file.writelines(final_wordlist)
