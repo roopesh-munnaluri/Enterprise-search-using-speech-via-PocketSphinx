@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     input.setText("Recognition Started!");
                     recognizer.startListening("digits");
                     gifimage.setVisibility(View.VISIBLE);
-                    gifimage.setImageResource(R.drawable.play);
+                    gifimage.setImageResource(R.drawable.play_1);
                 }
             }
         }.execute();
