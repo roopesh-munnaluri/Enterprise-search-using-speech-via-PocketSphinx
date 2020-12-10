@@ -1,11 +1,5 @@
-with open('sample_test.txt',"r") as f:
-    wordlist = [r.split()[0] for r in f]
-final_wordlist = []
-for word in wordlist:
-    word = '<s> ' + word + ' </s>\n'
-    final_wordlist.append(word)
-final_wordlist = list(dict.fromkeys(final_wordlist))
-print(len(wordlist))
-print(len(final_wordlist))
-file = open('sample_test_1.txt',"w")
-file.writelines(final_wordlist)
+names=open("transcripts.txt",'r')
+updatedNames=open("name2.txt",'a')
+for name in names:
+  updatedNames.write('<s> ' + name.rstrip() + ' </s>' + '\n')
+updatedNames.close()
