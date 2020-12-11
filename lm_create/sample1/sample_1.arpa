@@ -1,0 +1,1847 @@
+#############################################################################
+## Copyright (c) 1996, Carnegie Mellon University, Cambridge University,
+## Ronald Rosenfeld and Philip Clarkson
+#############################################################################
+=============================================================================
+===============  This file was produced by the CMU-Cambridge  ===============
+===============     Statistical Language Modeling Toolkit     ===============
+=============================================================================
+This is a 3-gram language model, based on a vocabulary of 300 words,
+  which begins "</s>", "<s>", "Card"...
+This is an OPEN-vocabulary model (type 1)
+  (OOVs were mapped to UNK, which is treated as any other vocabulary word)
+Good-Turing discounting was applied.
+1-gram frequency of frequency : 259 
+2-gram frequency of frequency : 520 55 14 2 4 0 0 
+3-gram frequency of frequency : 780 82 21 3 6 0 0 
+1-gram discounting ratios : 0.99 
+2-gram discounting ratios : 0.20 0.37 0.18 
+3-gram discounting ratios : 0.20 0.37 0.18 
+This file is in the ARPA-standard format introduced by Doug Paul.
+
+p(wd3|wd1,wd2)= if(trigram exists)           p_3(wd1,wd2,wd3)
+                else if(bigram w1,w2 exists) bo_wt_2(w1,w2)*p(wd3|wd2)
+                else                         p(wd3|w2)
+
+p(wd2|wd1)= if(bigram exists) p_2(wd1,wd2)
+            else              bo_wt_1(wd1)*p_1(wd2)
+
+All probs and back-off weights (bo_wt) are given in log10 form.
+
+Data formats:
+
+Beginning of data mark: \data\
+ngram 1=nr            # number of 1-grams
+ngram 2=nr            # number of 2-grams
+ngram 3=nr            # number of 3-grams
+
+\1-grams:
+p_1     wd_1 bo_wt_1
+\2-grams:
+p_2     wd_1 wd_2 bo_wt_2
+\3-grams:
+p_3     wd_1 wd_2 wd_3 
+
+end of data mark: \end\
+
+\data\
+ngram 1=301
+ngram 2=596
+ngram 3=892
+
+\1-grams:
+-3.0241 <UNK>	0.0000
+-0.4780 </s>	-2.3678
+-0.4767 <s>	0.0432
+-3.0241 Card	0.0792
+-3.0241 Colorful	0.0792
+-3.0241 Games	0.0792
+-3.0241 Inflatable	0.0792
+-3.0241 Lounges	0.0792
+-3.0241 Memory	0.0792
+-3.0241 Toys	0.0792
+-3.0241 Wooden	0.0792
+-3.0241 accessories	0.0792
+-3.0241 accessory	0.0792
+-3.0241 adapters	0.0792
+-3.0241 adjustable	0.0792
+-3.0241 air	0.0792
+-3.0241 and	0.0792
+-3.0241 apparels	0.0792
+-3.0241 apple	0.0792
+-3.0241 armchair	0.0792
+-3.0241 athleisure	0.0792
+-3.0241 avocado	0.0792
+-2.5437 baby	0.0906
+-3.0241 back	0.0792
+-2.7197 bag	-0.0265
+-3.0241 balance	0.0792
+-3.0241 balm	0.0792
+-3.0241 bamboo	0.0792
+-3.0241 banana	0.0792
+-2.7197 bands	-0.0265
+-3.0241 bath	0.0792
+-3.0241 beanies	0.0792
+-3.0241 beard	0.0792
+-2.5437 beauty	0.0906
+-2.7197 bed	-0.0265
+-3.0241 bibs	0.0792
+-3.0241 bike	0.0792
+-3.0241 bird	0.0792
+-3.0241 birgraphies	0.0792
+-3.0241 blankes	0.0792
+-3.0241 blocking	0.0792
+-3.0241 blocks	0.0792
+-3.0241 blue	0.0792
+-3.0241 bluetooth	-0.0957
+-2.5437 board	0.0906
+-3.0241 body	0.0792
+-3.0241 books	0.0792
+-3.0241 bottles	0.0792
+-3.0241 bouncer	0.0792
+-3.0241 bounty	0.0792
+-3.0241 bowls	0.0792
+-3.0241 branded	0.0792
+-3.0241 bread	0.0792
+-3.0241 breast	0.0792
+-3.0241 broom	0.0792
+-2.5437 brush	0.0906
+-3.0241 bun	0.0792
+-3.0241 cables	0.0792
+-3.0241 cake	0.0792
+-2.7197 camera	-0.0265
+-2.7197 cameras	-0.0265
+-2.7197 can	-0.0265
+-3.0241 car	0.0792
+-3.0241 care	0.0792
+-2.7197 carrier	-0.0265
+-2.7197 cases	-0.0265
+-3.0241 cat	0.0792
+-3.0241 chair	0.0792
+-3.0241 charcoal	0.0792
+-3.0241 charge	0.0792
+-3.0241 cheese	0.0792
+-3.0241 children's	0.0792
+-3.0241 chips	0.0792
+-3.0241 cigaratte	0.0792
+-3.0241 cilantro	0.0792
+-3.0241 cleaner	0.0792
+-3.0241 click	0.0792
+-3.0241 clogs	0.0792
+-3.0241 clothes	0.0792
+-3.0241 coconut	0.0792
+-3.0241 coke	0.0792
+-3.0241 collar	0.0792
+-3.0241 comics	0.0792
+-3.0241 computers	0.0792
+-3.0241 controllers	0.0792
+-3.0241 cookbooks	0.0792
+-3.0241 cords	0.0792
+-3.0241 corrector	0.0792
+-2.7197 cover	-0.0265
+-3.0241 crop	0.0792
+-3.0241 cross	0.0792
+-2.7197 cup	-0.0265
+-3.0241 curtain	0.0792
+-3.0241 cushion	0.0792
+-3.0241 cutie	0.0792
+-2.7197 denim	-0.0265
+-3.0241 desk	0.0792
+-3.0241 detergent	0.0792
+-2.7197 devices	-0.0265
+-3.0241 dew	0.0792
+-3.0241 diaper	0.0792
+-3.0241 diet	0.0792
+-3.0241 dig	0.0792
+-3.0241 dishwasher	0.0792
+-3.0241 docks	0.0792
+-2.3218 dog	-0.6694
+-3.0241 door	0.0792
+-3.0241 dry	0.0792
+-3.0241 dude	0.0792
+-3.0241 eggs	0.0792
+-3.0241 electric	0.0792
+-3.0241 electronic	0.0792
+-3.0241 enamel	0.0792
+-3.0241 excercise	0.0792
+-3.0241 exclusive	0.0792
+-3.0241 exercise	0.0792
+-3.0241 eyelashes	0.0792
+-3.0241 face	0.0792
+-3.0241 feeder	0.0792
+-3.0241 fictional	0.0792
+-3.0241 films	0.0792
+-3.0241 fishing	0.0792
+-3.0241 fitness	0.0792
+-3.0241 flakes	0.0792
+-3.0241 flour	0.0792
+-3.0241 food	0.0792
+-3.0241 fridge	0.0792
+-3.0241 gadgets	0.0792
+-3.0241 game	0.0792
+-3.0241 games	0.0792
+-2.7197 gaming	-0.0265
+-3.0241 gate	0.0792
+-3.0241 glass	0.0792
+-3.0241 glasses	0.0792
+-3.0241 gloves	0.0792
+-3.0241 gold	0.0792
+-3.0241 golf	0.0792
+-3.0241 gopro	0.0792
+-3.0241 growth	0.0792
+-3.0241 guards	0.0792
+-3.0241 guava	0.0792
+-3.0241 hari	0.0792
+-3.0241 headphones	0.0792
+-3.0241 high	0.0792
+-2.7197 holder	-0.0265
+-3.0241 home	0.0792
+-3.0241 hot	0.0792
+-3.0241 indoor	0.0792
+-3.0241 ingredients	0.0792
+-3.0241 instant	0.0792
+-3.0241 jeans	0.0792
+-3.0241 jewelry	0.0792
+-3.0241 jigsaw	0.0792
+-3.0241 juul	0.0792
+-3.0241 kayak	0.0792
+-3.0241 kitchen	0.0792
+-2.5437 kits	0.0906
+-3.0241 knife	0.0792
+-3.0241 lamp	0.0792
+-3.0241 laptop	0.0792
+-3.0241 legging	0.0792
+-3.0241 lego	0.0792
+-3.0241 light	0.0792
+-3.0241 lights	0.0792
+-3.0241 lip	0.0792
+-3.0241 long	0.0792
+-3.0241 loop	0.0792
+-3.0241 lumbar	0.0792
+-3.0241 machine	0.0792
+-3.0241 maker	0.0792
+-3.0241 makeup	0.0792
+-2.7197 mask	-0.0265
+-3.0241 massager	0.0792
+-2.5437 mat	0.0906
+-3.0241 matcha	0.0792
+-3.0241 maternity	0.0792
+-3.0241 mats	0.0792
+-3.0241 mattresses	0.0792
+-3.0241 measuring	0.0792
+-3.0241 memories	0.0792
+-3.0241 men	0.0792
+-3.0241 microsoft	0.0792
+-3.0241 milk	0.0792
+-3.0241 mix	0.0000
+-3.0241 monitor	0.0792
+-3.0241 mop	0.0792
+-3.0241 mountain	0.0792
+-3.0241 mouth	0.0792
+-3.0241 nail	0.0792
+-3.0241 natural	0.0792
+-3.0241 neck	0.0792
+-3.0241 nintendo	0.0792
+-3.0241 novelty	0.0792
+-3.0241 oats	0.0792
+-3.0241 off	0.0792
+-3.0241 oil	0.0792
+-3.0241 onion	0.0792
+-3.0241 opener	0.0792
+-3.0241 orange	0.0792
+-3.0241 organizer	0.0792
+-2.7197 outdoor	-0.0265
+-3.0241 oximeter	0.0792
+-3.0241 panel	0.0792
+-3.0241 papers	0.0792
+-3.0241 peel	0.0792
+-2.7197 pen	-0.0265
+-3.0241 pendant	0.0792
+-3.0241 pepsi	0.0792
+-3.0241 personal	0.0792
+-3.0241 pet	0.0792
+-3.0241 phone	0.0792
+-2.7197 photo	-0.0265
+-3.0241 pieces	0.0792
+-3.0241 pilates	0.0792
+-2.4187 pillow	-0.6025
+-3.0241 pins	0.0792
+-3.0241 plant	0.0792
+-3.0241 plants	0.0792
+-3.0241 platinum	0.0792
+-2.7197 play	-0.0265
+-3.0241 playsets	0.0792
+-3.0241 polish	0.0792
+-3.0241 pop	0.0792
+-3.0241 portable	0.0792
+-3.0241 posture	0.0792
+-3.0241 potato	0.0792
+-3.0241 powder	0.0792
+-3.0241 power	0.0792
+-3.0241 powerbanks	0.0792
+-3.0241 pregnancy	0.0792
+-3.0241 printers	0.0792
+-2.5437 products	0.0906
+-3.0241 protein	0.0792
+-3.0241 pulse	0.0792
+-3.0241 pump	0.0792
+-3.0241 puzzle	0.0792
+-3.0241 recipe	0.0792
+-3.0241 resistance	0.0792
+-3.0241 rhinestone	0.0792
+-3.0241 ring	0.0792
+-2.7197 rod	-0.0265
+-3.0241 rugs	0.0792
+-3.0241 salt	0.0792
+-2.7197 screen	-0.0265
+-3.0241 seat	0.0792
+-3.0241 seciruty	0.0792
+-3.0241 security	0.0792
+-3.0241 serum	0.0792
+-3.0241 shade	0.0792
+-3.0241 shape	0.0792
+-2.3218 shoes	-0.6694
+-2.7197 shower	-0.0265
+-3.0241 silver	0.0792
+-3.0241 smart	0.0792
+-3.0241 sneakers	0.0792
+-3.0241 socket	0.0792
+-3.0241 socks	0.0792
+-3.0241 sofa	0.0792
+-3.0241 solar	0.0792
+-3.0241 sony	0.0792
+-3.0241 speakers	0.0792
+-3.0241 spices	0.0792
+-3.0241 spin	0.0792
+-3.0241 sports	0.0792
+-3.0241 stand	0.0792
+-3.0241 station	0.0792
+-2.7197 stove	-0.0265
+-3.0241 stylish	0.0792
+-3.0241 suspense	0.0792
+-3.0241 swing	0.0792
+-3.0241 tactical	0.0792
+-3.0241 tea	0.0792
+-3.0241 that	0.0792
+-3.0241 thriller	0.0792
+-3.0241 throw	0.0792
+-3.0241 tights	0.0792
+-3.0241 tobacco	0.0792
+-3.0241 tomato	0.0792
+-3.0241 tools	0.0792
+-3.0241 top	0.0792
+-3.0241 touch	0.0792
+-3.0241 toys	0.0792
+-3.0241 tracker	0.0792
+-3.0241 trail	0.0792
+-3.0241 tripod	0.0792
+-3.0241 tub	0.0792
+-3.0241 unicorns	0.0792
+-3.0241 usb	0.0792
+-3.0241 vacuum	0.0792
+-3.0241 vegan	0.0792
+-3.0241 waffle	0.0792
+-2.7197 wash	-0.0265
+-3.0241 washing	0.0792
+-2.7197 water	-0.0265
+-2.7197 wear	-0.0265
+-3.0241 wearables	0.0792
+-3.0241 white	0.0792
+-3.0241 wipes	0.0792
+-2.7197 wireless	-0.0265
+-3.0241 women	0.0792
+-2.7197 yoga	-0.0265
+
+\2-grams:
+-0.0012 </s> <s> 0.0036
+-3.2484 <s> Card 0.0007
+-3.2484 <s> Colorful 0.0007
+-3.2484 <s> Games 0.0007
+-3.2484 <s> Inflatable 0.0007
+-3.2484 <s> Lounges 0.0007
+-3.2484 <s> Memory 0.0007
+-3.2484 <s> Toys 0.0007
+-3.2484 <s> Wooden 0.0007
+-3.2484 <s> accessories 0.0007
+-3.2484 <s> accessory 0.0007
+-3.2484 <s> adapters 0.0007
+-3.2484 <s> adjustable 0.0007
+-3.2484 <s> air 0.0007
+-3.2484 <s> and 0.0007
+-3.2484 <s> apparels 0.0007
+-3.2484 <s> apple 0.0007
+-3.2484 <s> armchair 0.0007
+-3.2484 <s> athleisure 0.0007
+-3.2484 <s> avocado 0.0007
+-2.8207 <s> baby 0.0000
+-3.2484 <s> back 0.0007
+-2.6760 <s> bag -0.0016
+-3.2484 <s> balance 0.0007
+-3.2484 <s> balm 0.0007
+-3.2484 <s> bamboo 0.0007
+-3.2484 <s> banana 0.0007
+-2.6760 <s> bands -0.0016
+-3.2484 <s> bath 0.0007
+-3.2484 <s> beanies 0.0007
+-3.2484 <s> beard 0.0007
+-2.8207 <s> beauty 0.0000
+-2.6760 <s> bed -0.0016
+-3.2484 <s> bibs 0.0007
+-3.2484 <s> bike 0.0007
+-3.2484 <s> bird 0.0007
+-3.2484 <s> birgraphies 0.0007
+-3.2484 <s> blankes 0.0007
+-3.2484 <s> blocking 0.0007
+-3.2484 <s> blocks 0.0007
+-3.2484 <s> blue 0.0007
+-3.2484 <s> bluetooth 0.0007
+-2.8207 <s> board 0.0000
+-3.2484 <s> body 0.0007
+-3.2484 <s> books 0.0007
+-3.2484 <s> bottles 0.0007
+-3.2484 <s> bouncer 0.0007
+-3.2484 <s> bounty 0.0007
+-3.2484 <s> bowls 0.0007
+-3.2484 <s> branded 0.0007
+-3.2484 <s> bread 0.0007
+-3.2484 <s> breast 0.0007
+-3.2484 <s> broom 0.0007
+-2.8207 <s> brush 0.0000
+-3.2484 <s> bun 0.0007
+-3.2484 <s> cables 0.0007
+-3.2484 <s> cake 0.0007
+-2.6760 <s> camera -0.0016
+-2.6760 <s> cameras -0.0016
+-2.6760 <s> can -0.0016
+-3.2484 <s> car 0.0007
+-3.2484 <s> care 0.0007
+-2.6760 <s> carrier -0.0016
+-2.6760 <s> cases -0.0016
+-3.2484 <s> cat 0.0007
+-3.2484 <s> chair 0.0007
+-3.2484 <s> charcoal 0.0007
+-3.2484 <s> charge 0.0007
+-3.2484 <s> cheese 0.0007
+-3.2484 <s> children's 0.0007
+-3.2484 <s> chips 0.0007
+-3.2484 <s> cigaratte 0.0007
+-3.2484 <s> cilantro 0.0007
+-3.2484 <s> cleaner 0.0007
+-3.2484 <s> click 0.0007
+-3.2484 <s> clogs 0.0007
+-3.2484 <s> clothes 0.0007
+-3.2484 <s> coconut 0.0007
+-3.2484 <s> coke 0.0007
+-3.2484 <s> collar 0.0007
+-3.2484 <s> comics 0.0007
+-3.2484 <s> computers 0.0007
+-3.2484 <s> controllers 0.0007
+-3.2484 <s> cookbooks 0.0007
+-3.2484 <s> cords 0.0007
+-3.2484 <s> corrector 0.0007
+-2.6760 <s> cover -0.0016
+-3.2484 <s> crop 0.0007
+-3.2484 <s> cross 0.0007
+-2.6760 <s> cup -0.0016
+-3.2484 <s> curtain 0.0007
+-3.2484 <s> cushion 0.0007
+-3.2484 <s> cutie 0.0007
+-2.6760 <s> denim -0.0016
+-3.2484 <s> desk 0.0007
+-3.2484 <s> detergent 0.0007
+-3.2484 <s> devices 0.1064
+-3.2484 <s> dew 0.0007
+-3.2484 <s> diaper 0.0007
+-3.2484 <s> diet 0.0007
+-3.2484 <s> dig 0.0007
+-3.2484 <s> dishwasher 0.0007
+-3.2484 <s> docks 0.0007
+-1.7696 <s> dog 0.0669
+-3.2484 <s> door 0.0007
+-3.2484 <s> dry 0.0007
+-3.2484 <s> dude 0.0007
+-3.2484 <s> eggs 0.0007
+-3.2484 <s> electric 0.0007
+-3.2484 <s> electronic 0.0007
+-3.2484 <s> enamel 0.0007
+-3.2484 <s> excercise 0.0007
+-3.2484 <s> exclusive 0.0007
+-3.2484 <s> exercise 0.0007
+-3.2484 <s> eyelashes 0.0007
+-3.2484 <s> face 0.0007
+-3.2484 <s> feeder 0.0007
+-3.2484 <s> fictional 0.0007
+-3.2484 <s> films 0.0007
+-3.2484 <s> fishing 0.0007
+-3.2484 <s> fitness 0.0007
+-3.2484 <s> flakes 0.0007
+-3.2484 <s> flour 0.0007
+-3.2484 <s> food 0.0007
+-3.2484 <s> fridge 0.0007
+-3.2484 <s> gadgets 0.0007
+-3.2484 <s> game 0.0007
+-3.2484 <s> games 0.0007
+-2.6760 <s> gaming -0.0016
+-3.2484 <s> gate 0.0007
+-3.2484 <s> glass 0.0007
+-3.2484 <s> glasses 0.0007
+-3.2484 <s> gloves 0.0007
+-3.2484 <s> gold 0.0007
+-3.2484 <s> golf 0.0007
+-3.2484 <s> gopro 0.0007
+-3.2484 <s> growth 0.0007
+-3.2484 <s> guards 0.0007
+-3.2484 <s> guava 0.0007
+-3.2484 <s> hari 0.0007
+-3.2484 <s> headphones 0.0007
+-3.2484 <s> high 0.0007
+-2.6760 <s> holder -0.0016
+-3.2484 <s> home 0.0007
+-3.2484 <s> hot 0.0007
+-3.2484 <s> indoor 0.0007
+-3.2484 <s> ingredients 0.0007
+-3.2484 <s> instant 0.0007
+-3.2484 <s> jeans 0.0007
+-3.2484 <s> jewelry 0.0007
+-3.2484 <s> jigsaw 0.0007
+-3.2484 <s> juul 0.0007
+-3.2484 <s> kayak 0.0007
+-3.2484 <s> kitchen 0.0007
+-2.8207 <s> kits 0.0000
+-3.2484 <s> knife 0.0007
+-3.2484 <s> lamp 0.0007
+-3.2484 <s> laptop 0.0007
+-3.2484 <s> legging 0.0007
+-3.2484 <s> lego 0.0007
+-3.2484 <s> light 0.0007
+-3.2484 <s> lights 0.0007
+-3.2484 <s> lip 0.0007
+-3.2484 <s> long 0.0007
+-3.2484 <s> loop 0.0007
+-3.2484 <s> lumbar 0.0007
+-3.2484 <s> machine 0.0007
+-3.2484 <s> maker 0.0007
+-3.2484 <s> makeup 0.0007
+-2.6760 <s> mask -0.0016
+-3.2484 <s> massager 0.0007
+-2.8207 <s> mat 0.0000
+-3.2484 <s> matcha 0.0007
+-3.2484 <s> maternity 0.0007
+-3.2484 <s> mats 0.0007
+-3.2484 <s> mattresses 0.0007
+-3.2484 <s> measuring 0.0007
+-3.2484 <s> memories 0.0007
+-3.2484 <s> men 0.0007
+-3.2484 <s> microsoft 0.0007
+-3.2484 <s> milk 0.0007
+-3.2484 <s> mix 0.0799
+-3.2484 <s> monitor 0.0007
+-3.2484 <s> mop 0.0007
+-3.2484 <s> mountain 0.0007
+-3.2484 <s> mouth 0.0007
+-3.2484 <s> nail 0.0007
+-3.2484 <s> natural 0.0007
+-3.2484 <s> neck 0.0007
+-3.2484 <s> nintendo 0.0007
+-3.2484 <s> novelty 0.0007
+-3.2484 <s> oats 0.0007
+-3.2484 <s> off 0.0007
+-3.2484 <s> oil 0.0007
+-3.2484 <s> onion 0.0007
+-3.2484 <s> opener 0.0007
+-3.2484 <s> orange 0.0007
+-3.2484 <s> organizer 0.0007
+-2.6760 <s> outdoor -0.0016
+-3.2484 <s> oximeter 0.0007
+-3.2484 <s> panel 0.0007
+-3.2484 <s> papers 0.0007
+-3.2484 <s> peel 0.0007
+-2.6760 <s> pen -0.0016
+-3.2484 <s> pendant 0.0007
+-3.2484 <s> pepsi 0.0007
+-3.2484 <s> personal 0.0007
+-3.2484 <s> pet 0.0007
+-3.2484 <s> phone 0.0007
+-2.6760 <s> photo -0.0016
+-3.2484 <s> pieces 0.0007
+-3.2484 <s> pilates 0.0007
+-1.8488 <s> pillow 0.0792
+-3.2484 <s> pins 0.0007
+-3.2484 <s> plant 0.0007
+-3.2484 <s> plants 0.0007
+-3.2484 <s> platinum 0.0007
+-2.6760 <s> play -0.0016
+-3.2484 <s> playsets 0.0007
+-3.2484 <s> polish 0.0007
+-3.2484 <s> pop 0.0007
+-3.2484 <s> portable 0.0007
+-3.2484 <s> posture 0.0007
+-3.2484 <s> potato 0.0007
+-3.2484 <s> powder 0.0007
+-3.2484 <s> power 0.0007
+-3.2484 <s> powerbanks 0.0007
+-3.2484 <s> pregnancy 0.0007
+-3.2484 <s> printers 0.0007
+-2.8207 <s> products 0.0000
+-3.2484 <s> protein 0.0007
+-3.2484 <s> pulse 0.0007
+-3.2484 <s> pump 0.0007
+-3.2484 <s> puzzle 0.0007
+-3.2484 <s> recipe 0.0007
+-3.2484 <s> resistance 0.0007
+-3.2484 <s> rhinestone 0.0007
+-3.2484 <s> ring 0.0007
+-2.6760 <s> rod -0.0016
+-3.2484 <s> rugs 0.0007
+-3.2484 <s> salt 0.0007
+-2.6760 <s> screen -0.0016
+-3.2484 <s> seat 0.0007
+-3.2484 <s> seciruty 0.0007
+-3.2484 <s> security 0.0007
+-3.2484 <s> serum 0.0007
+-3.2484 <s> shade 0.0007
+-3.2484 <s> shape 0.0007
+-1.7696 <s> shoes 0.0669
+-2.6760 <s> shower -0.0016
+-3.2484 <s> silver 0.0007
+-3.2484 <s> smart 0.0007
+-3.2484 <s> sneakers 0.0007
+-3.2484 <s> socket 0.0007
+-3.2484 <s> socks 0.0007
+-3.2484 <s> sofa 0.0007
+-3.2484 <s> solar 0.0007
+-3.2484 <s> sony 0.0007
+-3.2484 <s> speakers 0.0007
+-3.2484 <s> spices 0.0007
+-3.2484 <s> spin 0.0007
+-3.2484 <s> sports 0.0007
+-3.2484 <s> stand 0.0007
+-3.2484 <s> station 0.0007
+-2.6760 <s> stove -0.0016
+-3.2484 <s> stylish 0.0007
+-3.2484 <s> suspense 0.0007
+-3.2484 <s> swing 0.0007
+-3.2484 <s> tactical 0.0007
+-3.2484 <s> tea 0.0007
+-3.2484 <s> that 0.0007
+-3.2484 <s> thriller 0.0007
+-3.2484 <s> throw 0.0007
+-3.2484 <s> tights 0.0007
+-3.2484 <s> tobacco 0.0007
+-3.2484 <s> tomato 0.0007
+-3.2484 <s> tools 0.0007
+-3.2484 <s> top 0.0007
+-3.2484 <s> touch 0.0007
+-3.2484 <s> toys 0.0007
+-3.2484 <s> tracker 0.0007
+-3.2484 <s> trail 0.0007
+-3.2484 <s> tripod 0.0007
+-3.2484 <s> tub 0.0007
+-3.2484 <s> unicorns 0.0007
+-3.2484 <s> usb 0.0007
+-3.2484 <s> vacuum 0.0007
+-3.2484 <s> vegan 0.0007
+-3.2484 <s> waffle 0.0007
+-2.6760 <s> wash -0.0016
+-3.2484 <s> washing 0.0007
+-2.6760 <s> water -0.0016
+-2.6760 <s> wear -0.0016
+-3.2484 <s> wearables 0.0007
+-3.2484 <s> white 0.0007
+-3.2484 <s> wipes 0.0007
+-2.6760 <s> wireless -0.0016
+-3.2484 <s> women 0.0007
+-2.6760 <s> yoga -0.0016
+-0.7007 Card </s> 2.4483
+-0.7007 Colorful </s> 2.4483
+-0.7007 Games </s> 2.4483
+-0.7007 Inflatable </s> 2.4483
+-0.7007 Lounges </s> 2.4483
+-0.7007 Memory </s> 2.4483
+-0.7007 Toys </s> 2.4483
+-0.7007 Wooden </s> 2.4483
+-0.7007 accessories </s> 2.4483
+-0.7007 accessory </s> 2.4483
+-0.7007 adapters </s> 2.4483
+-0.7007 adjustable </s> 2.4483
+-0.7007 air </s> 2.4483
+-0.7007 and </s> 2.4483
+-0.7007 apparels </s> 2.4483
+-0.7007 apple </s> 2.4483
+-0.7007 armchair </s> 2.4483
+-0.7007 athleisure </s> 2.4483
+-0.7007 avocado </s> 2.4483
+-0.7500 baby </s> 2.4590
+-0.7007 back </s> 2.4483
+-0.4293 bag </s> 2.3403
+-0.7007 balance </s> 2.4483
+-0.7007 balm </s> 2.4483
+-0.7007 bamboo </s> 2.4483
+-0.7007 banana </s> 2.4483
+-0.4293 bands </s> 2.3403
+-0.7007 bath </s> 2.4483
+-0.7007 beanies </s> 2.4483
+-0.7007 beard </s> 2.4483
+-0.7500 beauty </s> 2.4590
+-0.4293 bed </s> 2.3403
+-0.7007 bibs </s> 2.4483
+-0.7007 bike </s> 2.4483
+-0.7007 bird </s> 2.4483
+-0.7007 birgraphies </s> 2.4483
+-0.7007 blankes </s> 2.4483
+-0.7007 blocking </s> 2.4483
+-0.7007 blocks </s> 2.4483
+-0.7007 blue </s> 2.4483
+-0.7007 bluetooth devices 0.1064
+-0.7500 board </s> 2.4590
+-0.7007 body </s> 2.4483
+-0.7007 books </s> 2.4483
+-0.7007 bottles </s> 2.4483
+-0.7007 bouncer </s> 2.4483
+-0.7007 bounty </s> 2.4483
+-0.7007 bowls </s> 2.4483
+-0.7007 branded </s> 2.4483
+-0.7007 bread </s> 2.4483
+-0.7007 breast </s> 2.4483
+-0.7007 broom </s> 2.4483
+-0.7500 brush </s> 2.4590
+-0.7007 bun </s> 2.4483
+-0.7007 cables </s> 2.4483
+-0.7007 cake </s> 2.4483
+-0.4293 camera </s> 2.3403
+-0.4293 cameras </s> 2.3403
+-0.4293 can </s> 2.3403
+-0.7007 car </s> 2.4483
+-0.7007 care </s> 2.4483
+-0.4293 carrier </s> 2.3403
+-0.4293 cases </s> 2.3403
+-0.7007 cat </s> 2.4483
+-0.7007 chair </s> 2.4483
+-0.7007 charcoal </s> 2.4483
+-0.7007 charge </s> 2.4483
+-0.7007 cheese </s> 2.4483
+-0.7007 children's </s> 2.4483
+-0.7007 chips </s> 2.4483
+-0.7007 cigaratte </s> 2.4483
+-0.7007 cilantro </s> 2.4483
+-0.7007 cleaner </s> 2.4483
+-0.7007 click </s> 2.4483
+-0.7007 clogs </s> 2.4483
+-0.7007 clothes </s> 2.4483
+-0.7007 coconut </s> 2.4483
+-0.7007 coke </s> 2.4483
+-0.7007 collar </s> 2.4483
+-0.7007 comics </s> 2.4483
+-0.7007 computers </s> 2.4483
+-0.7007 controllers </s> 2.4483
+-0.7007 cookbooks </s> 2.4483
+-0.7007 cords </s> 2.4483
+-0.7007 corrector </s> 2.4483
+-0.4293 cover </s> 2.3403
+-0.7007 crop </s> 2.4483
+-0.7007 cross </s> 2.4483
+-0.4293 cup </s> 2.3403
+-0.7007 curtain </s> 2.4483
+-0.7007 cushion </s> 2.4483
+-0.7007 cutie </s> 2.4483
+-0.4293 denim </s> 2.3403
+-0.7007 desk </s> 2.4483
+-0.7007 detergent </s> 2.4483
+-0.4293 devices </s> 2.3403
+-0.7007 dew </s> 2.4483
+-0.7007 diaper </s> 2.4483
+-0.7007 diet </s> 2.4483
+-0.7007 dig </s> 2.4483
+-0.7007 dishwasher </s> 2.4483
+-0.7007 docks </s> 2.4483
+-0.0669 dog </s> 1.7659
+-0.7007 door </s> 2.4483
+-0.7007 dry </s> 2.4483
+-0.7007 dude </s> 2.4483
+-0.7007 eggs </s> 2.4483
+-0.7007 electric </s> 2.4483
+-0.7007 electronic </s> 2.4483
+-0.7007 enamel </s> 2.4483
+-0.7007 excercise </s> 2.4483
+-0.7007 exclusive </s> 2.4483
+-0.7007 exercise </s> 2.4483
+-0.7007 eyelashes </s> 2.4483
+-0.7007 face </s> 2.4483
+-0.7007 feeder </s> 2.4483
+-0.7007 fictional </s> 2.4483
+-0.7007 films </s> 2.4483
+-0.7007 fishing </s> 2.4483
+-0.7007 fitness </s> 2.4483
+-0.7007 flakes </s> 2.4483
+-0.7007 flour </s> 2.4483
+-0.7007 food </s> 2.4483
+-0.7007 fridge </s> 2.4483
+-0.7007 gadgets </s> 2.4483
+-0.7007 game </s> 2.4483
+-0.7007 games </s> 2.4483
+-0.4293 gaming </s> 2.3403
+-0.7007 gate </s> 2.4483
+-0.7007 glass </s> 2.4483
+-0.7007 glasses </s> 2.4483
+-0.7007 gloves </s> 2.4483
+-0.7007 gold </s> 2.4483
+-0.7007 golf </s> 2.4483
+-0.7007 gopro </s> 2.4483
+-0.7007 growth </s> 2.4483
+-0.7007 guards </s> 2.4483
+-0.7007 guava </s> 2.4483
+-0.7007 hari </s> 2.4483
+-0.7007 headphones </s> 2.4483
+-0.7007 high </s> 2.4483
+-0.4293 holder </s> 2.3403
+-0.7007 home </s> 2.4483
+-0.7007 hot </s> 2.4483
+-0.7007 indoor </s> 2.4483
+-0.7007 ingredients </s> 2.4483
+-0.7007 instant </s> 2.4483
+-0.7007 jeans </s> 2.4483
+-0.7007 jewelry </s> 2.4483
+-0.7007 jigsaw </s> 2.4483
+-0.7007 juul </s> 2.4483
+-0.7007 kayak </s> 2.4483
+-0.7007 kitchen </s> 2.4483
+-0.7500 kits </s> 2.4590
+-0.7007 knife </s> 2.4483
+-0.7007 lamp </s> 2.4483
+-0.7007 laptop </s> 2.4483
+-0.7007 legging </s> 2.4483
+-0.7007 lego </s> 2.4483
+-0.7007 light </s> 2.4483
+-0.7007 lights </s> 2.4483
+-0.7007 lip </s> 2.4483
+-0.7007 long </s> 2.4483
+-0.7007 loop </s> 2.4483
+-0.7007 lumbar </s> 2.4483
+-0.7007 machine </s> 2.4483
+-0.7007 maker </s> 2.4483
+-0.7007 makeup </s> 2.4483
+-0.4293 mask </s> 2.3403
+-0.7007 massager </s> 2.4483
+-0.7500 mat </s> 2.4590
+-0.7007 matcha </s> 2.4483
+-0.7007 maternity </s> 2.4483
+-0.7007 mats </s> 2.4483
+-0.7007 mattresses </s> 2.4483
+-0.7007 measuring </s> 2.4483
+-0.7007 memories </s> 2.4483
+-0.7007 men </s> 2.4483
+-0.7007 microsoft </s> 2.4483
+-0.7007 milk </s> 2.4483
+-0.7007 monitor </s> 2.4483
+-0.7007 mop </s> 2.4483
+-0.7007 mountain </s> 2.4483
+-0.7007 mouth </s> 2.4483
+-0.7007 nail </s> 2.4483
+-0.7007 natural </s> 2.4483
+-0.7007 neck </s> 2.4483
+-0.7007 nintendo </s> 2.4483
+-0.7007 novelty </s> 2.4483
+-0.7007 oats </s> 2.4483
+-0.7007 off </s> 2.4483
+-0.7007 oil </s> 2.4483
+-0.7007 onion </s> 2.4483
+-0.7007 opener </s> 2.4483
+-0.7007 orange </s> 2.4483
+-0.7007 organizer </s> 2.4483
+-0.4293 outdoor </s> 2.3403
+-0.7007 oximeter </s> 2.4483
+-0.7007 panel </s> 2.4483
+-0.7007 papers </s> 2.4483
+-0.7007 peel </s> 2.4483
+-0.4293 pen </s> 2.3403
+-0.7007 pendant </s> 2.4483
+-0.7007 pepsi </s> 2.4483
+-0.7007 personal </s> 2.4483
+-0.7007 pet </s> 2.4483
+-0.7007 phone </s> 2.4483
+-0.4293 photo </s> 2.3403
+-0.7007 pieces </s> 2.4483
+-0.7007 pilates </s> 2.4483
+-0.0792 pillow </s> 1.8451
+-0.7007 pins </s> 2.4483
+-0.7007 plant </s> 2.4483
+-0.7007 plants </s> 2.4483
+-0.7007 platinum </s> 2.4483
+-0.4293 play </s> 2.3403
+-0.7007 playsets </s> 2.4483
+-0.7007 polish </s> 2.4483
+-0.7007 pop </s> 2.4483
+-0.7007 portable </s> 2.4483
+-0.7007 posture </s> 2.4483
+-0.7007 potato </s> 2.4483
+-0.7007 powder </s> 2.4483
+-0.7007 power </s> 2.4483
+-0.7007 powerbanks </s> 2.4483
+-0.7007 pregnancy </s> 2.4483
+-0.7007 printers </s> 2.4483
+-0.7500 products </s> 2.4590
+-0.7007 protein </s> 2.4483
+-0.7007 pulse </s> 2.4483
+-0.7007 pump </s> 2.4483
+-0.7007 puzzle </s> 2.4483
+-0.7007 recipe </s> 2.4483
+-0.7007 resistance </s> 2.4483
+-0.7007 rhinestone </s> 2.4483
+-0.7007 ring </s> 2.4483
+-0.4293 rod </s> 2.3403
+-0.7007 rugs </s> 2.4483
+-0.7007 salt </s> 2.4483
+-0.4293 screen </s> 2.3403
+-0.7007 seat </s> 2.4483
+-0.7007 seciruty </s> 2.4483
+-0.7007 security </s> 2.4483
+-0.7007 serum </s> 2.4483
+-0.7007 shade </s> 2.4483
+-0.7007 shape </s> 2.4483
+-0.0669 shoes </s> 1.7659
+-0.4293 shower </s> 2.3403
+-0.7007 silver </s> 2.4483
+-0.7007 smart </s> 2.4483
+-0.7007 sneakers </s> 2.4483
+-0.7007 socket </s> 2.4483
+-0.7007 socks </s> 2.4483
+-0.7007 sofa </s> 2.4483
+-0.7007 solar </s> 2.4483
+-0.7007 sony </s> 2.4483
+-0.7007 speakers </s> 2.4483
+-0.7007 spices </s> 2.4483
+-0.7007 spin </s> 2.4483
+-0.7007 sports </s> 2.4483
+-0.7007 stand </s> 2.4483
+-0.7007 station </s> 2.4483
+-0.4293 stove </s> 2.3403
+-0.7007 stylish </s> 2.4483
+-0.7007 suspense </s> 2.4483
+-0.7007 swing </s> 2.4483
+-0.7007 tactical </s> 2.4483
+-0.7007 tea </s> 2.4483
+-0.7007 that </s> 2.4483
+-0.7007 thriller </s> 2.4483
+-0.7007 throw </s> 2.4483
+-0.7007 tights </s> 2.4483
+-0.7007 tobacco </s> 2.4483
+-0.7007 tomato </s> 2.4483
+-0.7007 tools </s> 2.4483
+-0.7007 top </s> 2.4483
+-0.7007 touch </s> 2.4483
+-0.7007 toys </s> 2.4483
+-0.7007 tracker </s> 2.4483
+-0.7007 trail </s> 2.4483
+-0.7007 tripod </s> 2.4483
+-0.7007 tub </s> 2.4483
+-0.7007 unicorns </s> 2.4483
+-0.7007 usb </s> 2.4483
+-0.7007 vacuum </s> 2.4483
+-0.7007 vegan </s> 2.4483
+-0.7007 waffle </s> 2.4483
+-0.4293 wash </s> 2.3403
+-0.7007 washing </s> 2.4483
+-0.4293 water </s> 2.3403
+-0.4293 wear </s> 2.3403
+-0.7007 wearables </s> 2.4483
+-0.7007 white </s> 2.4483
+-0.7007 wipes </s> 2.4483
+-0.4293 wireless </s> 2.3403
+-0.7007 women </s> 2.4483
+-0.4293 yoga </s> 2.3403
+
+\3-grams:
+-3.2463 </s> <s> Card 
+-3.2463 </s> <s> Colorful 
+-3.2463 </s> <s> Games 
+-3.2463 </s> <s> Inflatable 
+-3.2463 </s> <s> Lounges 
+-3.2463 </s> <s> Memory 
+-3.2463 </s> <s> Wooden 
+-3.2463 </s> <s> accessories 
+-3.2463 </s> <s> accessory 
+-3.2463 </s> <s> adapters 
+-3.2463 </s> <s> adjustable 
+-3.2463 </s> <s> air 
+-3.2463 </s> <s> and 
+-3.2463 </s> <s> apparels 
+-3.2463 </s> <s> apple 
+-3.2463 </s> <s> armchair 
+-3.2463 </s> <s> athleisure 
+-3.2463 </s> <s> avocado 
+-2.8157 </s> <s> baby 
+-3.2463 </s> <s> back 
+-2.6683 </s> <s> bag 
+-3.2463 </s> <s> balance 
+-3.2463 </s> <s> balm 
+-3.2463 </s> <s> bamboo 
+-3.2463 </s> <s> banana 
+-2.6683 </s> <s> bands 
+-3.2463 </s> <s> bath 
+-3.2463 </s> <s> beanies 
+-3.2463 </s> <s> beard 
+-2.8157 </s> <s> beauty 
+-2.6683 </s> <s> bed 
+-3.2463 </s> <s> bibs 
+-3.2463 </s> <s> bike 
+-3.2463 </s> <s> bird 
+-3.2463 </s> <s> birgraphies 
+-3.2463 </s> <s> blankes 
+-3.2463 </s> <s> blocking 
+-3.2463 </s> <s> blocks 
+-3.2463 </s> <s> blue 
+-3.2463 </s> <s> bluetooth 
+-2.8157 </s> <s> board 
+-3.2463 </s> <s> body 
+-3.2463 </s> <s> books 
+-3.2463 </s> <s> bottles 
+-3.2463 </s> <s> bouncer 
+-3.2463 </s> <s> bounty 
+-3.2463 </s> <s> bowls 
+-3.2463 </s> <s> branded 
+-3.2463 </s> <s> bread 
+-3.2463 </s> <s> breast 
+-3.2463 </s> <s> broom 
+-2.8157 </s> <s> brush 
+-3.2463 </s> <s> bun 
+-3.2463 </s> <s> cables 
+-3.2463 </s> <s> cake 
+-2.6683 </s> <s> camera 
+-2.6683 </s> <s> cameras 
+-2.6683 </s> <s> can 
+-3.2463 </s> <s> car 
+-3.2463 </s> <s> care 
+-2.6683 </s> <s> carrier 
+-2.6683 </s> <s> cases 
+-3.2463 </s> <s> cat 
+-3.2463 </s> <s> chair 
+-3.2463 </s> <s> charcoal 
+-3.2463 </s> <s> charge 
+-3.2463 </s> <s> cheese 
+-3.2463 </s> <s> children's 
+-3.2463 </s> <s> chips 
+-3.2463 </s> <s> cigaratte 
+-3.2463 </s> <s> cilantro 
+-3.2463 </s> <s> cleaner 
+-3.2463 </s> <s> click 
+-3.2463 </s> <s> clogs 
+-3.2463 </s> <s> clothes 
+-3.2463 </s> <s> coconut 
+-3.2463 </s> <s> coke 
+-3.2463 </s> <s> collar 
+-3.2463 </s> <s> comics 
+-3.2463 </s> <s> computers 
+-3.2463 </s> <s> controllers 
+-3.2463 </s> <s> cookbooks 
+-3.2463 </s> <s> cords 
+-3.2463 </s> <s> corrector 
+-2.6683 </s> <s> cover 
+-3.2463 </s> <s> crop 
+-3.2463 </s> <s> cross 
+-2.6683 </s> <s> cup 
+-3.2463 </s> <s> curtain 
+-3.2463 </s> <s> cushion 
+-3.2463 </s> <s> cutie 
+-2.6683 </s> <s> denim 
+-3.2463 </s> <s> desk 
+-3.2463 </s> <s> detergent 
+-3.2463 </s> <s> devices 
+-3.2463 </s> <s> dew 
+-3.2463 </s> <s> diaper 
+-3.2463 </s> <s> diet 
+-3.2463 </s> <s> dig 
+-3.2463 </s> <s> dishwasher 
+-3.2463 </s> <s> docks 
+-1.8439 </s> <s> dog 
+-3.2463 </s> <s> door 
+-3.2463 </s> <s> dry 
+-3.2463 </s> <s> dude 
+-3.2463 </s> <s> eggs 
+-3.2463 </s> <s> electric 
+-3.2463 </s> <s> electronic 
+-3.2463 </s> <s> enamel 
+-3.2463 </s> <s> excercise 
+-3.2463 </s> <s> exclusive 
+-3.2463 </s> <s> exercise 
+-3.2463 </s> <s> eyelashes 
+-3.2463 </s> <s> face 
+-3.2463 </s> <s> feeder 
+-3.2463 </s> <s> fictional 
+-3.2463 </s> <s> films 
+-3.2463 </s> <s> fishing 
+-3.2463 </s> <s> fitness 
+-3.2463 </s> <s> flakes 
+-3.2463 </s> <s> flour 
+-3.2463 </s> <s> food 
+-3.2463 </s> <s> fridge 
+-3.2463 </s> <s> gadgets 
+-3.2463 </s> <s> game 
+-3.2463 </s> <s> games 
+-2.6683 </s> <s> gaming 
+-3.2463 </s> <s> gate 
+-3.2463 </s> <s> glass 
+-3.2463 </s> <s> glasses 
+-3.2463 </s> <s> gloves 
+-3.2463 </s> <s> gold 
+-3.2463 </s> <s> golf 
+-3.2463 </s> <s> gopro 
+-3.2463 </s> <s> growth 
+-3.2463 </s> <s> guards 
+-3.2463 </s> <s> guava 
+-3.2463 </s> <s> hari 
+-3.2463 </s> <s> headphones 
+-3.2463 </s> <s> high 
+-2.6683 </s> <s> holder 
+-3.2463 </s> <s> home 
+-3.2463 </s> <s> hot 
+-3.2463 </s> <s> indoor 
+-3.2463 </s> <s> ingredients 
+-3.2463 </s> <s> instant 
+-3.2463 </s> <s> jeans 
+-3.2463 </s> <s> jewelry 
+-3.2463 </s> <s> jigsaw 
+-3.2463 </s> <s> juul 
+-3.2463 </s> <s> kayak 
+-3.2463 </s> <s> kitchen 
+-2.8157 </s> <s> kits 
+-3.2463 </s> <s> knife 
+-3.2463 </s> <s> lamp 
+-3.2463 </s> <s> laptop 
+-3.2463 </s> <s> legging 
+-3.2463 </s> <s> lego 
+-3.2463 </s> <s> light 
+-3.2463 </s> <s> lights 
+-3.2463 </s> <s> lip 
+-3.2463 </s> <s> long 
+-3.2463 </s> <s> loop 
+-3.2463 </s> <s> lumbar 
+-3.2463 </s> <s> machine 
+-3.2463 </s> <s> maker 
+-3.2463 </s> <s> makeup 
+-2.6683 </s> <s> mask 
+-3.2463 </s> <s> massager 
+-2.8157 </s> <s> mat 
+-3.2463 </s> <s> matcha 
+-3.2463 </s> <s> maternity 
+-3.2463 </s> <s> mats 
+-3.2463 </s> <s> mattresses 
+-3.2463 </s> <s> measuring 
+-3.2463 </s> <s> memories 
+-3.2463 </s> <s> men 
+-3.2463 </s> <s> microsoft 
+-3.2463 </s> <s> milk 
+-3.2463 </s> <s> mix 
+-3.2463 </s> <s> monitor 
+-3.2463 </s> <s> mop 
+-3.2463 </s> <s> mountain 
+-3.2463 </s> <s> mouth 
+-3.2463 </s> <s> nail 
+-3.2463 </s> <s> natural 
+-3.2463 </s> <s> neck 
+-3.2463 </s> <s> nintendo 
+-3.2463 </s> <s> novelty 
+-3.2463 </s> <s> oats 
+-3.2463 </s> <s> off 
+-3.2463 </s> <s> oil 
+-3.2463 </s> <s> onion 
+-3.2463 </s> <s> opener 
+-3.2463 </s> <s> orange 
+-3.2463 </s> <s> organizer 
+-2.6683 </s> <s> outdoor 
+-3.2463 </s> <s> oximeter 
+-3.2463 </s> <s> panel 
+-3.2463 </s> <s> papers 
+-3.2463 </s> <s> peel 
+-2.6683 </s> <s> pen 
+-3.2463 </s> <s> pendant 
+-3.2463 </s> <s> pepsi 
+-3.2463 </s> <s> personal 
+-3.2463 </s> <s> pet 
+-3.2463 </s> <s> phone 
+-2.6683 </s> <s> photo 
+-3.2463 </s> <s> pieces 
+-3.2463 </s> <s> pilates 
+-1.9408 </s> <s> pillow 
+-3.2463 </s> <s> pins 
+-3.2463 </s> <s> plant 
+-3.2463 </s> <s> plants 
+-3.2463 </s> <s> platinum 
+-2.6683 </s> <s> play 
+-3.2463 </s> <s> playsets 
+-3.2463 </s> <s> polish 
+-3.2463 </s> <s> pop 
+-3.2463 </s> <s> portable 
+-3.2463 </s> <s> posture 
+-3.2463 </s> <s> potato 
+-3.2463 </s> <s> powder 
+-3.2463 </s> <s> power 
+-3.2463 </s> <s> powerbanks 
+-3.2463 </s> <s> pregnancy 
+-3.2463 </s> <s> printers 
+-2.8157 </s> <s> products 
+-3.2463 </s> <s> protein 
+-3.2463 </s> <s> pulse 
+-3.2463 </s> <s> pump 
+-3.2463 </s> <s> puzzle 
+-3.2463 </s> <s> recipe 
+-3.2463 </s> <s> resistance 
+-3.2463 </s> <s> rhinestone 
+-3.2463 </s> <s> ring 
+-2.6683 </s> <s> rod 
+-3.2463 </s> <s> rugs 
+-3.2463 </s> <s> salt 
+-2.6683 </s> <s> screen 
+-3.2463 </s> <s> seat 
+-3.2463 </s> <s> seciruty 
+-3.2463 </s> <s> security 
+-3.2463 </s> <s> serum 
+-3.2463 </s> <s> shade 
+-3.2463 </s> <s> shape 
+-1.8439 </s> <s> shoes 
+-2.6683 </s> <s> shower 
+-3.2463 </s> <s> silver 
+-3.2463 </s> <s> smart 
+-3.2463 </s> <s> sneakers 
+-3.2463 </s> <s> socket 
+-3.2463 </s> <s> socks 
+-3.2463 </s> <s> sofa 
+-3.2463 </s> <s> solar 
+-3.2463 </s> <s> sony 
+-3.2463 </s> <s> speakers 
+-3.2463 </s> <s> spices 
+-3.2463 </s> <s> spin 
+-3.2463 </s> <s> sports 
+-3.2463 </s> <s> stand 
+-3.2463 </s> <s> station 
+-2.6683 </s> <s> stove 
+-3.2463 </s> <s> stylish 
+-3.2463 </s> <s> suspense 
+-3.2463 </s> <s> swing 
+-3.2463 </s> <s> tactical 
+-3.2463 </s> <s> tea 
+-3.2463 </s> <s> that 
+-3.2463 </s> <s> thriller 
+-3.2463 </s> <s> throw 
+-3.2463 </s> <s> tights 
+-3.2463 </s> <s> tobacco 
+-3.2463 </s> <s> tomato 
+-3.2463 </s> <s> tools 
+-3.2463 </s> <s> top 
+-3.2463 </s> <s> touch 
+-3.2463 </s> <s> toys 
+-3.2463 </s> <s> tracker 
+-3.2463 </s> <s> trail 
+-3.2463 </s> <s> tripod 
+-3.2463 </s> <s> tub 
+-3.2463 </s> <s> unicorns 
+-3.2463 </s> <s> usb 
+-3.2463 </s> <s> vacuum 
+-3.2463 </s> <s> vegan 
+-3.2463 </s> <s> waffle 
+-2.6683 </s> <s> wash 
+-3.2463 </s> <s> washing 
+-2.6683 </s> <s> water 
+-2.6683 </s> <s> wear 
+-3.2463 </s> <s> wearables 
+-3.2463 </s> <s> white 
+-3.2463 </s> <s> wipes 
+-2.6683 </s> <s> wireless 
+-3.2463 </s> <s> women 
+-2.6683 </s> <s> yoga 
+-0.7035 <s> Card </s> 
+-0.7035 <s> Colorful </s> 
+-0.7035 <s> Games </s> 
+-0.7035 <s> Inflatable </s> 
+-0.7035 <s> Lounges </s> 
+-0.7035 <s> Memory </s> 
+-0.7035 <s> Toys </s> 
+-0.7035 <s> Wooden </s> 
+-0.7035 <s> accessories </s> 
+-0.7035 <s> accessory </s> 
+-0.7035 <s> adapters </s> 
+-0.7035 <s> adjustable </s> 
+-0.7035 <s> air </s> 
+-0.7035 <s> and </s> 
+-0.7035 <s> apparels </s> 
+-0.7035 <s> apple </s> 
+-0.7035 <s> armchair </s> 
+-0.7035 <s> athleisure </s> 
+-0.7035 <s> avocado </s> 
+-0.7500 <s> baby </s> 
+-0.7035 <s> back </s> 
+-0.4265 <s> bag </s> 
+-0.7035 <s> balance </s> 
+-0.7035 <s> balm </s> 
+-0.7035 <s> bamboo </s> 
+-0.7035 <s> banana </s> 
+-0.4265 <s> bands </s> 
+-0.7035 <s> bath </s> 
+-0.7035 <s> beanies </s> 
+-0.7035 <s> beard </s> 
+-0.7500 <s> beauty </s> 
+-0.4265 <s> bed </s> 
+-0.7035 <s> bibs </s> 
+-0.7035 <s> bike </s> 
+-0.7035 <s> bird </s> 
+-0.7035 <s> birgraphies </s> 
+-0.7035 <s> blankes </s> 
+-0.7035 <s> blocking </s> 
+-0.7035 <s> blocks </s> 
+-0.7035 <s> blue </s> 
+-0.7035 <s> bluetooth devices 
+-0.7500 <s> board </s> 
+-0.7035 <s> body </s> 
+-0.7035 <s> books </s> 
+-0.7035 <s> bottles </s> 
+-0.7035 <s> bouncer </s> 
+-0.7035 <s> bounty </s> 
+-0.7035 <s> bowls </s> 
+-0.7035 <s> branded </s> 
+-0.7035 <s> bread </s> 
+-0.7035 <s> breast </s> 
+-0.7035 <s> broom </s> 
+-0.7500 <s> brush </s> 
+-0.7035 <s> bun </s> 
+-0.7035 <s> cables </s> 
+-0.7035 <s> cake </s> 
+-0.4265 <s> camera </s> 
+-0.4265 <s> cameras </s> 
+-0.4265 <s> can </s> 
+-0.7035 <s> car </s> 
+-0.7035 <s> care </s> 
+-0.4265 <s> carrier </s> 
+-0.4265 <s> cases </s> 
+-0.7035 <s> cat </s> 
+-0.7035 <s> chair </s> 
+-0.7035 <s> charcoal </s> 
+-0.7035 <s> charge </s> 
+-0.7035 <s> cheese </s> 
+-0.7035 <s> children's </s> 
+-0.7035 <s> chips </s> 
+-0.7035 <s> cigaratte </s> 
+-0.7035 <s> cilantro </s> 
+-0.7035 <s> cleaner </s> 
+-0.7035 <s> click </s> 
+-0.7035 <s> clogs </s> 
+-0.7035 <s> clothes </s> 
+-0.7035 <s> coconut </s> 
+-0.7035 <s> coke </s> 
+-0.7035 <s> collar </s> 
+-0.7035 <s> comics </s> 
+-0.7035 <s> computers </s> 
+-0.7035 <s> controllers </s> 
+-0.7035 <s> cookbooks </s> 
+-0.7035 <s> cords </s> 
+-0.7035 <s> corrector </s> 
+-0.4265 <s> cover </s> 
+-0.7035 <s> crop </s> 
+-0.7035 <s> cross </s> 
+-0.4265 <s> cup </s> 
+-0.7035 <s> curtain </s> 
+-0.7035 <s> cushion </s> 
+-0.7035 <s> cutie </s> 
+-0.4265 <s> denim </s> 
+-0.7035 <s> desk </s> 
+-0.7035 <s> detergent </s> 
+-0.7035 <s> devices </s> 
+-0.7035 <s> dew </s> 
+-0.7035 <s> diaper </s> 
+-0.7035 <s> diet </s> 
+-0.7035 <s> dig </s> 
+-0.7035 <s> dishwasher </s> 
+-0.7035 <s> docks </s> 
+-0.0792 <s> dog </s> 
+-0.7035 <s> door </s> 
+-0.7035 <s> dry </s> 
+-0.7035 <s> dude </s> 
+-0.7035 <s> eggs </s> 
+-0.7035 <s> electric </s> 
+-0.7035 <s> electronic </s> 
+-0.7035 <s> enamel </s> 
+-0.7035 <s> excercise </s> 
+-0.7035 <s> exclusive </s> 
+-0.7035 <s> exercise </s> 
+-0.7035 <s> eyelashes </s> 
+-0.7035 <s> face </s> 
+-0.7035 <s> feeder </s> 
+-0.7035 <s> fictional </s> 
+-0.7035 <s> films </s> 
+-0.7035 <s> fishing </s> 
+-0.7035 <s> fitness </s> 
+-0.7035 <s> flakes </s> 
+-0.7035 <s> flour </s> 
+-0.7035 <s> food </s> 
+-0.7035 <s> fridge </s> 
+-0.7035 <s> gadgets </s> 
+-0.7035 <s> game </s> 
+-0.7035 <s> games </s> 
+-0.4265 <s> gaming </s> 
+-0.7035 <s> gate </s> 
+-0.7035 <s> glass </s> 
+-0.7035 <s> glasses </s> 
+-0.7035 <s> gloves </s> 
+-0.7035 <s> gold </s> 
+-0.7035 <s> golf </s> 
+-0.7035 <s> gopro </s> 
+-0.7035 <s> growth </s> 
+-0.7035 <s> guards </s> 
+-0.7035 <s> guava </s> 
+-0.7035 <s> hari </s> 
+-0.7035 <s> headphones </s> 
+-0.7035 <s> high </s> 
+-0.4265 <s> holder </s> 
+-0.7035 <s> home </s> 
+-0.7035 <s> hot </s> 
+-0.7035 <s> indoor </s> 
+-0.7035 <s> ingredients </s> 
+-0.7035 <s> instant </s> 
+-0.7035 <s> jeans </s> 
+-0.7035 <s> jewelry </s> 
+-0.7035 <s> jigsaw </s> 
+-0.7035 <s> juul </s> 
+-0.7035 <s> kayak </s> 
+-0.7035 <s> kitchen </s> 
+-0.7500 <s> kits </s> 
+-0.7035 <s> knife </s> 
+-0.7035 <s> lamp </s> 
+-0.7035 <s> laptop </s> 
+-0.7035 <s> legging </s> 
+-0.7035 <s> lego </s> 
+-0.7035 <s> light </s> 
+-0.7035 <s> lights </s> 
+-0.7035 <s> lip </s> 
+-0.7035 <s> long </s> 
+-0.7035 <s> loop </s> 
+-0.7035 <s> lumbar </s> 
+-0.7035 <s> machine </s> 
+-0.7035 <s> maker </s> 
+-0.7035 <s> makeup </s> 
+-0.4265 <s> mask </s> 
+-0.7035 <s> massager </s> 
+-0.7500 <s> mat </s> 
+-0.7035 <s> matcha </s> 
+-0.7035 <s> maternity </s> 
+-0.7035 <s> mats </s> 
+-0.7035 <s> mattresses </s> 
+-0.7035 <s> measuring </s> 
+-0.7035 <s> memories </s> 
+-0.7035 <s> men </s> 
+-0.7035 <s> microsoft </s> 
+-0.7035 <s> milk </s> 
+-0.7035 <s> mix </s> 
+-0.7035 <s> monitor </s> 
+-0.7035 <s> mop </s> 
+-0.7035 <s> mountain </s> 
+-0.7035 <s> mouth </s> 
+-0.7035 <s> nail </s> 
+-0.7035 <s> natural </s> 
+-0.7035 <s> neck </s> 
+-0.7035 <s> nintendo </s> 
+-0.7035 <s> novelty </s> 
+-0.7035 <s> oats </s> 
+-0.7035 <s> off </s> 
+-0.7035 <s> oil </s> 
+-0.7035 <s> onion </s> 
+-0.7035 <s> opener </s> 
+-0.7035 <s> orange </s> 
+-0.7035 <s> organizer </s> 
+-0.4265 <s> outdoor </s> 
+-0.7035 <s> oximeter </s> 
+-0.7035 <s> panel </s> 
+-0.7035 <s> papers </s> 
+-0.7035 <s> peel </s> 
+-0.4265 <s> pen </s> 
+-0.7035 <s> pendant </s> 
+-0.7035 <s> pepsi </s> 
+-0.7035 <s> personal </s> 
+-0.7035 <s> pet </s> 
+-0.7035 <s> phone </s> 
+-0.4265 <s> photo </s> 
+-0.7035 <s> pieces </s> 
+-0.7035 <s> pilates </s> 
+-0.0969 <s> pillow </s> 
+-0.7035 <s> pins </s> 
+-0.7035 <s> plant </s> 
+-0.7035 <s> plants </s> 
+-0.7035 <s> platinum </s> 
+-0.4265 <s> play </s> 
+-0.7035 <s> playsets </s> 
+-0.7035 <s> polish </s> 
+-0.7035 <s> pop </s> 
+-0.7035 <s> portable </s> 
+-0.7035 <s> posture </s> 
+-0.7035 <s> potato </s> 
+-0.7035 <s> powder </s> 
+-0.7035 <s> power </s> 
+-0.7035 <s> powerbanks </s> 
+-0.7035 <s> pregnancy </s> 
+-0.7035 <s> printers </s> 
+-0.7500 <s> products </s> 
+-0.7035 <s> protein </s> 
+-0.7035 <s> pulse </s> 
+-0.7035 <s> pump </s> 
+-0.7035 <s> puzzle </s> 
+-0.7035 <s> recipe </s> 
+-0.7035 <s> resistance </s> 
+-0.7035 <s> rhinestone </s> 
+-0.7035 <s> ring </s> 
+-0.4265 <s> rod </s> 
+-0.7035 <s> rugs </s> 
+-0.7035 <s> salt </s> 
+-0.4265 <s> screen </s> 
+-0.7035 <s> seat </s> 
+-0.7035 <s> seciruty </s> 
+-0.7035 <s> security </s> 
+-0.7035 <s> serum </s> 
+-0.7035 <s> shade </s> 
+-0.7035 <s> shape </s> 
+-0.0792 <s> shoes </s> 
+-0.4265 <s> shower </s> 
+-0.7035 <s> silver </s> 
+-0.7035 <s> smart </s> 
+-0.7035 <s> sneakers </s> 
+-0.7035 <s> socket </s> 
+-0.7035 <s> socks </s> 
+-0.7035 <s> sofa </s> 
+-0.7035 <s> solar </s> 
+-0.7035 <s> sony </s> 
+-0.7035 <s> speakers </s> 
+-0.7035 <s> spices </s> 
+-0.7035 <s> spin </s> 
+-0.7035 <s> sports </s> 
+-0.7035 <s> stand </s> 
+-0.7035 <s> station </s> 
+-0.4265 <s> stove </s> 
+-0.7035 <s> stylish </s> 
+-0.7035 <s> suspense </s> 
+-0.7035 <s> swing </s> 
+-0.7035 <s> tactical </s> 
+-0.7035 <s> tea </s> 
+-0.7035 <s> that </s> 
+-0.7035 <s> thriller </s> 
+-0.7035 <s> throw </s> 
+-0.7035 <s> tights </s> 
+-0.7035 <s> tobacco </s> 
+-0.7035 <s> tomato </s> 
+-0.7035 <s> tools </s> 
+-0.7035 <s> top </s> 
+-0.7035 <s> touch </s> 
+-0.7035 <s> toys </s> 
+-0.7035 <s> tracker </s> 
+-0.7035 <s> trail </s> 
+-0.7035 <s> tripod </s> 
+-0.7035 <s> tub </s> 
+-0.7035 <s> unicorns </s> 
+-0.7035 <s> usb </s> 
+-0.7035 <s> vacuum </s> 
+-0.7035 <s> vegan </s> 
+-0.7035 <s> waffle </s> 
+-0.4265 <s> wash </s> 
+-0.7035 <s> washing </s> 
+-0.4265 <s> water </s> 
+-0.4265 <s> wear </s> 
+-0.7035 <s> wearables </s> 
+-0.7035 <s> white </s> 
+-0.7035 <s> wipes </s> 
+-0.4265 <s> wireless </s> 
+-0.7035 <s> women </s> 
+-0.4265 <s> yoga </s> 
+-0.7035 Card </s> <s> 
+-0.7035 Colorful </s> <s> 
+-0.7035 Games </s> <s> 
+-0.7035 Inflatable </s> <s> 
+-0.7035 Lounges </s> <s> 
+-0.7035 Memory </s> <s> 
+-0.7035 Toys </s> <s> 
+-0.7035 Wooden </s> <s> 
+-0.7035 accessories </s> <s> 
+-0.7035 accessory </s> <s> 
+-0.7035 adapters </s> <s> 
+-0.7035 adjustable </s> <s> 
+-0.7035 air </s> <s> 
+-0.7035 and </s> <s> 
+-0.7035 apparels </s> <s> 
+-0.7035 apple </s> <s> 
+-0.7035 armchair </s> <s> 
+-0.7035 athleisure </s> <s> 
+-0.7035 avocado </s> <s> 
+-0.7500 baby </s> <s> 
+-0.7035 back </s> <s> 
+-0.4265 bag </s> <s> 
+-0.7035 balance </s> <s> 
+-0.7035 balm </s> <s> 
+-0.7035 bamboo </s> <s> 
+-0.7035 banana </s> <s> 
+-0.4265 bands </s> <s> 
+-0.7035 bath </s> <s> 
+-0.7035 beanies </s> <s> 
+-0.7035 beard </s> <s> 
+-0.7500 beauty </s> <s> 
+-0.4265 bed </s> <s> 
+-0.7035 bibs </s> <s> 
+-0.7035 bike </s> <s> 
+-0.7035 bird </s> <s> 
+-0.7035 birgraphies </s> <s> 
+-0.7035 blankes </s> <s> 
+-0.7035 blocking </s> <s> 
+-0.7035 blocks </s> <s> 
+-0.7035 blue </s> <s> 
+-0.7035 bluetooth devices </s> 
+-0.7500 board </s> <s> 
+-0.7035 body </s> <s> 
+-0.7035 books </s> <s> 
+-0.7035 bottles </s> <s> 
+-0.7035 bouncer </s> <s> 
+-0.7035 bounty </s> <s> 
+-0.7035 bowls </s> <s> 
+-0.7035 branded </s> <s> 
+-0.7035 bread </s> <s> 
+-0.7035 breast </s> <s> 
+-0.7035 broom </s> <s> 
+-0.7500 brush </s> <s> 
+-0.7035 bun </s> <s> 
+-0.7035 cables </s> <s> 
+-0.7035 cake </s> <s> 
+-0.4265 camera </s> <s> 
+-0.4265 cameras </s> <s> 
+-0.4265 can </s> <s> 
+-0.7035 car </s> <s> 
+-0.7035 care </s> <s> 
+-0.4265 carrier </s> <s> 
+-0.4265 cases </s> <s> 
+-0.7035 cat </s> <s> 
+-0.7035 chair </s> <s> 
+-0.7035 charcoal </s> <s> 
+-0.7035 charge </s> <s> 
+-0.7035 cheese </s> <s> 
+-0.7035 children's </s> <s> 
+-0.7035 chips </s> <s> 
+-0.7035 cigaratte </s> <s> 
+-0.7035 cilantro </s> <s> 
+-0.7035 cleaner </s> <s> 
+-0.7035 click </s> <s> 
+-0.7035 clogs </s> <s> 
+-0.7035 clothes </s> <s> 
+-0.7035 coconut </s> <s> 
+-0.7035 coke </s> <s> 
+-0.7035 collar </s> <s> 
+-0.7035 comics </s> <s> 
+-0.7035 computers </s> <s> 
+-0.7035 controllers </s> <s> 
+-0.7035 cookbooks </s> <s> 
+-0.7035 cords </s> <s> 
+-0.7035 corrector </s> <s> 
+-0.4265 cover </s> <s> 
+-0.7035 crop </s> <s> 
+-0.7035 cross </s> <s> 
+-0.4265 cup </s> <s> 
+-0.7035 curtain </s> <s> 
+-0.7035 cushion </s> <s> 
+-0.7035 cutie </s> <s> 
+-0.4265 denim </s> <s> 
+-0.7035 desk </s> <s> 
+-0.7035 detergent </s> <s> 
+-0.4265 devices </s> <s> 
+-0.7035 dew </s> <s> 
+-0.7035 diaper </s> <s> 
+-0.7035 diet </s> <s> 
+-0.7035 dig </s> <s> 
+-0.7035 dishwasher </s> <s> 
+-0.7035 docks </s> <s> 
+-0.0792 dog </s> <s> 
+-0.7035 door </s> <s> 
+-0.7035 dry </s> <s> 
+-0.7035 dude </s> <s> 
+-0.7035 eggs </s> <s> 
+-0.7035 electric </s> <s> 
+-0.7035 electronic </s> <s> 
+-0.7035 enamel </s> <s> 
+-0.7035 excercise </s> <s> 
+-0.7035 exclusive </s> <s> 
+-0.7035 exercise </s> <s> 
+-0.7035 eyelashes </s> <s> 
+-0.7035 face </s> <s> 
+-0.7035 feeder </s> <s> 
+-0.7035 fictional </s> <s> 
+-0.7035 films </s> <s> 
+-0.7035 fishing </s> <s> 
+-0.7035 fitness </s> <s> 
+-0.7035 flakes </s> <s> 
+-0.7035 flour </s> <s> 
+-0.7035 food </s> <s> 
+-0.7035 fridge </s> <s> 
+-0.7035 gadgets </s> <s> 
+-0.7035 game </s> <s> 
+-0.7035 games </s> <s> 
+-0.4265 gaming </s> <s> 
+-0.7035 gate </s> <s> 
+-0.7035 glass </s> <s> 
+-0.7035 glasses </s> <s> 
+-0.7035 gloves </s> <s> 
+-0.7035 gold </s> <s> 
+-0.7035 golf </s> <s> 
+-0.7035 gopro </s> <s> 
+-0.7035 growth </s> <s> 
+-0.7035 guards </s> <s> 
+-0.7035 guava </s> <s> 
+-0.7035 hari </s> <s> 
+-0.7035 headphones </s> <s> 
+-0.7035 high </s> <s> 
+-0.4265 holder </s> <s> 
+-0.7035 home </s> <s> 
+-0.7035 hot </s> <s> 
+-0.7035 indoor </s> <s> 
+-0.7035 ingredients </s> <s> 
+-0.7035 instant </s> <s> 
+-0.7035 jeans </s> <s> 
+-0.7035 jewelry </s> <s> 
+-0.7035 jigsaw </s> <s> 
+-0.7035 juul </s> <s> 
+-0.7035 kayak </s> <s> 
+-0.7035 kitchen </s> <s> 
+-0.7500 kits </s> <s> 
+-0.7035 knife </s> <s> 
+-0.7035 lamp </s> <s> 
+-0.7035 laptop </s> <s> 
+-0.7035 legging </s> <s> 
+-0.7035 lego </s> <s> 
+-0.7035 light </s> <s> 
+-0.7035 lights </s> <s> 
+-0.7035 lip </s> <s> 
+-0.7035 long </s> <s> 
+-0.7035 loop </s> <s> 
+-0.7035 lumbar </s> <s> 
+-0.7035 machine </s> <s> 
+-0.7035 maker </s> <s> 
+-0.7035 makeup </s> <s> 
+-0.4265 mask </s> <s> 
+-0.7035 massager </s> <s> 
+-0.7500 mat </s> <s> 
+-0.7035 matcha </s> <s> 
+-0.7035 maternity </s> <s> 
+-0.7035 mats </s> <s> 
+-0.7035 mattresses </s> <s> 
+-0.7035 measuring </s> <s> 
+-0.7035 memories </s> <s> 
+-0.7035 men </s> <s> 
+-0.7035 microsoft </s> <s> 
+-0.7035 milk </s> <s> 
+-0.7035 monitor </s> <s> 
+-0.7035 mop </s> <s> 
+-0.7035 mountain </s> <s> 
+-0.7035 mouth </s> <s> 
+-0.7035 nail </s> <s> 
+-0.7035 natural </s> <s> 
+-0.7035 neck </s> <s> 
+-0.7035 nintendo </s> <s> 
+-0.7035 novelty </s> <s> 
+-0.7035 oats </s> <s> 
+-0.7035 off </s> <s> 
+-0.7035 oil </s> <s> 
+-0.7035 onion </s> <s> 
+-0.7035 opener </s> <s> 
+-0.7035 orange </s> <s> 
+-0.7035 organizer </s> <s> 
+-0.4265 outdoor </s> <s> 
+-0.7035 oximeter </s> <s> 
+-0.7035 panel </s> <s> 
+-0.7035 papers </s> <s> 
+-0.7035 peel </s> <s> 
+-0.4265 pen </s> <s> 
+-0.7035 pendant </s> <s> 
+-0.7035 pepsi </s> <s> 
+-0.7035 personal </s> <s> 
+-0.7035 pet </s> <s> 
+-0.7035 phone </s> <s> 
+-0.4265 photo </s> <s> 
+-0.7035 pieces </s> <s> 
+-0.7035 pilates </s> <s> 
+-0.0969 pillow </s> <s> 
+-0.7035 pins </s> <s> 
+-0.7035 plant </s> <s> 
+-0.7035 plants </s> <s> 
+-0.7035 platinum </s> <s> 
+-0.4265 play </s> <s> 
+-0.7035 playsets </s> <s> 
+-0.7035 polish </s> <s> 
+-0.7035 pop </s> <s> 
+-0.7035 portable </s> <s> 
+-0.7035 posture </s> <s> 
+-0.7035 potato </s> <s> 
+-0.7035 powder </s> <s> 
+-0.7035 power </s> <s> 
+-0.7035 powerbanks </s> <s> 
+-0.7035 pregnancy </s> <s> 
+-0.7035 printers </s> <s> 
+-0.7500 products </s> <s> 
+-0.7035 protein </s> <s> 
+-0.7035 pulse </s> <s> 
+-0.7035 pump </s> <s> 
+-0.7035 puzzle </s> <s> 
+-0.7035 recipe </s> <s> 
+-0.7035 resistance </s> <s> 
+-0.7035 rhinestone </s> <s> 
+-0.7035 ring </s> <s> 
+-0.4265 rod </s> <s> 
+-0.7035 rugs </s> <s> 
+-0.7035 salt </s> <s> 
+-0.4265 screen </s> <s> 
+-0.7035 seat </s> <s> 
+-0.7035 seciruty </s> <s> 
+-0.7035 security </s> <s> 
+-0.7035 serum </s> <s> 
+-0.7035 shade </s> <s> 
+-0.7035 shape </s> <s> 
+-0.0792 shoes </s> <s> 
+-0.4265 shower </s> <s> 
+-0.7035 silver </s> <s> 
+-0.7035 smart </s> <s> 
+-0.7035 sneakers </s> <s> 
+-0.7035 socket </s> <s> 
+-0.7035 socks </s> <s> 
+-0.7035 sofa </s> <s> 
+-0.7035 solar </s> <s> 
+-0.7035 sony </s> <s> 
+-0.7035 speakers </s> <s> 
+-0.7035 spices </s> <s> 
+-0.7035 spin </s> <s> 
+-0.7035 sports </s> <s> 
+-0.7035 stand </s> <s> 
+-0.7035 station </s> <s> 
+-0.4265 stove </s> <s> 
+-0.7035 stylish </s> <s> 
+-0.7035 suspense </s> <s> 
+-0.7035 swing </s> <s> 
+-0.7035 tactical </s> <s> 
+-0.7035 tea </s> <s> 
+-0.7035 that </s> <s> 
+-0.7035 thriller </s> <s> 
+-0.7035 throw </s> <s> 
+-0.7035 tights </s> <s> 
+-0.7035 tobacco </s> <s> 
+-0.7035 tomato </s> <s> 
+-0.7035 tools </s> <s> 
+-0.7035 top </s> <s> 
+-0.7035 touch </s> <s> 
+-0.7035 toys </s> <s> 
+-0.7035 tracker </s> <s> 
+-0.7035 trail </s> <s> 
+-0.7035 tripod </s> <s> 
+-0.7035 tub </s> <s> 
+-0.7035 unicorns </s> <s> 
+-0.7035 usb </s> <s> 
+-0.7035 vacuum </s> <s> 
+-0.7035 vegan </s> <s> 
+-0.7035 waffle </s> <s> 
+-0.4265 wash </s> <s> 
+-0.7035 washing </s> <s> 
+-0.4265 water </s> <s> 
+-0.4265 wear </s> <s> 
+-0.7035 wearables </s> <s> 
+-0.7035 white </s> <s> 
+-0.7035 wipes </s> <s> 
+-0.4265 wireless </s> <s> 
+-0.7035 women </s> <s> 
+-0.4265 yoga </s> <s> 
+
+\end\
