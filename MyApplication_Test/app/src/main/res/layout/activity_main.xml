@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/editbox_background"
         android:ems = "20"
+        android:focusable="false"
         android:shadowColor="@color/black"
         android:inputType="textPersonName"
         android:text=""

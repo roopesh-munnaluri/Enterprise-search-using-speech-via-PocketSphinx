@@ -8,4 +8,7 @@ en-us-ptm/noisedict
 en-us-ptm/sendump
 en-us-ptm/transition_matrices
 en-us-ptm/variances
+sample.dic
 sample.dmp
+sample_1.dmp
+sample_test.txt
