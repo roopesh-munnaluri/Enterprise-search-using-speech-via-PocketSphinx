@@ -10,6 +10,7 @@
         android:id="@+id/gif"
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:background="@color/black"
         tools:ignore="InvalidId" />
 
     <View
@@ -21,7 +22,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="282dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_below="@id/divider"
         android:layout_marginTop="15dp"
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/editbox_background"
         android:ems = "20"
+        android:focusable="false"
         android:shadowColor="@color/black"
         android:inputType="textPersonName"
         android:text=""
@@ -58,7 +60,7 @@
     <Spinner
         android:id="@+id/spinner"
         style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="62dp"
         android:layout_below="@id/textView1"
         android:textSize ="40dp"
@@ -78,7 +80,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
-        android:layout_width="391dp"
+        android:layout_width="match_parent"
         android:layout_height="97dp"
         android:layout_below="@id/button"
         android:layout_marginLeft="10dp"
