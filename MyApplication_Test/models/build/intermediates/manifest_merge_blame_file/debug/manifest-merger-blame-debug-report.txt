@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="14"
-8-->/home/administrator/Desktop/munnaluri-roopesh/MyApplication_Test/models/src/main/AndroidManifest.xml
+8-->D:\Roopesh\project\project_git\munnaluri-roopesh\MyApplication_Test\models\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="26" />
-9-->/home/administrator/Desktop/munnaluri-roopesh/MyApplication_Test/models/src/main/AndroidManifest.xml
+9-->D:\Roopesh\project\project_git\munnaluri-roopesh\MyApplication_Test\models\src\main\AndroidManifest.xml
 10
 11</manifest>
