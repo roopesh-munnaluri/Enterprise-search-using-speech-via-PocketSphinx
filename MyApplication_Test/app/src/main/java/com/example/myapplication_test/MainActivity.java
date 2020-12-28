@@ -185,12 +185,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setupRecognizer(File assetsDir) throws IOException {
         recognizer = SpeechRecognizerSetup.defaultSetup()
                 .setAcousticModel(new File(assetsDir, "en-us-ptm"))
-                .setDictionary(new File(assetsDir, "sample.dic"))
+                .setDictionary(new File(assetsDir, "cmudict-en-us.dict"))
                 .setRawLogDir(assetsDir) // To disable logging of raw audio comment out this call (takes a lot of space on the device)
                 .getRecognizer();
         recognizer.addListener(this);
 
-        File digitsGrammar = new File(assetsDir, "sample_1.dmp");
+        File digitsGrammar = new File(assetsDir, "sample.dmp");
         recognizer.addNgramSearch("digits",digitsGrammar);
     }
     @Override
